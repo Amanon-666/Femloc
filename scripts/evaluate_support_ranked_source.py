@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 
 from data.uji import load_floors
-from scripts.evaluate_adjacent_map import make_map, source_pairs
+from scripts.evaluate_adjacent_map import episode, source_pairs
 from scripts.evaluate_ap_offset_source import (best_option, calibrated_predict,
                                                estimate_offset, mde, option_name, prepare)
 
@@ -43,20 +43,23 @@ def main():
     train_path = Path(config["data_path"])
     floors = load_floors(train_path)
     validation = load_floors(train_path.with_name("validationData.csv"))
-    source_episodes = json.loads(Path(config["source_episode_path"]).read_text())
+    rng = np.random.default_rng(config["source_episode_seed"])
     options = config["lambda_candidates"]
     beta = config["beta"]
     by_pair = {}
     detailed = {}
+    saved_episodes = {}
     for lower, upper in source_pairs(floors, set(config["targets"])):
         name = f"{lower}->{upper}"
         floor = floors[upper]
         data = prepare(floors[lower], floor, validation[upper], beta)
-        ids = {int(row): i for i, row in enumerate(floor["row_ids"])}
         episodes = []
-        for item in source_episodes[name]:
-            support = np.array([ids[row] for row in item["support_row_ids"]])
-            query = np.array([ids[row] for row in item["query_row_ids"]])
+        manifests = []
+        for _ in range(config["source_episodes_per_pair"]):
+            support, query = episode(floor, rng, config["support_positions"],
+                                     config["scans_per_position"])
+            manifests.append({"support_row_ids": floor["row_ids"][support].tolist(),
+                              "query_row_ids": floor["row_ids"][query].tolist()})
             selected, cv_scores = select_from_support(floor, support, data, options, beta)
             offset = estimate_offset(floor, support, data["positions"], data["prototypes"], selected)
             train_pred = calibrated_predict(data["train_d"][query],
@@ -82,6 +85,7 @@ def main():
                          "official_improvement_m": official_old - official_new,
                          "selected_counts": dict(Counter(option_name(v["selected_lambda"]) for v in episodes))}
         detailed[name] = episodes
+        saved_episodes[name] = manifests
         print(name, "gain", round(old-new, 3), "official_gain", round(official_old-official_new, 3),
               "choices", by_pair[name]["selected_counts"], flush=True)
     gain = float(np.mean([v["improvement_m"] for v in by_pair.values()]))
@@ -95,6 +99,7 @@ def main():
     args.output.mkdir(parents=True, exist_ok=False)
     (args.output / "selection.json").write_text(json.dumps(result, indent=2) + "\n")
     (args.output / "episodes.json").write_text(json.dumps(detailed) + "\n")
+    (args.output / "source_episodes.json").write_text(json.dumps(saved_episodes) + "\n")
     print("GAIN", round(gain, 3), "PAIRS", count, "OFFICIAL_GAIN", round(official_gain, 3),
           "GATE", gate, flush=True)
 
