@@ -1,0 +1,52 @@
+{
+  "rows_grouped": 19937,
+  "groups": 1801,
+  "consecutive_pairs_within_10s": 17819,
+  "bins": [
+    {
+      "rssi_dbm": [
+        -60,
+        0
+      ],
+      "observed_ap_events": 62594,
+      "next_scan_missing": 502,
+      "fraction_missing": 0.008019938013228105
+    },
+    {
+      "rssi_dbm": [
+        -70,
+        -60
+      ],
+      "observed_ap_events": 84158,
+      "next_scan_missing": 1287,
+      "fraction_missing": 0.015292663799044655
+    },
+    {
+      "rssi_dbm": [
+        -80,
+        -70
+      ],
+      "observed_ap_events": 152014,
+      "next_scan_missing": 7041,
+      "fraction_missing": 0.046318102280053154
+    },
+    {
+      "rssi_dbm": [
+        -90,
+        -80
+      ],
+      "observed_ap_events": 252734,
+      "next_scan_missing": 35529,
+      "fraction_missing": 0.14057863207957774
+    },
+    {
+      "rssi_dbm": [
+        -105,
+        -90
+      ],
+      "observed_ap_events": 88480,
+      "next_scan_missing": 31745,
+      "fraction_missing": 0.3587816455696203
+    }
+  ]
+}

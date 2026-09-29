@@ -1,6 +1,7 @@
-# 信号空间校准地图分支
+# SCM 机制审计分支
 
-- 当前分支 `scm-structural-audit` 从 `signal-calibrated-map` 分出；只修改本工作树。
-- `docs/SIGNAL_CALIBRATED_MAP.md` 是方法、数据权限和结果依据。
-- 选参只用 7 对历史相邻楼层转移（trainingData）；目标只读 10 位置×3 扫描 Support；`validationData.csv` 只用于冻结参数后的评价。
-- 服务器使用 `lab-server` 的 `bash -s`；GitHub 推送只走本机 SSH 隧道，不在服务器直连。凭证不进入文件、日志或提交。
+- 本工作树只属于 `scm-field-ranking-audit`，不修改主分支或其它工作树。
+- `docs/FIELD_RANKING_AUDIT_DESIGN.md` 记录审计问题与数据权限，`docs/FIELD_RANKING_AUDIT_RESULTS.md` 记录实测结果。
+- 固定 SCM v1 和 WKNN；审计不得根据 B0F3/B1F3/B2F4 的 Query 或 validation 结果调整模型、参数、阈值或数据划分。
+- 七对历史相邻楼层来自 trainingData，目标 Support 只取既有 manifest。Query 坐标仅用于离线评价场误差和定位误差。
+- 服务器命令经 `ssh lab-server 'bash -s'`；GitHub 推送只经本机 SSH 临时隧道，凭证不得进入源码、日志或提交。
