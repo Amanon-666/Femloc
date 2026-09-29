@@ -1,0 +1,17 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "seeds": [0, 1, 2],
+  "device": "cuda:0",
+  "source_iterations": 2500,
+  "tasks_per_iteration": 4,
+  "positions_per_task": 10,
+  "support_per_position": 3,
+  "query_per_position": 5,
+  "inner_steps": 5,
+  "target_steps": 10,
+  "inner_lr": 0.01,
+  "outer_lr": 0.001,
+  "coordinate_scale_m": 100.0,
+  "hidden": [256, 128]
+}
