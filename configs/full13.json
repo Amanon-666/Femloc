@@ -1,0 +1,22 @@
+{
+  "train_csv": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "test_csv": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "targets": ["B0F0", "B0F1", "B0F2", "B0F3", "B1F0", "B1F1", "B1F2", "B1F3", "B2F0", "B2F1", "B2F2", "B2F3", "B2F4"],
+  "methods": ["erm_mlp", "gga_mlp", "erm_set", "gga_set"],
+  "seeds": [0, 1, 2],
+  "train_steps": 5000,
+  "batch_per_source_floor": 32,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "checkpoint_steps": [0, 100, 500, 1000, 2000, 5000],
+  "gga_start_step": 100,
+  "gga_end_step": 200,
+  "gga_search_steps": 250,
+  "gga_neighborhood_size": 0.00001,
+  "gga_relative_loss_tolerance": 0.1,
+  "da_support_positions": 10,
+  "da_scans_per_position": 3,
+  "da_steps": 50,
+  "da_learning_rate": 0.001,
+  "da_report_steps": [0, 1, 5, 10, 20, 50]
+}

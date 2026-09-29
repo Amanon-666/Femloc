@@ -4,6 +4,8 @@
 
 Within one building, can a coordinate regressor trained on several historical floors locate scans from a wholly unseen floor? GGA tests whether its early source-domain gradient alignment improves this *domain generalization* over matched ERM. Set Transformer separately tests whether representing each scan as an unordered set of detected (AP ID, RSSI) pairs helps. Target-floor adaptation is a separate 10-position, 3-scans-per-position experiment, capped at 50 supervised update steps.
 
+`configs/v1.json` fixes a three-floor implementation pilot (one target from each building). The primary coverage study is frozen in `configs/full13.json`: every one of the 13 building–floor domains is held out in turn. Do not infer a general GGA effect from the three pilot floors alone, and do not change the full set after inspecting pilot errors.
+
 ## Domains and target permissions
 
 One BuildingID–Floor pair is one domain. For target floor t, train on `trainingData.csv` rows from every other floor of the **same building**. These source floors have globally comparable horizontal coordinates. No target-floor `trainingData.csv` row or `validationData.csv` row enters DG model fitting or GGA annealing. `validationData.csv` rows of t are the **primary final test**, as the UJI release intended. Target `trainingData.csv` rows are an additional spatial DG diagnostic only after fitting; they are not used to choose a checkpoint. The official validation file is never used for hyperparameters, early stopping, or target adaptation.
