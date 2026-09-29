@@ -1,0 +1,47 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "validation_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "targets": [
+    "B0F3",
+    "B1F3",
+    "B2F4"
+  ],
+  "development_floors": [
+    "B0F2",
+    "B1F2",
+    "B2F3"
+  ],
+  "development_seeds": [
+    0,
+    1
+  ],
+  "final_seeds": [
+    0,
+    1,
+    2
+  ],
+  "lambda_candidates": [
+    0.01,
+    0.1,
+    1.0
+  ],
+  "checkpoints": [
+    250,
+    500,
+    1000
+  ],
+  "development_splits": 3,
+  "device": "cuda:0",
+  "tasks_per_iteration": 4,
+  "positions_per_task": 10,
+  "support_per_position": 3,
+  "query_per_position": 5,
+  "outer_lr": 0.001,
+  "coordinate_scale_m": 100.0,
+  "hidden": [
+    256,
+    128
+  ],
+  "reference_manifest_root": "/home/panyushuo/projects/panyushuo/FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "selection_path": "/home/panyushuo/projects/panyushuo/FeMLoc-RidgeMeta/outputs/ridge_meta/development/selection.json"
+}
