@@ -38,6 +38,14 @@
 
 因此，**第一条假设“少量锚点可在历史相邻楼层改善信号预测”有证据；第二条“信号 RMSE 更低就能在新位置得到更低 MDE”不成立。** v1 应保留作强基线，不能只沿着更复杂的 RSSI 重建器迭代。先前 v2 的锚点留一选参与 v3 的分层场/Tobit 匹配在源端都低于冻结 v1，也支持暂时停止该系列扩展；那些试验在其它工作树，本分支不修改它们。
 
+## 候选排序：旧图有空间点，但无线排名仍可能错
+
+又做了一项在看过上述结果后追加的解释性审计：对每条 Query 找旧图中物理距离最近的点，比较该点在旧图与 SCM **同一批旧图坐标**中的无线距离排名。目标坐标只用于离线审计；没有据此修改定位方法。完整结果见 `docs/evidence/candidate_rank_audit.json`。
+
+B2F4 官方 validation 的约 **94.9%** 扫描在旧图中 5 m 内有空间候选；故主要问题并非旧图根本没有该处坐标。然而物理最近候选进入无线前 8 的比例，旧图只有 **17.9%**，SCM 提到 **36.8%**。近锚点组排名改善（平均约 19.7→13.8），20–40 m 与 ≥40 m 组反而恶化（约 24.2→30.4、28.6→42.1）。整层平均排名改善而最终 MDE 退化，说明单个“正确候选”的排名也不能替代**整组候选位置及其权重**的定位损失。
+
+B1F3 同日异位置另显示一个独立因素：只校准旧图、不把 Support 原型另作候选时，MDE 为 **12.24 m**；拼入 10 个 Support 候选后为 **12.90 m**，旧图为 **12.47 m**。加入已知点并非免费增益，可能改变远处 Query 的前 8 个候选。这是事后机制解释，不能据此把“删去锚点候选”宣布为经过独立验证的新方法。
+
 ## `100` 哨兵值的含义不能简化成一个固定 RSSI 阈值
 
 在 19,937 条 trainingData 中，将 Building/Floor、坐标、SpaceID、RelativePosition、UserID、PhoneID 完全相同的扫描分组，取时间相邻且相差不超过 10 秒的 17,819 对扫描。某 AP 此次实际读到以下 RSSI 时，下一次为 `100` 的描述性频率是：
@@ -54,18 +62,19 @@
 
 ## 下一步的完整方法方向
 
-若继续开发，应把观测拆成两个通道：`z_a` 表示是否看到 AP，`r_a | z_a=1` 表示看到时的强度。旧楼层全量地图提供每个候选位置的检出频率和条件强度；目标十个锚点只更新这两种空间关系。Query 直接按“该位置出现/消失这些 AP 的可能性 + 出现时强度的可能性”给候选**位置**打分，以位置误差评价，而非只优化 520 维信号重建。可参考 GUFU 显式保留 AP 观测关系的思想，但这里仍是有完整相邻旧图的少样本新楼层定位，不是 GUFU 的同场地长期地图更新。
+若继续开发，应把观测拆成两个通道：`z_a` 表示是否看到 AP，`r_a | z_a=1` 表示看到时的强度。旧楼层全量地图提供每个候选位置的检出频率和条件强度；目标十个锚点只更新这两种空间关系。Query 直接按“该位置出现/消失这些 AP 的可能性 + 出现时强度的可能性”给候选**位置**打分；源端训练或选择必须以整组候选加权后的坐标误差为目标，而非仅优化 520 维信号重建或单个候选排名。可参考 GUFU 显式保留 AP 观测关系的思想，但这里仍是有完整相邻旧图的少样本新楼层定位，不是 GUFU 的同场地长期地图更新。
 
 实现这个方向之前必须先把旧地图的检出频率估计、未出现 AP 的处理、条件 RSSI 噪声和候选分数的校准完整定义，再在历史楼层做留整栋建筑选择；不能看 B2F4 validation 再添距离门控。由于目标三层已多次进入探索，后续对其结果只能作为探索性比较。真正的独立验证需要新的楼层/建筑或其它数据集。
 
 ## 复现
 
-在服务器工作树 `/home/panyushuo/projects/panyushuo/FeMLoc-SCM-Field-Ranking-Audit`，使用已有 FeMLoc 环境执行三个脚本：
+在服务器工作树 `/home/panyushuo/projects/panyushuo/FeMLoc-SCM-Field-Ranking-Audit`，使用已有 FeMLoc 环境执行四个脚本：
 
 ```bash
 OPENBLAS_NUM_THREADS=1 ../FeMLoc-Reproduction/env/bin/python -m scripts.audit_field_vs_ranking --output outputs/field_ranking_audit.json
 OPENBLAS_NUM_THREADS=1 ../FeMLoc-Reproduction/env/bin/python -m scripts.audit_target_shift --output outputs/target_shift_audit.json
+OPENBLAS_NUM_THREADS=1 ../FeMLoc-Reproduction/env/bin/python -m scripts.audit_candidate_ranks --output outputs/candidate_rank_audit.json
 OPENBLAS_NUM_THREADS=1 ../FeMLoc-Reproduction/env/bin/python -m scripts.audit_scan_presence --data /home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv --output outputs/scan_presence_audit.json
 ```
 
-脚本语法检查通过，三个输出已实际生成并复制到 `docs/evidence/`。本轮没有训练新模型，也没有声称得到超过现有 SCM 的新定位成绩。
+脚本语法检查通过，四个输出已实际生成并复制到 `docs/evidence/`。本轮没有训练新模型，也没有声称得到超过现有 SCM 的新定位成绩。
