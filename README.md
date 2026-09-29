@@ -1,23 +1,19 @@
-# MetaLoc 式 UJI 少样本跨楼层定位
+# UJI 跨楼层 Support 条件定位
 
-这是 `Amanon-666/Femloc` 的 `metaloc-few-shot` 分支。`main` 保留独立 FeMLoc EXP1 重实现及原始结果；本分支只读共用 UJI 原始 CSV，使用新的 episode、共享 RSSI 回归网络和训练入口。
+这是 `Amanon-666/Femloc` 的 `support-conditioned` 分支。旧 `metaloc-few-shot` 分支和 FeMLoc EXP1 均保留。当前方法在七个历史楼层训练 RSSI 特征，来到新楼层后，只用 **10 个位置×每点 3 条扫描**直接求一个带正则的坐标映射，无需目标梯度步骤。训练目标是让这个映射准确预测未采集位置。
 
-- 每个目标楼层只给 **10 个位置 × 每点 3 条扫描 = 30 条标注扫描**。
-- 十个历史楼层组成源域 episode；三个目标楼层为 B0F3、B1F3、B2F4。
-- 比较 MetaLoc 式 MAML 初始化（MI）、普通源监督初始化（TL）和随机初始化（RI）；三者共享目标划分、网络、适应学习率和 0–10 步预算。
-- 主指标为目标楼层**未采集位置**的二维定位 MDE；已采集位置上的新扫描另列为辅助指标。
-
-[方法与数据权限](docs/METALOC_FEWSHOT_DESIGN.md) · [完整结果](docs/METALOC_FEWSHOT_RESULTS.md)
+[方法、楼层隔离与评价](docs/SUPPORT_RIDGE_METHOD.md) · [冻结旧模型诊断](docs/FROZEN_HEAD_DIAGNOSTIC.md) · [本轮结果](docs/SUPPORT_RIDGE_RESULTS.md)
 
 ## 运行
 
-服务器工作树：`/home/panyushuo/projects/panyushuo/FeMLoc-MetaLoc-few-shot`。安装依赖后：
+服务器工作树：`/home/panyushuo/projects/panyushuo/FeMLoc-Support-Conditioned`，沿用服务器已有的 Python 环境：
 
 ```bash
-CUBLAS_WORKSPACE_CONFIG=:4096:8 env/bin/python -m scripts.run_metaloc \
-  --config configs/metaloc_fewshot.json --output outputs/new_run
+CUBLAS_WORKSPACE_CONFIG=:4096:8 ../UJI-FeMLoc-V1/env/bin/python \
+  -m scripts.run_support_ridge --config configs/support_ridge.json \
+  --output outputs/new_run
 ```
 
-输出目录必须尚不存在。完整运行保存每个随机种子的目标划分、源训练日志、源模型、逐步误差曲线和完成标记，并生成 `docs/METALOC_FEWSHOT_RESULTS.md`。
+输出目录必须尚不存在。运行保留每个种子的源训练曲线、开发及确认划分、最优编码器、四方法配对结果和完成标记，并生成 `docs/SUPPORT_RIDGE_RESULTS.md`。
 
-MetaLoc [论文](https://arxiv.org/html/2211.04258v5)及[作者公开代码](https://github.com/StatFusion/MetaLoc/tree/2a3f7ae6dffcf7ebfc72a82b8091cc23db1aead9)提供 episode、内外层训练和逐步测试的参照。作者的真实场地实验以 CSI 图像做位置分类；这里采用 UJI RSSI 坐标回归，并将源域 Query 放到未采集位置，以对齐本项目的主目标。因此这些数值不能与原文的 CSI 精度直接比较。
+本方法借鉴[可微闭式求解元学习](https://arxiv.org/abs/1805.08136)的思想，使用 UJI 的 520 维 RSSI 和二维坐标重新定义了跨楼层任务；不是该论文原任务或 FeMLoc 的复现。旧分支的文档仍在仓库中供历史追溯。
