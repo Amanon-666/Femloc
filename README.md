@@ -1,3 +1,9 @@
+# 当前分支：少量锚点更新旧楼层无线地图
+
+本分支 `spatial-radiomap-adaptation` 的方法、事前门槛与完整结果分别见 [方法](docs/SPATIAL_RADIOMAP_METHOD.md) 和 [结果](docs/SPATIAL_RADIOMAP_RESULTS.md)。它是独立研究分支，不是 FeMLoc 原论文的复现；以下保留祖先分支原有说明。
+
+---
+
 # MetaLoc 式 UJI 少样本跨楼层定位
 
 这是 `Amanon-666/Femloc` 的 `metaloc-few-shot` 分支。`main` 保留独立 FeMLoc EXP1 重实现及原始结果；本分支只读共用 UJI 原始 CSV，使用新的 episode、共享 RSSI 回归网络和训练入口。

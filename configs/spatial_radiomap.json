@@ -5,7 +5,25 @@
   "support_positions": 10,
   "scans_per_position": 3,
   "beta": 10,
-  "length_scales_m": [10, 20, 40],
-  "shrinkage": [0.3, 1, 3],
-  "targets": ["B0F3", "B1F3", "B2F4"]
+  "length_scales_m": [
+    10,
+    20,
+    40
+  ],
+  "shrinkage": [
+    0.3,
+    1,
+    3
+  ],
+  "targets": [
+    "B0F3",
+    "B1F3",
+    "B2F4"
+  ],
+  "manifest_root": "../FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "seeds": [
+    0,
+    1,
+    2
+  ]
 }
