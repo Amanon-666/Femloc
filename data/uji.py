@@ -19,7 +19,9 @@ def load_floors(path):
         rss = np.array([[int(row[f"WAP{i:03d}"]) for i in range(1, 521)] for _, row in rows], dtype=np.int16)
         xy = np.array([[float(row[axis]) for axis in ("LONGITUDE", "LATITUDE")] for _, row in rows])
         groups = [hashlib.sha256(r.tobytes() + y.tobytes()).hexdigest() for r, y in zip(rss, xy)]
-        result[name] = {"rssi": rss, "xy": xy, "row_ids": np.array([i for i, _ in rows]), "groups": np.array(groups)}
+        result[name] = {"rssi": rss, "xy": xy, "row_ids": np.array([i for i, _ in rows]),
+                        "groups": np.array(groups),
+                        "phones": np.array([int(row["PHONEID"]) for _, row in rows], dtype=np.int16)}
     return result
 
 

@@ -12,7 +12,8 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-from data.episodes import episode_tensors, prepare_floor, sample_episode, target_split
+from data.episodes import (episode_tensors, prepare_floor, sample_cross_device_episode,
+                           sample_episode, target_split)
 from data.uji import load_floors
 from models.ridge import predict
 from models.rss_maml import network
@@ -100,9 +101,14 @@ def train_one(seed, floors, official, config, output):
         losses = []
         for name in rng.choice(sources, config["tasks_per_step"], replace=False):
             floor = floors[name]
-            support, query = sample_episode(floor, rng, config["positions_per_task"],
-                                            config["support_per_position"],
-                                            config["query_per_position"], unseen_query=True)
+            if config.get("cross_device_source"):
+                support, query = sample_cross_device_episode(
+                    floor, rng, config["positions_per_task"],
+                    config["support_per_position"], config["query_per_position"])
+            else:
+                support, query = sample_episode(floor, rng, config["positions_per_task"],
+                                                config["support_per_position"],
+                                                config["query_per_position"], unseen_query=True)
             sx, sy, qx, qy = episode_tensors(floor, support, query, config["coordinate_scale_m"])
             estimated = predict(encoder(sx), sy, encoder(qx), config["relative_penalty"])
             losses.append(F.mse_loss(estimated, qy))
