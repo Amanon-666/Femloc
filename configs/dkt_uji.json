@@ -1,0 +1,12 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "seeds": [0, 1, 2],
+  "support_positions": 10,
+  "scans_per_position": 3,
+  "train_query_positions": 10,
+  "updates": 5000,
+  "evaluation_episodes": 20,
+  "learning_rate": 0.001,
+  "device": "cuda:0"
+}
