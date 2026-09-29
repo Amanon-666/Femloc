@@ -1,6 +1,7 @@
-# 信号空间校准地图分支
+# 信号残差场校准地图 + 删失匹配分支（SCM-T）
 
 - 当前分支 `signal-calibrated-map` 从 `adjacent-map-few-shot` 分出；不得修改其他分支。
-- `docs/SIGNAL_CALIBRATED_MAP.md` 是方法、数据权限和结果依据。
-- 选参只用 7 对历史相邻楼层转移（trainingData）；目标只读 10 位置×3 扫描 Support；`validationData.csv` 只用于冻结参数后的评价。
-- 服务器使用 `lab-server` 的 `bash -s`；GitHub 推送只走本机 SSH 隧道，不在服务器直连。凭证不进入文件、日志或提交。
+- `docs/SIGNAL_CALIBRATED_MAP.md` 是方法、数据权限、结果与负结果的依据。主入口 `scripts/evaluate_scm_tobit.py`。
+- 主基准是 7 对历史相邻楼层转移：选参只用它们的 trainingData；这 7 层的官方 validation 只在冻结参数后评价。FeMLoc 三目标层只作探索性附录。
+- 新组件必须能从同一观测模型（场 + 删失检出）推导出来；推导不出的不进主线。
+- 服务器使用 `lab-server` 的 `bash -s`；GitHub 推送只走本机，不在服务器直连。凭证不进入文件、日志或提交。
