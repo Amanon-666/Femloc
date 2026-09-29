@@ -1,0 +1,20 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "validation_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "reference_manifest_root": "/home/panyushuo/projects/panyushuo/FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "development_floors": ["B0F2", "B1F2", "B2F3"],
+  "development_seeds": [0, 1],
+  "final_seeds": [0, 1, 2],
+  "development_splits": 3,
+  "beta_candidates": [1, 2, 5, 10, 20, 50, 100],
+  "lambda_candidates": [0.1, 1.0, 10.0, 100.0],
+  "checkpoints": [250, 500, 1000],
+  "device": "cuda:0",
+  "tasks_per_iteration": 4,
+  "positions_per_task": 10,
+  "support_per_position": 3,
+  "query_per_position": 5,
+  "outer_lr": 0.001,
+  "coordinate_scale_m": 100.0
+}
