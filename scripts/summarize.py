@@ -22,6 +22,8 @@ for target in cfg["targets"]:
             assert record["source_steps"] == cfg["train_steps"]
             assert len(record["gga_history"]) == (cfg["gga_end_step"] - cfg["gga_start_step"] + 1 if method.startswith("gga") else 0)
             assert set(record["da_curve_official_validation"]) == set(map(str, cfg["da_report_steps"]))
+            assert np.isfinite(record["dg_official_validation"]["mean_m"])
+            assert all(np.isfinite(value["mean_m"]) for value in record["da_curve_official_validation"].values())
             records[target, seed, method] = record
     for seed in cfg["seeds"]:
         supports = {tuple(records[target, seed, method]["da_support_row_ids"]) for method in cfg["methods"]}
@@ -35,7 +37,7 @@ def mean_sd(values):
 
 
 lines = [
-    "# GGA-UJI cross-floor V1 results",
+    f"# GGA-UJI cross-floor {output.name} results",
     "",
     "Within each building, the target floor is absent from all source training. Official",
     "`validationData.csv` is the primary held-out test. DG is source-only; DA uses ten",
@@ -54,6 +56,22 @@ for target in cfg["targets"]:
             [run["dg_official_validation"]["mean_m"] for run in runs],
         ] + [[run["da_curve_official_validation"][str(step)]["mean_m"] for run in runs] for step in [1, 5, 10, 20, 50]]
         lines.append(f"| {target} | {method} | " + " | ".join(map(mean_sd, values)) + " |")
+lines.extend(["", "## Equal-floor macro mean", "",
+              "| Method | DG official, m | DA 10, m | DA 50, m |",
+              "|---|---:|---:|---:|"])
+for method in cfg["methods"]:
+    macro = []
+    for step in [None, "10", "50"]:
+        floor_means = []
+        for target in cfg["targets"]:
+            values = [
+                records[target, seed, method]["dg_official_validation"]["mean_m"]
+                if step is None else records[target, seed, method]["da_curve_official_validation"][step]["mean_m"]
+                for seed in cfg["seeds"]
+            ]
+            floor_means.append(statistics.mean(values))
+        macro.append(mean_sd(floor_means))
+    lines.append(f"| {method} | " + " | ".join(macro) + " |")
 lines.extend(["", "## Paired GGA − ERM error (negative favours GGA)", "",
               "| Encoder | Stage | Per-target paired differences, m | Equal-floor mean, m |",
               "|---|---|---|---:|"])
@@ -80,7 +98,7 @@ lines.extend([
     "This is a coordinate-regression transfer of GGA, not its original image-classification",
     "benchmark. Set blocks are adapted from the official Set Transformer code with masks.",
 ])
-report = Path("docs/RESULTS_V1.md")
+report = Path(f"docs/RESULTS_{output.name.upper()}.md")
 report.write_text("\n".join(lines) + "\n")
 print(report)
 print("\n".join(lines[-18:]))
