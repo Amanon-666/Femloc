@@ -1,8 +1,8 @@
-# 相邻楼层空间参照实验分支
+# 少量锚点更新旧楼层信号地图的独立分支
 
-- 当前分支 `adjacent-map-few-shot` 从 `metaloc-few-shot` 分出；不得修改 `main`、`metaloc-few-shot` 或旧 WIFI-loc。
-- `docs/ADJACENT_MAP_METHOD.md` 是本分支的方法和数据权限依据。先写清方法，再运行；不按目标 Query 改参数。
-- 目标只给 10 个位置×3 条扫描；Query 位置不进入拟合和选择；`validationData.csv` 不用。
-- 优先复用已有 UJI 读取与 manifest；只加当前方法所需代码，不做通用算法框架或未来功能。
-- 必要检查仅覆盖目标标签权限、source-only 参数选择和相同 manifest。
-- 服务器使用 `lab-server` 的 `bash -s`；GitHub 推送只走本机 SSH 隧道，不在服务器直连。凭证不进入文件、日志或提交。
+- 本分支 `spatial-radiomap-adaptation` 从 `adjacent-map-few-shot` 分出，不能修改其他分支或旧 WIFI-loc。
+- `docs/SPATIAL_RADIOMAP_METHOD.md` 先于代码写定方法、数据权限与源端门槛；不得依据目标 Query 修改超参数或额外添加机制。
+- 旧楼层完整带坐标指纹图可以输入；目标只有固定 10 位置×3 次扫描作为 Support；Query 标签只能评价。
+- 历史相邻楼层转移先完成整对留出与较晚验证门槛；失败就停，不在既定三个目标楼层选法。
+- 代码只实现信号地图的空间更新和源端评价；复用现有读取、地图、episode，不建通用框架。功能性注释即可。
+- 服务器经 `ssh lab-server 'bash -s'` 操作；GitHub 推送只用本机 SSH 临时隧道，凭证不进入源码、日志或提交。
