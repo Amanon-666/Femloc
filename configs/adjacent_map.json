@@ -1,0 +1,12 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "manifest_root": "../FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "seeds": [0, 1, 2],
+  "source_episodes_per_pair": 20,
+  "source_episode_seed": 27429,
+  "support_positions": 10,
+  "scans_per_position": 3,
+  "length_scales_m": [10, 20, 40],
+  "noise_ratios": [0.3, 1, 3]
+}
