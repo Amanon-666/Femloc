@@ -1,5 +1,7 @@
 # 相邻楼层地图与 10×3 少样本适应：第一轮方法审计
 
+> **后续更正：** 本文表格来自 `trainingData.csv` 内部自构 Query。官方 `validationData.csv` 的独立检查已完成，B0F3/B1F3/B2F4 零标注软地图误差为 **7.12/12.24/15.28 米**，详见 [`OFFICIAL_VALIDATION.md`](OFFICIAL_VALIDATION.md)。此前“数值接近 FeMLoc”的表述不能外推到官方 validation。
+
 ## 实验问题和权限
 
 三个既定目标 B0F3/B1F3/B2F4，各沿用 `metaloc-few-shot` 分支 seeds 0/1/2 的固定 manifest：每层 10 个目标位置，每处 3 条扫描作 Support；不同位置的扫描作 Query。位置集合互斥。RSSI 520 维按 `100→-110` 后 `(r+110)/110` 截断到 [0,1]。完整相邻**旧**楼层的 RSSI 和坐标可建 radio map；目标 Query 坐标只用于最终误差。`validationData.csv` 不参与。所有方法目标梯度步数均为 0，符合“不超过 50 步”，但没有验证 FeMLoc 式 1–50 步梯度适应速度。
