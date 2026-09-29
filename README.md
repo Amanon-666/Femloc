@@ -2,7 +2,7 @@
 
 这是 `Amanon-666/Femloc` 的 `support-conditioned` 分支。旧 `metaloc-few-shot` 分支和 FeMLoc EXP1 均保留。当前方法在七个历史楼层训练 RSSI 特征，来到新楼层后，只用 **10 个位置×每点 3 条扫描**直接求一个带正则的坐标映射，无需目标梯度步骤。训练目标是让这个映射准确预测未采集位置。
 
-[方法、楼层隔离与评价](docs/SUPPORT_RIDGE_METHOD.md) · [冻结旧模型诊断](docs/FROZEN_HEAD_DIAGNOSTIC.md) · [本轮结果](docs/SUPPORT_RIDGE_RESULTS.md)
+[方法、楼层隔离与评价](docs/SUPPORT_RIDGE_METHOD.md) · [冻结旧模型诊断](docs/FROZEN_HEAD_DIAGNOSTIC.md) · [本轮结果](docs/SUPPORT_RIDGE_RESULTS.md) · [下一步推导](docs/NEXT_STAGE_REASONING.md)
 
 ## 运行
 
