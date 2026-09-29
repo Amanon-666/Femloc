@@ -51,6 +51,30 @@ def sample_cross_device_episode(floor, rng, n_positions, n_support, n_query):
     return np.array(support, dtype=np.int64), np.array(query, dtype=np.int64)
 
 
+def sample_paired_device_episode(floor, rng, n_positions, n_support, n_query):
+    """先固定两台设备共同覆盖的空间，再分出异位置 Support/Query。"""
+    phones = floor["phone_positions"]
+    pairs = []
+    for support_phone, support_rows in phones.items():
+        available_support = {xy for xy, rows in support_rows.items() if len(rows) >= n_support}
+        for query_phone, query_rows in phones.items():
+            if support_phone == query_phone:
+                continue
+            available_query = {xy for xy, rows in query_rows.items() if len(rows) >= n_query}
+            shared = sorted(available_support & available_query)
+            if len(shared) >= 2 * n_positions:
+                pairs.append((support_phone, query_phone, shared))
+    if not pairs:
+        raise ValueError("No device pair shares enough source positions")
+    support_phone, query_phone, shared = pairs[rng.integers(len(pairs))]
+    chosen = rng.choice(len(shared), 2 * n_positions, replace=False)
+    support = [i for j in chosen[:n_positions] for i in rng.choice(
+        phones[support_phone][shared[j]], n_support, replace=False)]
+    query = [i for j in chosen[n_positions:] for i in rng.choice(
+        phones[query_phone][shared[j]], n_query, replace=False)]
+    return np.array(support, dtype=np.int64), np.array(query, dtype=np.int64)
+
+
 def sample_episode(floor, rng, n_positions, n_support, n_query, unseen_query=False):
     """每个位置选不同观测组；源域可要求 Query 来自另外的位置。"""
     eligible = [pos for pos, rows in floor["positions"].items()

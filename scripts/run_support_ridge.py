@@ -13,7 +13,7 @@ import torch
 from torch.nn import functional as F
 
 from data.episodes import (episode_tensors, prepare_floor, sample_cross_device_episode,
-                           sample_episode, target_split)
+                           sample_episode, sample_paired_device_episode, target_split)
 from data.uji import load_floors
 from models.ridge import predict
 from models.rss_maml import network
@@ -101,7 +101,11 @@ def train_one(seed, floors, official, config, output):
         losses = []
         for name in rng.choice(sources, config["tasks_per_step"], replace=False):
             floor = floors[name]
-            if config.get("cross_device_source"):
+            if config.get("paired_device_source"):
+                support, query = sample_paired_device_episode(
+                    floor, rng, config["positions_per_task"],
+                    config["support_per_position"], config["query_per_position"])
+            elif config.get("cross_device_source"):
                 support, query = sample_cross_device_episode(
                     floor, rng, config["positions_per_task"],
                     config["support_per_position"], config["query_per_position"])
@@ -159,7 +163,11 @@ def train_one(seed, floors, official, config, output):
 
 
 def summarize(records, config, output):
-    lines = ["# Support 条件映射的跨楼层初步结果", "",
+    if config.get("paired_device_source"):
+        title, output_path = "共同覆盖位置的跨设备源训练结果", "docs/PAIRED_DEVICE_RESULTS.md"
+    else:
+        title, output_path = "Support 条件映射的跨楼层初步结果", "docs/SUPPORT_RIDGE_RESULTS.md"
+    lines = [f"# {title}", "",
              "源端只训练信号特征；每次预测用目标楼层 10 个位置×3 条扫描直接求坐标映射，无目标梯度步。",
              "训练轮数由三个完整留出的开发楼层选择；三层确认目标不参与训练、选择或早停。", "",
              "|目标|评价集|训练特征+岭回归|随机特征+岭回归|原始 RSSI+岭回归|WKNN|",
@@ -177,7 +185,7 @@ def summarize(records, config, output):
     lines += ["", "数字为 UJI 投影坐标中的平均二维误差；± 为三个训练种子均值的样本标准差。",
               "`unseen_position` 为 trainingData 内与 Support 位置互斥的扫描；官方 validation 同时包含时间、设备、用户及覆盖变化。",
               "这些楼层曾出现在其它分支的源训练或研究讨论中，因此这里只能作为本方法的探索性确认。", ""]
-    Path("docs/SUPPORT_RIDGE_RESULTS.md").write_text("\n".join(lines))
+    Path(output_path).write_text("\n".join(lines))
 
 
 def main():
