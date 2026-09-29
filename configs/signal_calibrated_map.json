@@ -1,0 +1,21 @@
+{
+  "train_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "validation_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "manifest_root": "../FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "manifest_seeds": [0, 1, 2],
+  "support_positions": 10,
+  "scans_per_position": 3,
+  "source_episodes_per_pair": 20,
+  "source_query_cap": 300,
+  "source_episode_seed": 1,
+  "length_scales_m": [20, 40, 60, 80, 120],
+  "noise_ratios": [0.1, 0.3, 1, 3],
+  "knn_k": [1, 3, 8, 1000],
+  "knn_beta": [3, 10, 30],
+  "anchor_lookup_neighbors": 3,
+  "k_curve": [3, 5, 10, 20],
+  "k_curve_draws": 30,
+  "k_curve_seed": 11,
+  "shuffle_repeats": 10
+}
