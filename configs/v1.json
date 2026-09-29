@@ -13,7 +13,7 @@
   "gga_end_step": 200,
   "gga_search_steps": 250,
   "gga_neighborhood_size": 0.00001,
-  "gga_loss_tolerance": 0.1,
+  "gga_relative_loss_tolerance": 0.1,
   "da_support_positions": 10,
   "da_scans_per_position": 3,
   "da_steps": 50,

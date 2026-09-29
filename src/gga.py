@@ -41,7 +41,8 @@ def gga_step(model, optimizer, batches: list[dict], cfg: dict) -> tuple[float, f
 
         candidate_similarity = minimum_gradient_cosine(model, batches)
         candidate_loss = regression_loss(model, pooled).item()
-        if candidate_loss - best_loss < cfg["gga_loss_tolerance"] and candidate_similarity > best_similarity:
+        # Coordinate scaling is arbitrary, so apply the original gate to relative loss.
+        if candidate_loss < best_loss * (1 + cfg["gga_relative_loss_tolerance"]) and candidate_similarity > best_similarity:
             best_similarity, best_loss = candidate_similarity, candidate_loss
             best = [parameter.detach().clone() for parameter in model.parameters()]
             accepted += 1
