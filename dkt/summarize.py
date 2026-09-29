@@ -9,6 +9,7 @@ import numpy as np
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path)
+    parser.add_argument('--report',type=Path,default=Path('docs/DKT_UJI_RESULTS.md'))
     args=parser.parse_args()
     config=json.loads((args.output/'config.json').read_text())
     rows=json.loads((args.output/'results.json').read_text())
@@ -20,7 +21,7 @@ def main():
         assert [x['step'] for x in logs]==list(range(1,config['updates']+1))
         assert all(np.isfinite(x['DKT']) and np.isfinite(x['RBF-GP']) for x in logs)
     assert all(x['support_scans']==30 and x['target_gradient_steps']==0 and np.isfinite(x['mde']) for x in rows)
-    lines=['# DKT-UJI 首轮结果','',f"每个训练seed执行{config['updates']}次源任务更新；每目标20组Support，每组10个位置×3条扫描，测试阶段0次参数更新。",'',
+    lines=['# DKT-UJI 实验结果','',f"每个训练seed执行{config['updates']}次源任务更新；每目标20组Support，每组10个位置×3条扫描，测试阶段0次参数更新。",'',
            '误差单位米；先平均每个训练seed内20个episode，再计算三个seed的均值±样本标准差。episode重叠，不当作60个独立训练重复。','',
            '|目标|DKT MDE|原始RSSI RBF-GP MDE|DKT−RBF配对差|','|---|---:|---:|---:|']
     for target in config['targets']:
@@ -35,12 +36,12 @@ def main():
                 vals=[np.mean([x[key] for x in r]) for key in ['mde','position_mde','rmse','seconds']]
                 lines.append(f'|{seed}|{target}|{method}|'+ '|'.join(f'{v:.4f}' for v in vals)+'|')
     lines+=['','## 范围','', '- 这是DKT官方机制的UJI适配，不是原论文正弦/QMUL数值复现。',
-            '- 首轮固定5000更新，不按目标结果选模型；不宣称源训练已经收敛。',
+            f"- 本次固定{config['updates']}更新，不按目标结果选模型；不宣称源训练已经收敛。",
             '- 三建筑各留一层，不能称跨整栋建筑；设备、用户、时间未被控制。',
             '- 未使用官方validationData；Query位置完全未进入对应Support，推断函数不接收Query标签。',
             '- 固定520维AP身份槽位；源域未见AP和仅13楼层的任务多样性仍是限制。',
             '- 方差是带观测噪声的每坐标GP方差，尚未验证置信区间校准。','']
-    report=Path('docs/DKT_UJI_RESULTS.md')
+    report=args.report
     report.write_text('\n'.join(lines))
     print(report)
 

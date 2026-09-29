@@ -84,3 +84,11 @@ UJI的520列已定义AP身份，保留固定列顺序，避免发明新表示。
 必要检查：官方类未变、30条预算和位置隔离、Feature梯度存在、GP后验均值/方差与直接Cholesky一致、推断不修改参数。最终核验3×5000训练记录、360条episode方法结果、保存的row_id与预测有限。
 
 本实验不使用官方validationData，不处理设备/用户/时间控制，不加入GUFU或其他表示改造。效果不好如实报告，先审视方法与任务假设，不按目标结果逐个打补丁。
+
+## 7. 源内部开发选择版（2026-09-29）
+
+首轮5000步保留为V1，输出outputs/dkt_v1。第二轮依据DKT_REVIEW_02.md与DKT_DEVELOPMENT_RESULTS.md，使用独立源开发楼层选择10000更新；模型和所有目标任务采样不变。
+
+配置configs/dkt_uji_selected.json，输出outputs/dkt_selected，报告DKT_SELECTED_RESULTS.md。
+复现命令：`bash dkt/train.sh outputs/dkt_selected configs/dkt_uji_selected.json docs/DKT_SELECTED_RESULTS.md`。
+预算来自source-only开发选择，不是直接根据最终楼层误差增大训练；对三seed同episode做配对比较。开发结果不保证最终目标改善，若退化也保留并报告，不自动追加搜索。
