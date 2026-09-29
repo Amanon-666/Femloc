@@ -7,7 +7,7 @@
 - 每层一个环境，B0F3/B1F3/B2F4为目标，其他10层为source。
 - 私有Encoder → 共享Meta-model → 私有Mapper。局部Adam，outer按Query规模加权的一阶梯度步。
 - 以Table II为优先依据；d50、32批、5局部步、1000通信轮。
-- 当前已实现并通过GPU最小机制检查；完整训练状态及结果见docs/TRAINING_STATUS.md及后续TRAINING_RESULTS.md。
+- 已完成3次1000轮训练及18条400步适应曲线；详见[训练状态](docs/TRAINING_STATUS.md)和[完整结果](docs/TRAINING_RESULTS.md)。
 - 这是明确补充缺失细节的独立重实现，不声称完整恢复作者隐藏配方。扫描级分组留出，不是旧位置级few-shot协议；相同位置可跨Support/Query。
 
 ## 运行
