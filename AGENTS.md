@@ -1,8 +1,8 @@
-# 相邻楼层空间参照实验分支
+# AP 偏移校准实验分支
 
-- 当前分支 `adjacent-map-few-shot` 从 `metaloc-few-shot` 分出；不得修改 `main`、`metaloc-few-shot` 或旧 WIFI-loc。
-- `docs/ADJACENT_MAP_METHOD.md` 是本分支的方法和数据权限依据。先写清方法，再运行；不按目标 Query 改参数。
-- 目标只给 10 个位置×3 条扫描；Query 位置不进入拟合和选择；`validationData.csv` 不用。
-- 优先复用已有 UJI 读取与 manifest；只加当前方法所需代码，不做通用算法框架或未来功能。
-- 必要检查仅覆盖目标标签权限、source-only 参数选择和相同 manifest。
-- 服务器使用 `lab-server` 的 `bash -s`；GitHub 推送只走本机 SSH 隧道，不在服务器直连。凭证不进入文件、日志或提交。
+- 本分支 `ap-offset-map-adaptation` 从 `adjacent-map-few-shot` 分出。不得修改其他分支、旧 WIFI-loc 或其结果。
+- `docs/AP_OFFSET_METHOD.md` 先于实现写定了假设、数据权限、模型、选择和失败判据。不得依据 B0F3/B1F3/B2F4 的 Query 结果调参。
+- 目标只开放固定 manifest 的 10 个位置×3 次扫描作为 Support；训练集异位置 Query 与官方 validation 只能评价，不参与校准。
+- 旧楼层完整指纹图可供全部方法推理。报告零标注旧图、校准旧图、目标 Support WKNN 在完全相同 Query 上的误差。
+- 优先复用现有 UJI 数据读取和旧图预测，代码只覆盖本方法；只检查标签权限、manifest 和有限指标。
+- 服务器经 `ssh lab-server 'bash -s'` 操作；GitHub 推送只能走本机 SSH 隧道，凭证不得进入源码或日志。
