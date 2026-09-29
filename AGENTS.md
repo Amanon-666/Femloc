@@ -1,7 +1,7 @@
-# Support 条件映射分支
+# 全局与局部关系定位分支
 
-- 本分支 `support-conditioned` 独立于原 `metaloc-few-shot`；旧代码、权重和结果仅用于只读诊断。
-- 当前方法及信息权限以 `docs/SUPPORT_RIDGE_METHOD.md` 和 `configs/support_ridge.json` 为准。
+- 本分支 `global-local-kernel` 从 `support-conditioned` 分出；旧代码、权重和结果仅用于只读比较。
+- 当前方法及信息权限以 `docs/GLOBAL_LOCAL_METHOD.md` 和 `configs/global_local.json` 为准。
 - 每次实质修改对应一个可用自然语言解释的训练或表示思想；先检查源任务、坐标与目标信息权限，再实验。
 - 训练只用七个源楼层；完整开发楼层只用于训练轮数选择；确认楼层仅开放固定 Support，Query 标签只用于评分。
 - 保留所有随机种子的实际划分、训练曲线和负结果。不要按确认目标或官方 validation 反调方法。

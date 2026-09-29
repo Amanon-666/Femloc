@@ -1,0 +1,21 @@
+{
+  "method": "global_local",
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "validation_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "development_targets": ["B0F3", "B1F3", "B2F4"],
+  "confirmation_targets": ["B0F2", "B1F0", "B2F3"],
+  "seeds": [0, 1, 2],
+  "device": "cuda:0",
+  "hidden": [256, 128],
+  "positions_per_task": 10,
+  "support_per_position": 3,
+  "query_per_position": 5,
+  "tasks_per_step": 4,
+  "development_episodes": 3,
+  "confirmation_episodes": 5,
+  "coordinate_scale_m": 100.0,
+  "relative_penalty": 0.1,
+  "outer_lr": 0.001,
+  "source_steps": 1500,
+  "evaluation_interval": 250
+}

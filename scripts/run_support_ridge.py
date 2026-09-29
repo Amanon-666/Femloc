@@ -14,7 +14,8 @@ from torch.nn import functional as F
 
 from data.episodes import episode_tensors, prepare_floor, sample_episode, target_split
 from data.uji import load_floors
-from models.ridge import predict
+from models.global_local import predict as predict_global_local
+from models.ridge import predict as predict_ridge
 from models.rss_maml import network
 
 
@@ -45,19 +46,19 @@ def nearest_predict(sx, sy, qx):
     return (sy[nearest.indices] * weights[..., None]).sum(dim=1)
 
 
-def evaluate(encoder, floor, support, query_x, query_y, config):
+def evaluate(encoder, floor, support, query_x, query_y, config, predictor):
     """Query 坐标只用于最后计分，从不传入映射求解器。"""
     sx = floor["x"][support]
     origin = floor["xy"][support].mean(dim=0)
     sy = ((floor["xy"][support] - origin) / config["coordinate_scale_m"]).float()
     truth = ((query_y - origin) / config["coordinate_scale_m"]).float()
     with torch.no_grad():
-        prediction = predict(encoder(sx), sy, encoder(query_x), config["relative_penalty"])
+        prediction = predictor(encoder(sx), sy, encoder(query_x), config["relative_penalty"])
     return mean_distance(prediction, truth, config["coordinate_scale_m"])
 
 
-def score_floor(encoder, floor, support, query, config):
-    return evaluate(encoder, floor, support, floor["x"][query], floor["xy"][query], config)
+def score_floor(encoder, floor, support, query, config, predictor):
+    return evaluate(encoder, floor, support, floor["x"][query], floor["xy"][query], config, predictor)
 
 
 def train_one(seed, floors, official, config, output):
@@ -70,6 +71,7 @@ def train_one(seed, floors, official, config, output):
     excluded = set(config["development_targets"] + config["confirmation_targets"])
     sources = [name for name in sorted(floors) if name not in excluded]
     assert len(sources) == 7
+    predictor = predict_global_local if config.get("method") == "global_local" else predict_ridge
 
     # 完整楼层留出用于选择训练轮数；确认楼层不参与这个选择。
     split_rng = np.random.default_rng(seed + 10000)
@@ -86,7 +88,7 @@ def train_one(seed, floors, official, config, output):
 
     def development_score():
         encoder.eval()
-        values = [mean(score_floor(encoder, floors[name], s, q, config) for s, q in tasks)
+        values = [mean(score_floor(encoder, floors[name], s, q, config, predictor) for s, q in tasks)
                   for name, tasks in development.items()]
         encoder.train()
         return float(mean(values))
@@ -104,7 +106,7 @@ def train_one(seed, floors, official, config, output):
                                             config["support_per_position"],
                                             config["query_per_position"], unseen_query=True)
             sx, sy, qx, qy = episode_tensors(floor, support, query, config["coordinate_scale_m"])
-            estimated = predict(encoder(sx), sy, encoder(qx), config["relative_penalty"])
+            estimated = predictor(encoder(sx), sy, encoder(qx), config["relative_penalty"])
             losses.append(F.mse_loss(estimated, qy))
         loss = torch.stack(losses).mean()
         loss.backward()
@@ -133,12 +135,22 @@ def train_one(seed, floors, official, config, output):
                                       ("official_validation", official[name]["x"], official[name]["xy"])):
                 truth = ((qxy - origin) / config["coordinate_scale_m"]).float()
                 with torch.no_grad():
-                    baselines = {
-                        "trained_ridge": predict(encoder(sx), sy, encoder(qx), config["relative_penalty"]),
-                        "random_ridge": predict(initial(sx), sy, initial(qx), config["relative_penalty"]),
-                        "raw_ridge": predict(sx, sy, qx, config["relative_penalty"]),
-                        "wknn": nearest_predict(sx, sy, qx),
-                    }
+                    if config.get("method") == "global_local":
+                        baselines = {
+                            "trained_global_local": predictor(encoder(sx), sy, encoder(qx), config["relative_penalty"]),
+                            "same_features_linear": predict_ridge(encoder(sx), sy, encoder(qx), config["relative_penalty"]),
+                            "random_global_local": predictor(initial(sx), sy, initial(qx), config["relative_penalty"]),
+                            "raw_global_local": predictor(sx, sy, qx, config["relative_penalty"]),
+                            "raw_ridge": predict_ridge(sx, sy, qx, config["relative_penalty"]),
+                            "wknn": nearest_predict(sx, sy, qx),
+                        }
+                    else:
+                        baselines = {
+                            "trained_ridge": predictor(encoder(sx), sy, encoder(qx), config["relative_penalty"]),
+                            "random_ridge": predictor(initial(sx), sy, initial(qx), config["relative_penalty"]),
+                            "raw_ridge": predictor(sx, sy, qx, config["relative_penalty"]),
+                            "wknn": nearest_predict(sx, sy, qx),
+                        }
                 record = {"seed": seed, "target": name, "episode": episode_id,
                           "set": set_name, "support_rows": len(support), "query_rows": len(qx),
                           **{method: mean_distance(pred, truth, config["coordinate_scale_m"])
@@ -153,12 +165,20 @@ def train_one(seed, floors, official, config, output):
 
 
 def summarize(records, config, output):
-    lines = ["# Support 条件映射的跨楼层初步结果", "",
+    if config.get("method") == "global_local":
+        title = "全局与局部关系共同定位的跨楼层探索结果"
+        methods = ("trained_global_local", "same_features_linear", "random_global_local",
+                   "raw_global_local", "raw_ridge", "wknn")
+        output_path = "docs/GLOBAL_LOCAL_RESULTS.md"
+    else:
+        title = "Support 条件映射的跨楼层初步结果"
+        methods = ("trained_ridge", "random_ridge", "raw_ridge", "wknn")
+        output_path = "docs/SUPPORT_RIDGE_RESULTS.md"
+    lines = [f"# {title}", "",
              "源端只训练信号特征；每次预测用目标楼层 10 个位置×3 条扫描直接求坐标映射，无目标梯度步。",
              "训练轮数由三个完整留出的开发楼层选择；三层确认目标不参与训练、选择或早停。", "",
-             "|目标|评价集|训练特征+岭回归|随机特征+岭回归|原始 RSSI+岭回归|WKNN|",
-             "|---|---|---:|---:|---:|---:|"]
-    methods = ("trained_ridge", "random_ridge", "raw_ridge", "wknn")
+             "|目标|评价集|" + "|".join(methods) + "|",
+             "|---|---|" + "---:|" * len(methods)]
     for name in config["confirmation_targets"]:
         for set_name in ("unseen_position", "official_validation"):
             values = {}
@@ -171,7 +191,7 @@ def summarize(records, config, output):
     lines += ["", "数字为 UJI 投影坐标中的平均二维误差；± 为三个训练种子均值的样本标准差。",
               "`unseen_position` 为 trainingData 内与 Support 位置互斥的扫描；官方 validation 同时包含时间、设备、用户及覆盖变化。",
               "这些楼层曾出现在其它分支的源训练或研究讨论中，因此这里只能作为本方法的探索性确认。", ""]
-    Path("docs/SUPPORT_RIDGE_RESULTS.md").write_text("\n".join(lines))
+    Path(output_path).write_text("\n".join(lines))
 
 
 def main():
