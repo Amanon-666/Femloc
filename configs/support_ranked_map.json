@@ -1,0 +1,9 @@
+{
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "source_episode_path": "../FeMLoc-AP-Offset-Map/outputs/ap_offset_source/source_episodes.json",
+  "manifest_root": "../FeMLoc-MetaLoc-few-shot/outputs/metaloc_fewshot",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "seeds": [0, 1, 2],
+  "beta": 10,
+  "lambda_candidates": [0, 3, 10, 30, 100, null]
+}
