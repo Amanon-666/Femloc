@@ -1,0 +1,6 @@
+{
+  "development_floors": ["B0F2", "B1F2", "B2F3"],
+  "seed": 0,
+  "checkpoints": [0, 500, 1000, 2000, 5000, 10000],
+  "episodes_per_floor": 20
+}
