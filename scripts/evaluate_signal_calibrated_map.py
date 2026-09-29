@@ -125,7 +125,21 @@ def select(train, config):
         pick = lambda v: min((k for k in equal if k[0] == v),
                              key=lambda k: np.mean([s for p, s in per_pair[k].items() if p != upper]))
         audit[upper] = {v: per_pair[pick(v)][upper] for v in ("map", "scm")}
-    return pairs, chosen, {k: equal[k] for k in chosen.values()}, audit
+    # 整栋建筑留出：源建筑之间的相关转移不参与该建筑的参数选择。
+    building_audit = {}
+    for building in sorted({upper.split("F")[0] for _, upper in pairs}):
+        held = [upper for _, upper in pairs if upper.startswith(building + "F")]
+        remaining = [upper for _, upper in pairs if upper not in held]
+        selected = {variant: min((key for key in equal if key[0] == variant),
+                                 key=lambda key: np.mean([per_pair[key][upper] for upper in remaining]))
+                    for variant in ("map", "scm")}
+        building_audit[building] = {
+            "parameters": {variant: {"field": selected[variant][1], "knn": selected[variant][2]}
+                           for variant in selected},
+            "floors": {upper: {variant: per_pair[selected[variant]][upper] for variant in selected}
+                       for upper in held},
+        }
+    return pairs, chosen, {k: equal[k] for k in chosen.values()}, audit, building_audit
 
 
 def main():
@@ -136,10 +150,10 @@ def main():
     config = json.loads(Path(args.config).read_text())
     args.output.mkdir(parents=True, exist_ok=False)
     train, validation = load_floors(config["train_path"]), load_floors(config["validation_path"])
-    pairs, chosen, source_scores, audit = select(train, config)
+    pairs, chosen, source_scores, audit, building_audit = select(train, config)
     scm, base = chosen["scm"], chosen["map"]
     report = {"selection": {v: {"params": k[1], "knn": k[2], "source_mde_m": source_scores[k]} for v, k in chosen.items()},
-              "leave_one_pair_out": audit}
+              "leave_one_pair_out": audit, "leave_one_building_out": building_audit}
     print("selection", json.dumps(report["selection"]))
     print("LOPO gain", round(np.mean([a["map"] - a["scm"] for a in audit.values()]), 3),
           "improved", sum(a["scm"] < a["map"] for a in audit.values()), "/", len(audit))
