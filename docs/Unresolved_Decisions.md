@@ -1,3 +1,5 @@
+> 历史审计版：2026-09-29用户已授权自主决定并训练；当前决策见 [IMPLEMENTATION_DECISIONS.md](IMPLEMENTATION_DECISIONS.md)。下文保留原审计记录。
+
 # Unresolved Decisions
 
 状态：待用户一次性确认研究决策。没有将以下建议写成运行默认；未启动AE或定位训练。

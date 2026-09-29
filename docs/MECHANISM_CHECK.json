@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "device": "cuda:0",
+  "source_clients": [
+    "B0F0",
+    "B1F0"
+  ],
+  "adaptation_development_floor": "B2F0",
+  "target_query_used": false,
+  "checks": [
+    "duplicate groups isolated",
+    "batch visits cover all rows",
+    "Eq.11 weighted gradient matches",
+    "identical paired runs match",
+    "private initial weights unchanged",
+    "prediction shape"
+  ],
+  "global_update_norm": 0.07027343750000001
+}

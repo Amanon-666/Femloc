@@ -1,3 +1,5 @@
+> 历史审计版：2026-09-29用户已授权自主决定并训练；当前决策见 [IMPLEMENTATION_DECISIONS.md](IMPLEMENTATION_DECISIONS.md)。下文保留原审计记录。
+
 # FeMLoc Reproduction Specification — 已确定部分
 
 状态：**审计版，非可执行训练规范**。阻塞项见 `Unresolved_Decisions.md`；未决项没有默认数值。

@@ -1,0 +1,15 @@
+{
+  "protocol": "FeMLoc-EXP1-table-first-reimplementation",
+  "data_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "targets": ["B0F3", "B1F3", "B2F4"],
+  "seeds": [0, 1, 2],
+  "device": "cuda:0",
+  "threads": 1,
+  "split_folds": 5,
+  "batch_size": 32,
+  "model": {"latent": 50, "encoder_hidden": [1024], "decoder_hidden": [1024], "shared_hidden": [256, 128, 64], "representation": 32, "mapper_hidden": [64, 32], "output": 2},
+  "adam": {"betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0},
+  "meta": {"rounds": 1000, "inner_steps": 5, "encoder_lr": 0.0095, "shared_lr": 0.0005, "mapper_lr": 0.0005, "outer_lr": 0.001},
+  "ae": {"candidate_lrs": [0.0095, 0.0005], "epoch_growth": 2},
+  "adapt": {"steps": 400, "report_steps": [50, 100, 150, 400], "thresholds": {"B0F3": [5, 10, 15], "B1F3": [12], "B2F4": [10]}}
+}
