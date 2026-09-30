@@ -8,10 +8,11 @@ from torch import nn
 from torch.nn import functional as F
 
 from models.gufu_reference import rssi2weight
-from scripts.evaluate_signal_calibrated_map import lookup
+from scripts.evaluate_signal_calibrated_map import lookup, build_map
+from scipy.special import ndtr
 
 
-def cells(rssi, xy, fallback=None):
+def cells(rssi, xy, fallback=None, unknown_strength=-90.0):
     """按坐标汇总不同指纹的检出比例和条件 RSSI；100 不进入强度均值。"""
     _, first = np.unique(np.column_stack([rssi, xy]), axis=0, return_index=True)
     rssi, xy = rssi[first], xy[first]
@@ -22,7 +23,7 @@ def cells(rssi, xy, fallback=None):
     np.add.at(counts, inv, seen)
     np.add.at(sums, inv, np.where(seen, rssi, 0))
     if fallback is None:
-        fallback = np.divide(sums.sum(0), counts.sum(0), out=np.full(520, -90.0),
+        fallback = np.divide(sums.sum(0), counts.sum(0), out=np.full(520, unknown_strength),
                              where=counts.sum(0) > 0)
     probability = counts / np.bincount(inv)[:, None]
     strength = np.divide(sums, counts, out=np.broadcast_to(fallback, sums.shape).copy(), where=counts > 0)
@@ -84,6 +85,26 @@ def build(old, support_rssi, support_xy, config, device):
                  tensor(candidates - origin), origin)
 
 
+def build_scm_t(old, coded_old, support_rssi, support_xy, config, device):
+    """保留 SCM-T 的编码地图，只提供 AP 关系上下文给可靠度网络。"""
+    pos, p0, _, old_seen, fallback = old
+    sy, _, _, support_seen, _ = cells(support_rssi, support_xy, fallback)
+    prototypes, positions = build_map('scm', coded_old, support_rssi, support_xy,
+        (config['length_scale_m'], config['noise_ratio']), config)
+    base = np.vstack([coded_old[0], lookup(sy, pos, coded_old[0], config['anchor_lookup_neighbors'])])
+    probability = ndtr((prototypes - config['detection_theta_dbm']) / config['initial_sigma_db'])
+    _, coverage = field(positions, sy, np.zeros(len(sy)), config['length_scale_m'], config['noise_ratio'])
+    base_p = np.vstack([p0, lookup(sy, pos, p0, config['anchor_lookup_neighbors'])])
+    features = np.stack([base_p, probability, rssi2weight(110, base) / 110,
+        rssi2weight(110, prototypes) / 110, np.broadcast_to(coverage[:, None], base.shape),
+        np.abs(prototypes - base) / 50, np.broadcast_to(support_seen.mean(0), base.shape)], -1)
+    aps = np.flatnonzero(old_seen.any(0) | support_seen.any(0))
+    origin = pos.mean(0)
+    tensor = lambda x: torch.as_tensor(x, dtype=torch.float32, device=device)
+    return APMap(aps, tensor(probability[:, aps]), tensor(prototypes[:, aps]), tensor(features[:, aps]),
+                 tensor(positions - origin), origin)
+
+
 class APReliability(nn.Module):
     """AP 共享网络输出检出证据权重与强度噪声；候选坐标由后验加权输出。"""
     def __init__(self, config):
@@ -95,6 +116,8 @@ class APReliability(nn.Module):
         self.temperature = nn.Parameter(torch.tensor(0.0))
         self.minimum_sigma = config['minimum_sigma_db']
         self.initial_sigma = config['initial_sigma_db']
+        self.observation_model = config.get('observation_model', 'two_channel')
+        self.theta = config.get('detection_theta_dbm', -80.0)
 
     def forward(self, rssi, radio_map):
         raw = torch.as_tensor(rssi[:, radio_map.aps], device=radio_map.strength.device, dtype=torch.float32)
@@ -105,7 +128,10 @@ class APReliability(nn.Module):
         sigma = self.minimum_sigma + (self.initial_sigma - self.minimum_sigma) * F.softplus(h[..., 1]) / math.log(2)
         p, m = radio_map.probability, radio_map.strength
         precision = sigma.square().reciprocal()
-        score = detected @ (importance * p.log()).T + (1 - detected) @ (importance * torch.log1p(-p)).T
+        if self.observation_model == 'scm_t':
+            score = (1 - detected) @ (importance * torch.special.log_ndtr((self.theta - m) / sigma)).T
+        else:
+            score = detected @ (importance * p.log()).T + (1 - detected) @ (importance * torch.log1p(-p)).T
         distance = x.square() @ precision.T - 2 * x @ (precision * m).T \
             + detected @ (precision * m.square() + 2 * sigma.log()).T
         score = (score - 0.5 * distance) / (F.softplus(self.temperature) / math.log(2))

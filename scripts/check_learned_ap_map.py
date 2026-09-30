@@ -5,7 +5,9 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from models.learned_ap_map import APReliability, build, cells
+from models.learned_ap_map import APReliability, build, build_scm_t, cells
+from scripts.evaluate_signal_calibrated_map import build_map, position_map
+from scripts.evaluate_scm_tobit import tobit_match
 
 
 cfg = json.loads(Path('configs/learned_ap_map.json').read_text())
@@ -29,4 +31,11 @@ other = build(cells(raw[:, perm], xy), raw[support][:, perm], xy[support], cfg, 
 assert np.allclose(model.predict(raw[query], mapped), model.predict(raw[query][:, perm], other), atol=1e-4)
 assert torch.isfinite(prediction).all() and prediction.shape == (8, 2)
 assert sum(p.numel() for p in model.parameters()) == 163
-print('AP permutation, gradient, finite coordinates and 163 parameters: passed')
+cfg['observation_model'], cfg['detection_theta_dbm'] = 'scm_t', -80.0
+scm_model = APReliability(cfg)
+proto, pos, _ = position_map(raw, xy)
+old = proto, pos
+scm_map = build_scm_t(cells(raw, xy), old, raw[support], xy[support], cfg, 'cpu')
+base = build_map('scm', old, raw[support], xy[support], (60.0, 0.3), cfg)
+assert np.allclose(scm_model.predict(raw[query], scm_map), tobit_match(raw[query], *base, 16.0, -80.0), atol=.005)
+print('AP permutation, gradient, shapes, 163 parameters and frozen SCM-T identity: passed')

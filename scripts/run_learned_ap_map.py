@@ -8,7 +8,7 @@ import numpy as np
 import torch
 
 from data.uji import load_floors
-from models.learned_ap_map import APReliability, build, cells
+from models.learned_ap_map import APReliability, build, build_scm_t, cells
 from scripts.evaluate_adjacent_map import episode
 from scripts.evaluate_scm_tobit import PAIRS, tobit_match
 from scripts.evaluate_signal_calibrated_map import FLOOR, build_map, lower_map, wknn
@@ -27,7 +27,10 @@ def make_episode(train, maps, old, lo, up, support, query, cfg):
     assert len(support) == cfg['support_positions'] * cfg['scans_per_position']
     assert len(np.unique(floor['xy'][support], axis=0)) == cfg['support_positions']
     assert set(map(tuple, floor['xy'][support])).isdisjoint(map(tuple, floor['xy'][query]))
-    radio_map = build(maps[lo], floor['rssi'][support], floor['xy'][support], cfg, cfg['device'])
+    if cfg.get('observation_model', 'two_channel') == 'scm_t':
+        radio_map = build_scm_t(maps[lo], old[lo], floor['rssi'][support], floor['xy'][support], cfg, cfg['device'])
+    else:
+        radio_map = build(maps[lo], floor['rssi'][support], floor['xy'][support], cfg, cfg['device'])
     return {'lower': lo, 'upper': up, 'support': support, 'query': query, 'map': radio_map,
             'rssi': floor['rssi'][query], 'truth': floor['xy'][query],
             'y': torch.as_tensor(floor['xy'][query] - radio_map.origin, device=cfg['device'], dtype=torch.float32),
@@ -100,10 +103,11 @@ def evaluate_episode(ep, train, cfg, frozen, models, raw=None, truth=None):
     s = ep['support']
     scm = build_map('scm', ep['old'], new['rssi'][s], new['xy'][s],
                     (cfg['length_scale_m'], cfg['noise_ratio']), cfg)
+    fixed_name = 'scm_t_frozen' if cfg.get('observation_model') == 'scm_t' else 'two_channel_frozen'
     predictions = {'old_map': wknn(raw, *ep['old'], 1000, 10),
                    'scm': wknn(raw, *scm, 8, 10),
                    'scm_t': tobit_match(raw, *scm, 16, -80),
-                   'two_channel_frozen': frozen.predict(raw, ep['map'])}
+                   fixed_name: frozen.predict(raw, ep['map'])}
     result = {method: metrics(pred, truth) for method, pred in predictions.items()}
     result['learned'] = [metrics(model.predict(raw, ep['map']), truth) for model in models]
     return result
@@ -112,7 +116,7 @@ def evaluate_episode(ep, train, cfg, frozen, models, raw=None, truth=None):
 def reduce_episodes(rows):
     out = {method: {m: float(np.mean([row[method][m] for row in rows]))
                     for m in ('scan_mde', 'position_mde')}
-           for method in ('old_map', 'scm', 'scm_t', 'two_channel_frozen')}
+           for method in rows[0] if method != 'learned'}
     out['learned'] = [{m: float(np.mean([row['learned'][seed][m] for row in rows]))
                        for m in ('scan_mde', 'position_mde')}
                       for seed in range(len(rows[0]['learned']))]
@@ -131,7 +135,8 @@ def main():
     started = time.time()
     train = load_floors(cfg['train_path'])
     names = sorted({name for pair in PAIRS for name in pair})
-    maps = {name: cells(train[name]['rssi'], train[name]['xy']) for name in names}
+    maps = {name: cells(train[name]['rssi'], train[name]['xy'], unknown_strength=cfg['unknown_strength_dbm'])
+            for name in names}
     old = {name: lower_map(train[name]) for name in names}
     print('preparing historical maps', flush=True)
     fit = pools(train, maps, old, cfg, cfg['training_episodes_per_pair'], cfg['training_seed'], cfg['training_query_cap'])
