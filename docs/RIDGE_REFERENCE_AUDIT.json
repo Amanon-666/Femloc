@@ -1,0 +1,73 @@
+{
+  "completed_metric_records": 810,
+  "task_combinations": 45,
+  "shared_source_sampling": true,
+  "finite_metrics": true,
+  "target_position_disjoint": true,
+  "profiles": {
+    "B0F3": {
+      "unseen_position": {
+        "n_query": 1186.6,
+        "visible_ap_per_scan": 14.8,
+        "visible_ap_unseen_support_fraction": 0.10487232697828432,
+        "visible_ap_unseen_source_fraction": 0.005720631443788724,
+        "nearest_support_distance_m": 11.142757505884134
+      },
+      "official_validation": {
+        "n_query": 85,
+        "visible_ap_per_scan": 17.0,
+        "visible_ap_unseen_support_fraction": 0.2106703146374829,
+        "visible_ap_unseen_source_fraction": 0.060191518467852256,
+        "nearest_support_distance_m": 9.600567755822356
+      }
+    },
+    "B1F3": {
+      "unseen_position": {
+        "n_query": 738.6,
+        "visible_ap_per_scan": 10.0,
+        "visible_ap_unseen_support_fraction": 0.20363033691762075,
+        "visible_ap_unseen_source_fraction": 0.0014698158515073305,
+        "nearest_support_distance_m": 20.125391299027406
+      },
+      "official_validation": {
+        "n_query": 47,
+        "visible_ap_per_scan": 13.0,
+        "visible_ap_unseen_support_fraction": 0.244794952681388,
+        "visible_ap_unseen_source_fraction": 0.02996845425867508,
+        "nearest_support_distance_m": 18.47295612330098
+      }
+    },
+    "B2F4": {
+      "unseen_position": {
+        "n_query": 596.8,
+        "visible_ap_per_scan": 19.0,
+        "visible_ap_unseen_support_fraction": 0.06652663525297967,
+        "visible_ap_unseen_source_fraction": 0.003971375904698526,
+        "nearest_support_distance_m": 9.046654365966173
+      },
+      "official_validation": {
+        "n_query": 39,
+        "visible_ap_per_scan": 12.0,
+        "visible_ap_unseen_support_fraction": 0.1307543520309478,
+        "visible_ap_unseen_source_fraction": 0.059961315280464215,
+        "nearest_support_distance_m": 14.711337764603412
+      }
+    }
+  },
+  "development_curves": {
+    "Meta-Ridge": {
+      "0": 23.93970256050428,
+      "250": 15.890225867430368,
+      "500": 15.996412858366966,
+      "1000": 15.756564761201542,
+      "2000": 15.974493672450382
+    },
+    "Sup-Ridge": {
+      "0": 23.93970256050428,
+      "250": 16.226925651232403,
+      "500": 16.618110612034798,
+      "1000": 16.56682131191095,
+      "2000": 16.31150794525941
+    }
+  }
+}
