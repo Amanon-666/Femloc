@@ -23,6 +23,19 @@ def prepare_floor(raw, device):
 
 def sample_episode(floor, rng, n_positions, n_support, n_query, unseen_query=False):
     """每个位置选不同观测组；源域可要求 Query 来自另外的位置。"""
+    if unseen_query:
+        eligible_support = [pos for pos, rows in floor["positions"].items()
+                            if len(rows) >= n_support]
+        chosen_support = rng.choice(len(eligible_support), n_positions, replace=False)
+        support_positions = {eligible_support[i] for i in chosen_support}
+        eligible_query = [pos for pos, rows in floor["positions"].items()
+                          if len(rows) >= n_query and pos not in support_positions]
+        chosen_query = rng.choice(len(eligible_query), n_positions, replace=False)
+        support = np.concatenate([rng.choice(floor["positions"][eligible_support[i]],
+                                             n_support, replace=False) for i in chosen_support])
+        query = np.concatenate([rng.choice(floor["positions"][eligible_query[i]],
+                                           n_query, replace=False) for i in chosen_query])
+        return support, query
     eligible = [pos for pos, rows in floor["positions"].items()
                 if len(rows) >= n_support + n_query]
     count = n_positions * (2 if unseen_query else 1)
@@ -39,6 +52,17 @@ def sample_episode(floor, rng, n_positions, n_support, n_query, unseen_query=Fal
         for j in chosen[n_positions:]:
             query.extend(rng.choice(floor["positions"][eligible[j]], n_query, replace=False).tolist())
     return np.array(support), np.array(query)
+
+
+def spatial_support_split(floor, rng, n_positions, n_support):
+    """只抽标定扫描；全部其他位置的唯一观测作为 Query。"""
+    eligible = [pos for pos, rows in floor["positions"].items() if len(rows) >= n_support]
+    chosen = rng.choice(len(eligible), n_positions, replace=False)
+    selected = {eligible[i] for i in chosen}
+    support = np.concatenate([rng.choice(floor["positions"][eligible[i]], n_support,
+                                         replace=False) for i in chosen])
+    query = np.concatenate([rows for pos, rows in floor["positions"].items() if pos not in selected])
+    return support, query
 
 
 def target_split(floor, rng, n_positions, n_support, n_query):

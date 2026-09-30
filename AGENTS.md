@@ -1,10 +1,11 @@
-# RidgeMeta 少样本跨楼层分支
+# Support 闭式适应主线
 
-本分支从 `metaloc-few-shot@ab13e65` 建立，保留原分支及主分支不动。先读 `docs/RIDGEMETA_METHOD.md` 和 `configs/ridge_meta.json`。
+当前分支 `r2d2-uji-reference`，来源 `ridge-meta-fewshot@eb0ae3f`；不得修改其他工作树。
+先读 `docs/RIDGE_REFERENCE_METHOD.md` 和 `configs/ridge_reference.json`。
 
-- 目标楼层固定 B0F3、B1F3、B2F4；目标标注每楼层 10 个位置 × 3 条扫描。所有方法使用相同的原有随机种子划分。
-- 先在源域的整层留出任务上选择正则强度与训练轮数，再使用全部十个源楼层重训。目标训练楼层及官方 validation 的标签只用于最终评价，不参与选择。
-- 主方法是源域训练 RSSI 特征，使 30 条 Support 的岭回归闭式坐标映射能定位未采集位置。目标端冻结特征，仅求解岭回归，无目标梯度步。
-- 比较普通源监督特征接同一岭回归、随机特征接同一岭回归、原 MetaLoc 分支结果，以及零目标标注的相邻楼层地图。
-- 不添加未定义的模型组件、超参搜索、测试框架或数据修复；每次方法修改先写理由。简单功能性注释即可。失败如实报告。
-- 服务器用 `ssh lab-server 'bash -s'`；GPU 无 Slurm。推送只能用本机 SSH 临时隧道，不用服务器直连；不提交凭证。
+- 研究目标：历史楼层学表征，新楼层只标定 10 个位置、每位置 3 扫描，一次求解坐标映射，定位未标定位置。
+- Meta-Ridge 与 Sup-Ridge 共用网络、源 episode、目标 manifest 和岭回归；源监督只用固定楼层原点和私有源线性头。分别用历史留出楼层选择参数，不借目标评价选择。
+- Query 坐标不进入适应，官方 validation 只在训练选择完成后评价。目标楼层已有历史结果，本轮仍是探索性实验。
+- 保留原始 RSSI、随机特征、Support-WKNN 和完整相邻楼层地图作为对照；地图的额外空间信息须说明。
+- 每次实质修改先写可解释的方法假设；不叠加 fallback、抽象工厂、未来模块或大批测试。只写必要科学不变量检查和模块功能注释。
+- 服务器通过 `ssh lab-server 'bash -s'` 操作，无 Slurm。GitHub 只走本机临时隧道；不输出或提交凭证。
