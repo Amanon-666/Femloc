@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
+from models.map_kernel import LearnedMapKernel
 from scripts.run_learned_ap_map import building_mean
 
 
@@ -27,7 +28,12 @@ def main():
         curve = json.loads((directory / 'curve.json').read_text())
         assert done['steps'] == checkpoint['steps'] == cfg['steps'] and done['trainable_parameters'] == 8
         assert checkpoint['state_dict']['matrix'].shape == (2, 4)
-        assert all(torch.isfinite(value).all() for value in checkpoint['state_dict'].values())
+        model = LearnedMapKernel(cfg)
+        model.load_state_dict(checkpoint['state_dict'])
+        # 核约束的无穷上界是合法配置，有限性检查针对实际模型参数。
+        assert all(torch.isfinite(parameter).all() for parameter in model.parameters())
+        assert torch.isfinite(model.covariance.outputscale).all()
+        assert torch.isfinite(model.covariance.base_kernel.lengthscale).all()
         assert [row['step'] for row in curve] == cfg['curve_steps']
         assert all(np.isfinite(row['source_development_mde']) for row in curve)
         if name.startswith('held_'):
@@ -50,6 +56,9 @@ def main():
         f"12 个模型各完成 {cfg['steps']} 个 source 步；每个模型 8 个参数。目标端 0 梯度步。",
         '复用上一轮 10x3 Support/Query manifest；3 折建筑留出、3 source 抽样种子。',
         '所有权重固定后评价官方 validation。± 为 3 个抽样种子的样本标准差，不是独立场地置信区间。', '',
+        f"训练与评价使用的实现提交：`{data['code_commit']}`。",
+        '同批次 Query 与当前 Support 的位置隔离；官方 validation 使用对应楼层全部行。',
+        'old_map 是不更新的旧图，scm 是目标锚点修正，scm_t 加入固定缺失观测匹配；scm_t_frozen 是同一算法的可微等价实现。', '',
         '## 建筑等权主结果（米）', '',
         '|方法|同批次未知位置：扫描 / 位置|官方 validation：扫描 / 位置|', '|---|---:|---:|']
     totals = {}
@@ -90,7 +99,15 @@ def main():
         values = np.array([curves[f'{prefix}_seed_{s}'] for s in seeds])
         lines.append('|' + prefix + '|' + '|'.join(f'{mean:.2f} ± {std:.2f}'
             for mean, std in zip(values.mean(0), values.std(0, ddof=1))) + '|')
-    lines += ['', '## 解释范围', '',
+    lines += ['', '## 本轮判断', '',
+        f'- 官方 validation 的建筑等权配对差为 {deltas.mean():+.3f} m，改善 {wins}/7 层，未形成整体定位收益。',
+        '- 梯度检查、实际矩阵变化与源开发曲线下降表明训练已发生；效果弱不能解释成没有更新参数。',
+        '- 这轮结果不支持“从旧 AP 分布学习八参数相关性，可整体胜过已有几何传播”的假设。',
+        '- 当前明确的收益仍来自完整旧图、少量目标锚点修正和固定匹配。保留固定 SCM-T 为后续比较参照。',
+        '- 学习只改变旧点上的 RSS 值；候选坐标与匹配器保持不变。预测始终是候选坐标的加权均值，不能超出其凸包。',
+        '- 三个最终楼层仅为附录；不能用其中两个小幅改善来覆盖七层建筑留出主比较。',
+        '- 本轮不根据最终 Query 追加预算、挑最好步骤或叠加模块。', '',
+        '## 解释范围', '',
         '- 本轮仅训练地图更新相关性；匹配器、候选、目标数据量与固定几何核共用。',
         '- 实际复用作者 DKT 协方差类，但输入与训练损失已改造，因此不是 DKT/FeMLoc 原文复现。',
         '- 只有三建筑、七对相关转移；固定几何核和匹配参数有使用全部历史建筑调优的历史。',
