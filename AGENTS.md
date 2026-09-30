@@ -22,3 +22,4 @@
 - 先读 `docs/research/RESEARCH_POSITIONING_RESET.md`。用户要求对照近期权威论文和UJI强方法重新判断研究价值；TPM只作为待比较基线/可能的先验组件，不再默认它必须是主干。
 - 在外部方法卡、原协议可复现性、统一数据预算和明确创新缺口建立前，暂停追加TPM结构的性能实验；上一节的部署漂移是候选问题，不是已经选定的下一项主创新。
 - 文献中抽取具体机制，代码从核实的作者仓库复用；区分正式发表/预印本、CCF等级、是否真用UJI及输入权限。内部数学自洽、自己的消融提升均不能替代外部强基线对照。
+- 外部机制与实现前条件见 `docs/research/EXTERNAL_METHOD_CARDS.md`；MetaLoc 作者快照审查见 `docs/research/METALOC_AUTHOR_CODE_AUDIT.md`。TrGP 的目标条件似然不能无声替换成联合边际似然；图模型和 BatchNorm 是否使用 Query 特征须单列权限。已有 DKT 结果先查档案，不重复当成新方向。方法卡仍不是可开跑的冻结预注册。

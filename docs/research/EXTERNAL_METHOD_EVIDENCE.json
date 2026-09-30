@@ -1,0 +1,367 @@
+{
+  "checked_on": "2026-09-30",
+  "scope": "Static author-code and primary-paper audit; no imports or training executed",
+  "metaloc": {
+    "url": "https://github.com/StatFusion/MetaLoc",
+    "readme_commit": "1249521372822cfd6b3063230e0e63ec65755ef4",
+    "code_commit": "2a3f7ae6dffcf7ebfc72a82b8091cc23db1aead9",
+    "code_branch": "master",
+    "files_sha256": {
+      "MiniImagenet.py": "6c006c1eab02a3ba55631f417f62e311efa2341ed71d6e57f7bc390067df703d",
+      "MiniImagenet2.py": "6bc3e7b8c19ce63f4213ec4bc9a3b9fd8891ff43666b171c9d4dffd3730f362e",
+      "learner.py": "21e9bd82c3ee8f3a08f9fe98c40664810d30230b2846e76bdbd9eeabe58e8935",
+      "learner2.py": "3f5fcd014afcac4fa7eeb664ef8c7fd0313505b39095a6e776bdcfc582c67327",
+      "meta.py": "80ed86aabcd8c0feebe9da25b28cf00b4f002464c495e3fb6dbd0d69cabb1536",
+      "meta2.py": "448e8a45a35242a3ac2b111f956ab54e4f94e1c60752fc6d56776770f7b60373",
+      "miniimagenet_train.py": "37d68b1da93a69290abc895ed6c991e933dacd1c24bb5999a4ae07bee3d23103",
+      "miniimagenet_train2.py": "5720a8cd3c86653123b457a7daaa644722be8d41ba693f6918797fc6736375a0"
+    }
+  },
+  "publications": [
+    {
+      "title": [
+        "Attentional Graph Meta-Learning for Indoor Localization Using Extremely Sparse Fingerprints"
+      ],
+      "DOI": "10.1109/tmc.2025.3649637",
+      "container-title": [
+        "IEEE Transactions on Mobile Computing"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            6
+          ]
+        ]
+      },
+      "volume": "25",
+      "issue": "6",
+      "page": "8718-8734",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0009-7768-4950",
+          "authenticated-orcid": false,
+          "given": "Wenzhong",
+          "family": "Yan",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "School of Science &amp; Engineering, The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5754-9246",
+          "authenticated-orcid": false,
+          "given": "Feng",
+          "family": "Yin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0005-9256-4747",
+          "authenticated-orcid": false,
+          "given": "Jun",
+          "family": "Gao",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Science &amp; Engineering, The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ao",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Science &amp; Engineering, The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yang",
+          "family": "Tian",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Huawei Technologies Company, Ltd., Shanghai, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ruizhi",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Data Science, The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "Adaptive Transfer Kernel Learning for Transfer Gaussian Process Regression"
+      ],
+      "DOI": "10.1109/tpami.2022.3219121",
+      "container-title": [
+        "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            6,
+            1
+          ]
+        ]
+      },
+      "volume": "45",
+      "issue": "6",
+      "page": "7142-7156",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0001-8093-0803",
+          "authenticated-orcid": false,
+          "given": "Pengfei",
+          "family": "Wei",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Speech &amp; Audio Team, Bytedance AI Lab, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-9473-3202",
+          "authenticated-orcid": false,
+          "given": "Yiping",
+          "family": "Ke",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Computer Science and Engineering, Nanyang Technological University, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4480-169X",
+          "authenticated-orcid": false,
+          "given": "Yew-Soon",
+          "family": "Ong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Computer Science and Engineering, Nanyang Technological University, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Zejun",
+          "family": "Ma",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Speech &amp; Audio Team, Bytedance AI Lab, Singapore"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "MetaLoc: Learning to Learn Wireless Localization"
+      ],
+      "DOI": "10.1109/jsac.2023.3322766",
+      "container-title": [
+        "IEEE Journal on Selected Areas in Communications"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            12
+          ]
+        ]
+      },
+      "volume": "41",
+      "issue": "12",
+      "page": "3831-3847",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0009-0005-9256-4747",
+          "authenticated-orcid": false,
+          "given": "Jun",
+          "family": "Gao",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Future Network of Intelligence Institute (FNii), Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0001-9795-7452",
+          "authenticated-orcid": false,
+          "given": "Dongze",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Science and Engineering (SSE), The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5754-9246",
+          "authenticated-orcid": false,
+          "given": "Feng",
+          "family": "Yin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "School of Science and Engineering (SSE), The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9740-0240",
+          "authenticated-orcid": false,
+          "given": "Qinglei",
+          "family": "Kong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Institute of Space Science and Applied Technology, Harbin Institute of Technology (Shenzhen), Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4338-7252",
+          "authenticated-orcid": false,
+          "given": "Lexi",
+          "family": "Xu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Research Institute, China United Network Communications Corporation, Beijing, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shuguang",
+          "family": "Cui",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Guangdong Provincial Key Laboratory of Future Networks of Intelligence, School of Science and Engineering (SSE)Future Network of Intelligence Institute (FNii), The Chinese University of Hong Kong, Shenzhen, China"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
