@@ -1,0 +1,36 @@
+B0F0->B0F1: fitted APs 42  1s
+B0F1->B0F2: fitted APs 65  2s
+B1F0->B1F1: fitted APs 80  4s
+B1F1->B1F2: fitted APs 111  8s
+B2F0->B2F1: fitted APs 41  1s
+B2F1->B2F2: fitted APs 58  3s
+B2F2->B2F3: fitted APs 68  5s
+shift constant (median upper−lower on co-located reliable cells): -1.33
+setting      rho   RMSE_both: shift  phys  phys+rho | RMSE_Lcensored: phys  (n)
+n=2.0  F=6.0   0.18    14.05  12.40   12.36   |    10.03  (420)
+n=2.0  F=12.0  0.28    14.05  15.78   15.70   |    15.41  (420)
+n=2.0  F=18.0  0.23    14.05  20.77   20.71   |    21.45  (420)
+n=2.75 F=6.0   0.02    14.05  13.02   13.02   |    10.42  (420)
+n=2.75 F=12.0  0.23    14.05  16.13   16.10   |    15.14  (420)
+n=2.75 F=18.0  0.25    14.05  20.29   20.24   |    21.81  (420)
+n=3.5  F=6.0   0.10    14.05  13.63   13.63   |    10.03  (420)
+n=3.5  F=12.0  0.25    14.05  17.27   17.23   |    14.92  (420)
+n=3.5  F=18.0  0.30    14.05  20.34   20.27   |    20.53  (420)
+best setting by physrho RMSE: (2.0, 6.0)
+  class below(<fL)  cells    294  RMSE shift  10.80  phys+rho   7.38
+  class on fL       cells   1780  RMSE shift  13.99  phys+rho  13.19
+  class on fU       cells    463  RMSE shift  15.64  phys+rho  12.85
+  class above(>fU)  cells    351  RMSE shift  14.54  phys+rho  10.58
+zero-shot localization (Tobit 16/−80, candidates = lower-floor positions): val | train-all(≤1500)
+  B0F1: old  10.09 |  10.90   shift  10.45 |  11.42   phys   7.65 |   7.18
+  B0F2: old   8.38 |   7.80   shift   8.20 |   7.77   phys   9.75 |   7.57
+  B1F1: old  25.21 |  16.39   shift  24.87 |  16.03   phys  26.22 |  16.84
+  B1F2: old  20.68 |  14.89   shift  19.93 |  14.39   phys  40.09 |  32.12
+  B2F1: old  12.40 |  14.80   shift  12.26 |  14.16   phys  11.15 |  11.78
+  B2F2: old  20.46 |  17.05   shift  20.21 |  18.31   phys  14.00 |  12.27
+  B2F3: old  24.16 |  14.90   shift  22.85 |  14.46   phys  20.64 |  15.69
+  EQUAL old    val  17.34  train  13.82
+  EQUAL shift  val  16.97  train  13.79
+  EQUAL phys   val  18.50  train  14.78
+reference: LRM zero-shot (m2) val 14.10 int 11.82; old-map Tobit val 17.34
+done
