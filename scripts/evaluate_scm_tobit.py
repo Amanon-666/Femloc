@@ -30,14 +30,18 @@ QUERY_CAP = 300
 CFG = {"anchor_lookup_neighbors": 3}
 
 
-def tobit_match(qraw, protos, positions, sigma, theta):
+def tobit_weights(qraw, protos, sigma, theta):
     det = (qraw != 100).astype(np.float64)
     x = dbm(qraw) * det
     d2 = (x * x).sum(1, keepdims=True) + det @ (protos * protos).T - 2 * x @ protos.T
     score = -0.5 / sigma ** 2 * d2 + (1 - det) @ log_ndtr((theta - protos) / sigma).T
     score -= score.max(1, keepdims=True)
     w = np.exp(score)
-    return (w / w.sum(1, keepdims=True)) @ positions
+    return w / w.sum(1, keepdims=True)
+
+
+def tobit_match(qraw, protos, positions, sigma, theta):
+    return tobit_weights(qraw, protos, sigma, theta) @ positions
 
 
 def calibrated(old, s_rssi, s_xy):
