@@ -1,0 +1,16 @@
+{
+  "source_files_hash_verified": 36,
+  "pngs_checked": 13,
+  "png_dimensions": [
+    4000,
+    2250
+  ],
+  "aspect_ratio": "16:9",
+  "charts": 8,
+  "presentation_tables": 5,
+  "branch_registry_rows": 25,
+  "chart_data_rows": 80,
+  "new_training_runs": 0,
+  "missing_results": "GGA未取得正式数值表；UE-GLoc未实现；其余缺失标为未报告/未运行",
+  "visual_check": "已查看13张图表联系表，并检查单图；修复F08近邻曲线数值标签重叠。"
+}

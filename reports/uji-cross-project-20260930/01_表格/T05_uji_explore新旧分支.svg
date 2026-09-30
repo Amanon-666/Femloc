@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T17:20:48.404124</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 40.32 145.0224 
+L 351.0144 145.0224 
+L 351.0144 102.384 
+L 40.32 102.384 
+z
+" style="fill: #20334b; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #ffffff" x="54.301248" y="128.3832" transform="rotate(-0 54.301248 128.3832)">分支 / 场景</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 351.0144 145.0224 
+L 576 145.0224 
+L 576 102.384 
+L 351.0144 102.384 
+z
+" style="fill: #20334b; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #ffffff" x="361.138752" y="128.3832" transform="rotate(-0 361.138752 128.3832)">方法</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 576 145.0224 
+L 854.5536 145.0224 
+L 854.5536 102.384 
+L 576 102.384 
+z
+" style="fill: #20334b; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #ffffff" x="588.534912" y="128.3832" transform="rotate(-0 588.534912 128.3832)">标签与聚合</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 854.5536 145.0224 
+L 983.1168 145.0224 
+L 983.1168 102.384 
+L 854.5536 102.384 
+z
+" style="fill: #20334b; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #ffffff" x="860.338944" y="128.3832" transform="rotate(-0 860.338944 128.3832)">同日 / m</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 983.1168 145.0224 
+L 1111.68 145.0224 
+L 1111.68 102.384 
+L 983.1168 102.384 
+z
+" style="fill: #20334b; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #ffffff" x="988.902144" y="128.3832" transform="rotate(-0 988.902144 128.3832)">官方 / m</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 40.32 187.6608 
+L 351.0144 187.6608 
+L 351.0144 145.0224 
+L 40.32 145.0224 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="171.0216" transform="rotate(-0 54.301248 171.0216)">main：少样本 pilot</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 351.0144 187.6608 
+L 576 187.6608 
+L 576 145.0224 
+L 351.0144 145.0224 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="171.0216" transform="rotate(-0 361.138752 171.0216)">CMANP</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 576 187.6608 
+L 854.5536 187.6608 
+L 854.5536 145.0224 
+L 576 145.0224 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="171.0216" transform="rotate(-0 588.534912 171.0216)">10 位置×1；3 层等权</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 854.5536 187.6608 
+L 983.1168 187.6608 
+L 983.1168 145.0224 
+L 854.5536 145.0224 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="171.0216" transform="rotate(-0 860.338944 171.0216)">25.50</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 983.1168 187.6608 
+L 1111.68 187.6608 
+L 1111.68 145.0224 
+L 983.1168 145.0224 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="171.0216" transform="rotate(-0 988.902144 171.0216)">23.17</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 40.32 230.2992 
+L 351.0144 230.2992 
+L 351.0144 187.6608 
+L 40.32 187.6608 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="213.66" transform="rotate(-0 54.301248 213.66)">main：少样本 pilot</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 351.0144 230.2992 
+L 576 230.2992 
+L 576 187.6608 
+L 351.0144 187.6608 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="213.66" transform="rotate(-0 361.138752 213.66)">Support-WKNN</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 576 230.2992 
+L 854.5536 230.2992 
+L 854.5536 187.6608 
+L 576 187.6608 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="213.66" transform="rotate(-0 588.534912 213.66)">10 位置×1；3 层等权</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 854.5536 230.2992 
+L 983.1168 230.2992 
+L 983.1168 187.6608 
+L 854.5536 187.6608 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="213.66" transform="rotate(-0 860.338944 213.66)">19.34</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 983.1168 230.2992 
+L 1111.68 230.2992 
+L 1111.68 187.6608 
+L 983.1168 187.6608 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="213.66" transform="rotate(-0 988.902144 213.66)">18.93</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 40.32 272.9376 
+L 351.0144 272.9376 
+L 351.0144 230.2992 
+L 40.32 230.2992 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="256.2984" transform="rotate(-0 54.301248 256.2984)">main：少样本 pilot</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 351.0144 272.9376 
+L 576 272.9376 
+L 576 230.2992 
+L 351.0144 230.2992 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="256.2984" transform="rotate(-0 361.138752 256.2984)">MLP + 50 步微调</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 576 272.9376 
+L 854.5536 272.9376 
+L 854.5536 230.2992 
+L 576 230.2992 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="256.2984" transform="rotate(-0 588.534912 256.2984)">10 位置×1；3 层等权</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 854.5536 272.9376 
+L 983.1168 272.9376 
+L 983.1168 230.2992 
+L 854.5536 230.2992 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="256.2984" transform="rotate(-0 860.338944 256.2984)">16.63</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 983.1168 272.9376 
+L 1111.68 272.9376 
+L 1111.68 230.2992 
+L 983.1168 230.2992 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="256.2984" transform="rotate(-0 988.902144 256.2984)">未运行</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 40.32 315.576 
+L 351.0144 315.576 
+L 351.0144 272.9376 
+L 40.32 272.9376 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="298.9368" transform="rotate(-0 54.301248 298.9368)">research：常规监督</text>
+    </g>
+    <g id="patch_23">
+     <path d="M 351.0144 315.576 
+L 576 315.576 
+L 576 272.9376 
+L 351.0144 272.9376 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="298.9368" transform="rotate(-0 361.138752 298.9368)">GConvLoc</text>
+    </g>
+    <g id="patch_24">
+     <path d="M 576 315.576 
+L 854.5536 315.576 
+L 854.5536 272.9376 
+L 576 272.9376 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="298.9368" transform="rotate(-0 588.534912 298.9368)">完整监督；1111 条加权</text>
+    </g>
+    <g id="patch_25">
+     <path d="M 854.5536 315.576 
+L 983.1168 315.576 
+L 983.1168 272.9376 
+L 854.5536 272.9376 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_24">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="298.9368" transform="rotate(-0 860.338944 298.9368)">—</text>
+    </g>
+    <g id="patch_26">
+     <path d="M 983.1168 315.576 
+L 1111.68 315.576 
+L 1111.68 272.9376 
+L 983.1168 272.9376 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_25">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="298.9368" transform="rotate(-0 988.902144 298.9368)">7.61</text>
+    </g>
+    <g id="patch_27">
+     <path d="M 40.32 358.2144 
+L 351.0144 358.2144 
+L 351.0144 315.576 
+L 40.32 315.576 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_26">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="341.5752" transform="rotate(-0 54.301248 341.5752)">research：留出 FLOOR=3</text>
+    </g>
+    <g id="patch_28">
+     <path d="M 351.0144 358.2144 
+L 576 358.2144 
+L 576 315.576 
+L 351.0144 315.576 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_27">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="341.5752" transform="rotate(-0 361.138752 341.5752)">GConvLoc</text>
+    </g>
+    <g id="patch_29">
+     <path d="M 576 358.2144 
+L 854.5536 358.2144 
+L 854.5536 315.576 
+L 576 315.576 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_28">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="341.5752" transform="rotate(-0 588.534912 341.5752)">0 目标标签；扫描加权</text>
+    </g>
+    <g id="patch_30">
+     <path d="M 854.5536 358.2144 
+L 983.1168 358.2144 
+L 983.1168 315.576 
+L 854.5536 315.576 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_29">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="341.5752" transform="rotate(-0 860.338944 341.5752)">12.80</text>
+    </g>
+    <g id="patch_31">
+     <path d="M 983.1168 358.2144 
+L 1111.68 358.2144 
+L 1111.68 315.576 
+L 983.1168 315.576 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_30">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="341.5752" transform="rotate(-0 988.902144 341.5752)">9.78</text>
+    </g>
+    <g id="patch_32">
+     <path d="M 40.32 400.8528 
+L 351.0144 400.8528 
+L 351.0144 358.2144 
+L 40.32 358.2144 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_31">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="384.2136" transform="rotate(-0 54.301248 384.2136)">research：留出 FLOOR=3</text>
+    </g>
+    <g id="patch_33">
+     <path d="M 351.0144 400.8528 
+L 576 400.8528 
+L 576 358.2144 
+L 351.0144 358.2144 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_32">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="384.2136" transform="rotate(-0 361.138752 384.2136)">GConvLoc</text>
+    </g>
+    <g id="patch_34">
+     <path d="M 576 400.8528 
+L 854.5536 400.8528 
+L 854.5536 358.2144 
+L 576 358.2144 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_33">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="384.2136" transform="rotate(-0 588.534912 384.2136)">0 目标标签；3 层等权</text>
+    </g>
+    <g id="patch_35">
+     <path d="M 854.5536 400.8528 
+L 983.1168 400.8528 
+L 983.1168 358.2144 
+L 854.5536 358.2144 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_34">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="384.2136" transform="rotate(-0 860.338944 384.2136)">13.44</text>
+    </g>
+    <g id="patch_36">
+     <path d="M 983.1168 400.8528 
+L 1111.68 400.8528 
+L 1111.68 358.2144 
+L 983.1168 358.2144 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_35">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="384.2136" transform="rotate(-0 988.902144 384.2136)">10.38</text>
+    </g>
+    <g id="patch_37">
+     <path d="M 40.32 443.4912 
+L 351.0144 443.4912 
+L 351.0144 400.8528 
+L 40.32 400.8528 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_36">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="426.852" transform="rotate(-0 54.301248 426.852)">research：4 次楼层留出</text>
+    </g>
+    <g id="patch_38">
+     <path d="M 351.0144 443.4912 
+L 576 443.4912 
+L 576 400.8528 
+L 351.0144 400.8528 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_37">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="426.852" transform="rotate(-0 361.138752 426.852)">JPRL</text>
+    </g>
+    <g id="patch_39">
+     <path d="M 576 443.4912 
+L 854.5536 443.4912 
+L 854.5536 400.8528 
+L 576 400.8528 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_38">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="426.852" transform="rotate(-0 588.534912 426.852)">0 目标标签；4 任务等权</text>
+    </g>
+    <g id="patch_40">
+     <path d="M 854.5536 443.4912 
+L 983.1168 443.4912 
+L 983.1168 400.8528 
+L 854.5536 400.8528 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_39">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="426.852" transform="rotate(-0 860.338944 426.852)">31.91</text>
+    </g>
+    <g id="patch_41">
+     <path d="M 983.1168 443.4912 
+L 1111.68 443.4912 
+L 1111.68 400.8528 
+L 983.1168 400.8528 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_40">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="426.852" transform="rotate(-0 988.902144 426.852)">99.17</text>
+    </g>
+    <g id="patch_42">
+     <path d="M 40.32 486.1296 
+L 351.0144 486.1296 
+L 351.0144 443.4912 
+L 40.32 443.4912 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_41">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="469.4904" transform="rotate(-0 54.301248 469.4904)">research：4 次楼层留出</text>
+    </g>
+    <g id="patch_43">
+     <path d="M 351.0144 486.1296 
+L 576 486.1296 
+L 576 443.4912 
+L 351.0144 443.4912 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_42">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="469.4904" transform="rotate(-0 361.138752 469.4904)">同骨干 ERM</text>
+    </g>
+    <g id="patch_44">
+     <path d="M 576 486.1296 
+L 854.5536 486.1296 
+L 854.5536 443.4912 
+L 576 443.4912 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_43">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="469.4904" transform="rotate(-0 588.534912 469.4904)">同 JPRL 协议</text>
+    </g>
+    <g id="patch_45">
+     <path d="M 854.5536 486.1296 
+L 983.1168 486.1296 
+L 983.1168 443.4912 
+L 854.5536 443.4912 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_44">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="469.4904" transform="rotate(-0 860.338944 469.4904)">31.91</text>
+    </g>
+    <g id="patch_46">
+     <path d="M 983.1168 486.1296 
+L 1111.68 486.1296 
+L 1111.68 443.4912 
+L 983.1168 443.4912 
+z
+" style="fill: #edf3f8; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_45">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="469.4904" transform="rotate(-0 988.902144 469.4904)">99.10</text>
+    </g>
+    <g id="patch_47">
+     <path d="M 40.32 528.768 
+L 351.0144 528.768 
+L 351.0144 486.1296 
+L 40.32 486.1296 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_46">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="54.301248" y="512.1288" transform="rotate(-0 54.301248 512.1288)">research：尚未实现</text>
+    </g>
+    <g id="patch_48">
+     <path d="M 351.0144 528.768 
+L 576 528.768 
+L 576 486.1296 
+L 351.0144 486.1296 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_47">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="361.138752" y="512.1288" transform="rotate(-0 361.138752 512.1288)">UE-GLoc</text>
+    </g>
+    <g id="patch_49">
+     <path d="M 576 528.768 
+L 854.5536 528.768 
+L 854.5536 486.1296 
+L 576 486.1296 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_48">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="588.534912" y="512.1288" transform="rotate(-0 588.534912 512.1288)">无运行结果</text>
+    </g>
+    <g id="patch_50">
+     <path d="M 854.5536 528.768 
+L 983.1168 528.768 
+L 983.1168 486.1296 
+L 854.5536 486.1296 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_49">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="860.338944" y="512.1288" transform="rotate(-0 860.338944 512.1288)">未运行</text>
+    </g>
+    <g id="patch_51">
+     <path d="M 983.1168 528.768 
+L 1111.68 528.768 
+L 1111.68 486.1296 
+L 983.1168 486.1296 
+z
+" style="fill: #f8fafc; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_50">
+     <text style="font-size: 13px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="988.902144" y="512.1288" transform="rotate(-0 988.902144 512.1288)">未运行</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_51">
+   <text style="font-weight: 700; font-size: 23px; font-family: 'Heiti TC'; text-anchor: start; fill: #20334b" x="40.32" y="45.7" transform="rotate(-0 40.32 45.7)">uji-explore：新旧分支都保留，包括负结果</text>
+  </g>
+  <g id="text_52">
+   <text style="font-size: 10.5px; font-family: 'Heiti TC'; fill: #526276" transform="translate(40.32 612.8775)">research 指 research/gconvloc-jprl-uegloc-20260930。main 仅 1 模型种子、2 支持种子；新分支也为单种子。</text>
+   <text style="font-size: 10.5px; font-family: 'Heiti TC'; fill: #526276" transform="translate(40.32 623.6925)">main 的官方测试还排除与支持集同位置的样本；跨场景数字不应直接作算法排名。</text>
+  </g>
+ </g>
+</svg>

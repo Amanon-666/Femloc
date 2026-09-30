@@ -1,0 +1,322 @@
+[
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "main",
+    "commit": "9d0f7aad2bd6484b4c415bf7382808cc30cf3fbd",
+    "path": "docs/TRAINING_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/main__TRAINING_RESULTS.md",
+    "sha256": "ec5a8e96f9683af024b3b054bfe29f25712f57b29b7ef308b677bb5dfeeca136",
+    "url": "https://github.com/Amanon-666/Femloc/blob/9d0f7aad2bd6484b4c415bf7382808cc30cf3fbd/docs/TRAINING_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "metaloc-few-shot",
+    "commit": "ab13e657cfa8f35890a4dfb806dba81213747cee",
+    "path": "docs/METALOC_FEWSHOT_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/metaloc-few-shot__METALOC_FEWSHOT_RESULTS.md",
+    "sha256": "c8fb6ff00f80336865a6a89c6a80f47fb873c46649ed6f1945599dd8576400e7",
+    "url": "https://github.com/Amanon-666/Femloc/blob/ab13e657cfa8f35890a4dfb806dba81213747cee/docs/METALOC_FEWSHOT_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "ridge-meta-fewshot",
+    "commit": "eb0ae3f4bf5544a7ba61d1819c0612e9c44afb88",
+    "path": "docs/RIDGEMETA_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/ridge-meta-fewshot__RIDGEMETA_RESULTS.md",
+    "sha256": "17d29e20792386de79e3483546d9fc1a0b75b513a63e65d5be3a5ef429ea5291",
+    "url": "https://github.com/Amanon-666/Femloc/blob/eb0ae3f4bf5544a7ba61d1819c0612e9c44afb88/docs/RIDGEMETA_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "r2d2-uji-reference",
+    "commit": "121036aa4a8d943e066433fbbf844657a7b4b66c",
+    "path": "docs/RIDGE_REFERENCE_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/r2d2-uji-reference__RIDGE_REFERENCE_RESULTS.md",
+    "sha256": "dcb420b58aec8f18084f82951321d785ff4dd0fe9cfea022efccaf186a45f7b7",
+    "url": "https://github.com/Amanon-666/Femloc/blob/121036aa4a8d943e066433fbbf844657a7b4b66c/docs/RIDGE_REFERENCE_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "r2d2-uji-reference",
+    "commit": "121036aa4a8d943e066433fbbf844657a7b4b66c",
+    "path": "docs/RIDGE_REFERENCE_ANALYSIS.md",
+    "snapshot": "04_数据与来源/原始报告/r2d2-uji-reference__RIDGE_REFERENCE_ANALYSIS.md",
+    "sha256": "487ccd0f899a129e2c5d640905c8d76274b469b5c78f98a0e04a5a4317d67bd8",
+    "url": "https://github.com/Amanon-666/Femloc/blob/121036aa4a8d943e066433fbbf844657a7b4b66c/docs/RIDGE_REFERENCE_ANALYSIS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "r2d2-uji-reference",
+    "commit": "121036aa4a8d943e066433fbbf844657a7b4b66c",
+    "path": "docs/RIDGE_REFERENCE_SUMMARY.json",
+    "snapshot": "04_数据与来源/原始报告/r2d2-uji-reference__RIDGE_REFERENCE_SUMMARY.json",
+    "sha256": "016926f24b011e547b89e9f6f815043665de952e94802af54b839855719354a1",
+    "url": "https://github.com/Amanon-666/Femloc/blob/121036aa4a8d943e066433fbbf844657a7b4b66c/docs/RIDGE_REFERENCE_SUMMARY.json"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "support-conditioned",
+    "commit": "0e11ac4b8e6105311a27fbac4ca858a4141e4336",
+    "path": "docs/SUPPORT_RIDGE_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/support-conditioned__SUPPORT_RIDGE_RESULTS.md",
+    "sha256": "b3888e70cdc82820ac0cc576082693e94bbe3173e56fec9173a4e33a008d168b",
+    "url": "https://github.com/Amanon-666/Femloc/blob/0e11ac4b8e6105311a27fbac4ca858a4141e4336/docs/SUPPORT_RIDGE_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "global-local-kernel",
+    "commit": "c4f32525d343e46c8ca9b480edfa31478b24c8af",
+    "path": "docs/GLOBAL_LOCAL_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/global-local-kernel__GLOBAL_LOCAL_RESULTS.md",
+    "sha256": "e6ffd8bf470ebeca08d29dcfb5254ca85ea4da01fbafdd210b4c73479d9b2834",
+    "url": "https://github.com/Amanon-666/Femloc/blob/c4f32525d343e46c8ca9b480edfa31478b24c8af/docs/GLOBAL_LOCAL_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "cross-device-episodes",
+    "commit": "cda1817060f9bdd337bc5f00331a6600e7dca422",
+    "path": "docs/CROSS_DEVICE_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/cross-device-episodes__CROSS_DEVICE_RESULTS.md",
+    "sha256": "2a7fbe9d8eee35a5b61bd1aedda0f74ada6caf963e1555d39b97d17a6b419850",
+    "url": "https://github.com/Amanon-666/Femloc/blob/cda1817060f9bdd337bc5f00331a6600e7dca422/docs/CROSS_DEVICE_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "paired-device-episodes",
+    "commit": "94077fe7a914b6740c3f826a09801bc2da8adf5d",
+    "path": "docs/PAIRED_DEVICE_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/paired-device-episodes__PAIRED_DEVICE_RESULTS.md",
+    "sha256": "20db76b8816bbd3ebca96ad34c17f9ca705bd6d36c150cc7ba779876ca7134bc",
+    "url": "https://github.com/Amanon-666/Femloc/blob/94077fe7a914b6740c3f826a09801bc2da8adf5d/docs/PAIRED_DEVICE_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "dkt-uji",
+    "commit": "785228585bc68eec21dc6a10e16bd3efce51613c",
+    "path": "docs/DKT_UJI_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/dkt-uji__DKT_UJI_RESULTS.md",
+    "sha256": "e4cbc74e1c55a9ecb132705728cb3cdfbf99636aaaeb18f38c3211ea618b6dbb",
+    "url": "https://github.com/Amanon-666/Femloc/blob/785228585bc68eec21dc6a10e16bd3efce51613c/docs/DKT_UJI_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "dkt-uji",
+    "commit": "785228585bc68eec21dc6a10e16bd3efce51613c",
+    "path": "docs/DKT_STATUS.md",
+    "snapshot": "04_数据与来源/原始报告/dkt-uji__DKT_STATUS.md",
+    "sha256": "b09324b321ecf44855823a7f0bb1f2ad3c9c30728d830de4eb61b1ca9fe477f3",
+    "url": "https://github.com/Amanon-666/Femloc/blob/785228585bc68eec21dc6a10e16bd3efce51613c/docs/DKT_STATUS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "gga-uji-cross-floor",
+    "commit": "bcc41b1180df2466ef73b87cabb8012bead4112f",
+    "path": "README.md",
+    "snapshot": "04_数据与来源/原始报告/gga-uji-cross-floor__README.md",
+    "sha256": "07219e17e27b72a71ba097be952e420a3a1ac08e1cb63efff442cde880b92415",
+    "url": "https://github.com/Amanon-666/Femloc/blob/bcc41b1180df2466ef73b87cabb8012bead4112f/README.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "gga-uji-cross-floor",
+    "commit": "bcc41b1180df2466ef73b87cabb8012bead4112f",
+    "path": "docs/VALIDATION_AUDIT.md",
+    "snapshot": "04_数据与来源/原始报告/gga-uji-cross-floor__VALIDATION_AUDIT.md",
+    "sha256": "68dd70201642aa5849d5b9b6e14fd10e038aba6b6341a00969ee9a3f6d632f28",
+    "url": "https://github.com/Amanon-666/Femloc/blob/bcc41b1180df2466ef73b87cabb8012bead4112f/docs/VALIDATION_AUDIT.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "adjacent-map-few-shot",
+    "commit": "9a3e3310126f0fc14d877a5d0503191457b5d7bf",
+    "path": "docs/ADJACENT_FLOOR_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/adjacent-map-few-shot__ADJACENT_FLOOR_RESULTS.md",
+    "sha256": "ce97ced6d5e95028bb8bdc5e461138aba8cce503654af5b13557fad413d25259",
+    "url": "https://github.com/Amanon-666/Femloc/blob/9a3e3310126f0fc14d877a5d0503191457b5d7bf/docs/ADJACENT_FLOOR_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "adjacent-map-few-shot",
+    "commit": "9a3e3310126f0fc14d877a5d0503191457b5d7bf",
+    "path": "docs/OFFICIAL_VALIDATION.md",
+    "snapshot": "04_数据与来源/原始报告/adjacent-map-few-shot__OFFICIAL_VALIDATION.md",
+    "sha256": "7f06560fe583fed7c3b55e3a71893eb576ffcc9710e323f89e0cda2d28cb1093",
+    "url": "https://github.com/Amanon-666/Femloc/blob/9a3e3310126f0fc14d877a5d0503191457b5d7bf/docs/OFFICIAL_VALIDATION.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "ap-offset-map-adaptation",
+    "commit": "50e3ace315202ae9db9bc3edb36a4c8052b9c004",
+    "path": "docs/AP_OFFSET_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/ap-offset-map-adaptation__AP_OFFSET_RESULTS.md",
+    "sha256": "841d2ae356bed97ecf72544912144aad17469bc2accce63ff8e3c99f8c624e8c",
+    "url": "https://github.com/Amanon-666/Femloc/blob/50e3ace315202ae9db9bc3edb36a4c8052b9c004/docs/AP_OFFSET_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "support-ranked-map-adaptation",
+    "commit": "9b8c3a34f3ca89771556729626c39d31a4863797",
+    "path": "docs/SUPPORT_RANKED_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/support-ranked-map-adaptation__SUPPORT_RANKED_RESULTS.md",
+    "sha256": "b1839110019308d56257ed48f153096392fcf2b91800a84a4ede2075903be2fd",
+    "url": "https://github.com/Amanon-666/Femloc/blob/9b8c3a34f3ca89771556729626c39d31a4863797/docs/SUPPORT_RANKED_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "map-conditioned-meta",
+    "commit": "f207f7c2163fb377460578d9c8a5eaa766267880",
+    "path": "docs/MAPMETA_DEVELOPMENT_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/map-conditioned-meta__MAPMETA_DEVELOPMENT_RESULTS.md",
+    "sha256": "160064767167d14530be1fe3ef37468f31fece213f80a7074edb962307bc1a8e",
+    "url": "https://github.com/Amanon-666/Femloc/blob/f207f7c2163fb377460578d9c8a5eaa766267880/docs/MAPMETA_DEVELOPMENT_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "spatial-radiomap-adaptation",
+    "commit": "bc4fd9b1d9ac0937bb23cd01bf9ae4b7e4a0a5d3",
+    "path": "docs/SPATIAL_RADIOMAP_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/spatial-radiomap-adaptation__SPATIAL_RADIOMAP_RESULTS.md",
+    "sha256": "311f1d4a03eebbf5b74c7ef79e018eeac47f1e2327cdcce5d198fb084ef28b45",
+    "url": "https://github.com/Amanon-666/Femloc/blob/bc4fd9b1d9ac0937bb23cd01bf9ae4b7e4a0a5d3/docs/SPATIAL_RADIOMAP_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "signal-calibrated-map",
+    "commit": "ab1a60b17c7b85542755937c68f89d63ce26255c",
+    "path": "docs/SIGNAL_CALIBRATED_MAP.md",
+    "snapshot": "04_数据与来源/原始报告/signal-calibrated-map__SIGNAL_CALIBRATED_MAP.md",
+    "sha256": "92a6863daf446e24ffd572e4665c8ca3e8de1fd92e9a2b45ac5aeaa24cf56e5d",
+    "url": "https://github.com/Amanon-666/Femloc/blob/ab1a60b17c7b85542755937c68f89d63ce26255c/docs/SIGNAL_CALIBRATED_MAP.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "learned-ap-map",
+    "commit": "ce2fb254a98ba4a1095828514261ebfc66f71c73",
+    "path": "docs/SCM_T_LEARNED_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/learned-ap-map__SCM_T_LEARNED_RESULTS.md",
+    "sha256": "941acc344ffed301865a9d25408d677c4448ed33ccda88987bab5d38fc1ad3d7",
+    "url": "https://github.com/Amanon-666/Femloc/blob/ce2fb254a98ba4a1095828514261ebfc66f71c73/docs/SCM_T_LEARNED_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "learned-ap-map",
+    "commit": "ce2fb254a98ba4a1095828514261ebfc66f71c73",
+    "path": "docs/LEARNED_AP_MAP_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/learned-ap-map__LEARNED_AP_MAP_RESULTS.md",
+    "sha256": "4770ce0ed901ae67221b5b43886c645ff9c0dc3956b0d63d3016945410e22a9b",
+    "url": "https://github.com/Amanon-666/Femloc/blob/ce2fb254a98ba4a1095828514261ebfc66f71c73/docs/LEARNED_AP_MAP_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "learned-map-kernel",
+    "commit": "28cfc8faa4c512ce8bca4230fb3d4e7ded43f35e",
+    "path": "docs/MAP_KERNEL_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/learned-map-kernel__MAP_KERNEL_RESULTS.md",
+    "sha256": "78f2ca0dc94635ea65862382f615a94aa98e70c86a7bde38f84bb9b5d5d9b807",
+    "url": "https://github.com/Amanon-666/Femloc/blob/28cfc8faa4c512ce8bca4230fb3d4e7ded43f35e/docs/MAP_KERNEL_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "scm-structural-audit",
+    "commit": "be164faf77cca7e46aacffb991da299f85755fb7",
+    "path": "docs/STRUCTURAL_AUDIT_20260929.md",
+    "snapshot": "04_数据与来源/原始报告/scm-structural-audit__STRUCTURAL_AUDIT_20260929.md",
+    "sha256": "088b1af7b6dd69e3ffc64f040f696caf9ba3a38cbe8fe0de5f32d96a38e4b5ea",
+    "url": "https://github.com/Amanon-666/Femloc/blob/be164faf77cca7e46aacffb991da299f85755fb7/docs/STRUCTURAL_AUDIT_20260929.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "scm-field-ranking-audit",
+    "commit": "cc9155d81749638f4b37418ddc57a7181f60bed1",
+    "path": "docs/FIELD_RANKING_AUDIT_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/scm-field-ranking-audit__FIELD_RANKING_AUDIT_RESULTS.md",
+    "sha256": "35bdc6c203d873499ede709332ff36d9f5d89b98b0d372a110800e8576b8efc5",
+    "url": "https://github.com/Amanon-666/Femloc/blob/cc9155d81749638f4b37418ddc57a7181f60bed1/docs/FIELD_RANKING_AUDIT_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "research/tpm-evidence-guided-20260930",
+    "commit": "b2e346058334cf9bcca5f5c9592b7d6609a895e8",
+    "path": "docs/TPM_STUDY_PLAN.md",
+    "snapshot": "04_数据与来源/原始报告/research__tpm-evidence-guided-20260930__TPM_STUDY_PLAN.md",
+    "sha256": "f31a480e6c98952448faff8073c71c5d97bcce86346cdef4d741f418274e0c54",
+    "url": "https://github.com/Amanon-666/Femloc/blob/b2e346058334cf9bcca5f5c9592b7d6609a895e8/docs/TPM_STUDY_PLAN.md"
+  },
+  {
+    "repo": "Amanon-666/Femloc",
+    "branch": "research/tpm-evidence-guided-20260930",
+    "commit": "b2e346058334cf9bcca5f5c9592b7d6609a895e8",
+    "path": "docs/TPM_STAGE2_PLAN.md",
+    "snapshot": "04_数据与来源/原始报告/research__tpm-evidence-guided-20260930__TPM_STAGE2_PLAN.md",
+    "sha256": "58e735b7d10ab92551b01036ca5bc3169011fdfbb91334e9818a41ed5b09de2a",
+    "url": "https://github.com/Amanon-666/Femloc/blob/b2e346058334cf9bcca5f5c9592b7d6609a895e8/docs/TPM_STAGE2_PLAN.md"
+  },
+  {
+    "repo": "Amanon-666/uji-explore",
+    "branch": "main",
+    "commit": "e83087da97265f64430af26ff05a5e4a546e8691",
+    "path": "reports/RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/uji_main__RESULTS.md",
+    "sha256": "3bdfadad2c050fd917e36311701ab34ee36e70ed5143667a1897ecefd6c78034",
+    "url": "https://github.com/Amanon-666/uji-explore/blob/e83087da97265f64430af26ff05a5e4a546e8691/reports/RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/uji-explore",
+    "branch": "research/gconvloc-jprl-uegloc-20260930",
+    "commit": "c698d5e5ff2014397ecfee9e98bb369d5a52001a",
+    "path": "reports/GRAPH_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_RESULTS.md",
+    "sha256": "1e6c5531e11240fa1143b9fcd6e26db471c7344cf6a1f345504c481c7620912e",
+    "url": "https://github.com/Amanon-666/uji-explore/blob/c698d5e5ff2014397ecfee9e98bb369d5a52001a/reports/GRAPH_RESULTS.md"
+  },
+  {
+    "repo": "Amanon-666/uji-explore",
+    "branch": "research/gconvloc-jprl-uegloc-20260930",
+    "commit": "c698d5e5ff2014397ecfee9e98bb369d5a52001a",
+    "path": "reports/graph_metrics.csv",
+    "snapshot": "04_数据与来源/原始报告/uji_research__gconvloc-jprl-uegloc-20260930__graph_metrics.csv",
+    "sha256": "3863d582f3ac30e5239a09bf542e3879c6342ec05c82b64af7d8ce15153d3c6a",
+    "url": "https://github.com/Amanon-666/uji-explore/blob/c698d5e5ff2014397ecfee9e98bb369d5a52001a/reports/graph_metrics.csv"
+  },
+  {
+    "repo": "Amanon-666/uji-explore",
+    "branch": "research/gconvloc-jprl-uegloc-20260930",
+    "commit": "c698d5e5ff2014397ecfee9e98bb369d5a52001a",
+    "path": "docs/GRAPH_REPRODUCTION_AUDIT.md",
+    "snapshot": "04_数据与来源/原始报告/uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_REPRODUCTION_AUDIT.md",
+    "sha256": "248bbaf61a72c397719391246d31e5776f8b1095f9433ddf962461a73b35fc56",
+    "url": "https://github.com/Amanon-666/uji-explore/blob/c698d5e5ff2014397ecfee9e98bb369d5a52001a/docs/GRAPH_REPRODUCTION_AUDIT.md"
+  },
+  {
+    "repo": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-GUFU",
+    "branch": "tpm-gufu-unlabeled",
+    "commit": "fe0f5597ec3a0558b7648542b27d9265e88aaafa",
+    "path": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-GUFU/docs/research/GUFU_V1_REPORT.md",
+    "snapshot": "04_数据与来源/原始报告/gufu_report.md",
+    "sha256": "4438edcbe04681117a94bf865fd8cb1086073924fbbfdeaa7eb7b72cfb3e1e1c"
+  },
+  {
+    "repo": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-GUFU",
+    "branch": "tpm-gufu-unlabeled",
+    "commit": "fe0f5597ec3a0558b7648542b27d9265e88aaafa",
+    "path": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-GUFU/docs/research/GUFU_V1_RESULTS.json",
+    "snapshot": "04_数据与来源/原始报告/gufu_results.json",
+    "sha256": "46c7e9debe585b64f0ff8a47b5c909cd6283e4d24b153f025f68bbc3a6d401dc"
+  },
+  {
+    "repo": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-Learned-Map",
+    "branch": "tpm-learned-map",
+    "commit": "34cd89ddb73285fde81cec025c75cef34a33e990",
+    "path": "/Users/Admin/Desktop/project/迁移学习/FeMLoc-TPM-Learned-Map/docs/research/LEARNED_MAP_V1_REPORT.md",
+    "snapshot": "04_数据与来源/原始报告/learned_tpm.md",
+    "sha256": "8fe6c0d9ebd103b8938c3311da6c6488a9ec7c12b85d1c12bb3688ff8e3f088d"
+  },
+  {
+    "repo": "/Users/Admin/Desktop/project/迁移学习/DKT-UJI",
+    "branch": "local-result-snapshot",
+    "commit": null,
+    "path": "/Users/Admin/Desktop/project/迁移学习/DKT-UJI/docs/DKT_SELECTED_RESULTS.md",
+    "snapshot": "04_数据与来源/原始报告/dkt_selected.md",
+    "sha256": "4fc4807ed36c24b10f519164d31058e6041ec8db4377b8c6fb33f39839e11771"
+  }
+]

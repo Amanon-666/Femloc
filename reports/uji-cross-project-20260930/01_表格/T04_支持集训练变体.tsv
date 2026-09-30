@@ -1,0 +1,5 @@
+训练方式	同日 MDE / m	官方 MDE / m	相对原版官方变化 / m
+Support-conditioned	16.43	18.34	基线
+Global-local kernel	17.11	19.96	+1.62
+Cross-device episodes	17.88	19.08	+0.74
+Paired-device episodes	20.06	20.87	+2.53

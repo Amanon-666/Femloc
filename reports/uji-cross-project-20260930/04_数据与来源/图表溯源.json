@@ -1,0 +1,60 @@
+{
+  "T01": [
+    "signal-calibrated-map__SIGNAL_CALIBRATED_MAP.md",
+    "gufu_report.md",
+    "uji_research__gconvloc-jprl-uegloc-20260930__graph_metrics.csv"
+  ],
+  "T02": [
+    "gufu_results.json",
+    "learned_tpm.md",
+    "learned-ap-map__SCM_T_LEARNED_RESULTS.md",
+    "learned-map-kernel__MAP_KERNEL_RESULTS.md",
+    "uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_RESULTS.md"
+  ],
+  "T03": [
+    "main__TRAINING_RESULTS.md",
+    "metaloc-few-shot__METALOC_FEWSHOT_RESULTS.md",
+    "ridge-meta-fewshot__RIDGEMETA_RESULTS.md",
+    "r2d2-uji-reference__RIDGE_REFERENCE_RESULTS.md",
+    "dkt_selected.md",
+    "adjacent-map-few-shot__OFFICIAL_VALIDATION.md",
+    "spatial-radiomap-adaptation__SPATIAL_RADIOMAP_RESULTS.md"
+  ],
+  "T04": [
+    "support-conditioned__SUPPORT_RIDGE_RESULTS.md",
+    "global-local-kernel__GLOBAL_LOCAL_RESULTS.md",
+    "cross-device-episodes__CROSS_DEVICE_RESULTS.md",
+    "paired-device-episodes__PAIRED_DEVICE_RESULTS.md"
+  ],
+  "T05": [
+    "uji_main__RESULTS.md",
+    "uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_RESULTS.md"
+  ],
+  "F01": [
+    "signal-calibrated-map__SIGNAL_CALIBRATED_MAP.md"
+  ],
+  "F02": [
+    "gufu_results.json",
+    "gufu_report.md"
+  ],
+  "F03": [
+    "learned_tpm.md",
+    "learned-ap-map__SCM_T_LEARNED_RESULTS.md",
+    "learned-map-kernel__MAP_KERNEL_RESULTS.md"
+  ],
+  "F04": [
+    "r2d2-uji-reference__RIDGE_REFERENCE_RESULTS.md"
+  ],
+  "F05": [
+    "uji_research__gconvloc-jprl-uegloc-20260930__graph_metrics.csv"
+  ],
+  "F06": [
+    "uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_RESULTS.md"
+  ],
+  "F07": [
+    "uji_research__gconvloc-jprl-uegloc-20260930__GRAPH_RESULTS.md"
+  ],
+  "F08": [
+    "uji_main__RESULTS.md"
+  ]
+}
