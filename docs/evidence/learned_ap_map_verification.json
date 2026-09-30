@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "run": "outputs/learned_ap_map_v1",
+      "models": 12,
+      "steps_each": 600,
+      "fit_buildings_excluded": true,
+      "metrics_finite": true
+    },
+    {
+      "run": "outputs/scm_t_learned_v1",
+      "models": 12,
+      "steps_each": 600,
+      "fit_buildings_excluded": true,
+      "metrics_finite": true
+    }
+  ],
+  "identical_manifests": true
+}
