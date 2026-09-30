@@ -1,0 +1,23 @@
+name: TPM source bundle
+on:
+  push:
+    branches: [research/tpm-evidence-guided-20260930]
+    paths: [.github/workflows/tpm-source-bundle.yml]
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive pinned source only
+        run: |
+          mkdir -p bundle
+          git archive --format=tar.gz HEAD > bundle/tpm-source.tar.gz
+          git rev-parse HEAD > bundle/commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tpm-source-bundle
+          path: bundle/
+          retention-days: 7
