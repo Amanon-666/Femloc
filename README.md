@@ -1,3 +1,17 @@
+# TPM + GUFU 启发的无标签地图更新
+
+本分支 `tpm-gufu-unlabeled` 从 TPM `ab1a60b` 接续。先做文献/代码审计与数学推导，再实现固定软对应的地图重构。首轮7个历史楼层开发验证：官方 validation 等权 **10.31 → 9.61 m**，6/7层改善，B0F1退化；不是全新楼层盲测，也不是完整GUFU复现。
+
+- [实验结果、边界与复现](docs/research/GUFU_V1_REPORT.md)
+- [实验前推导与协议](docs/research/GUFU_UNLABELED_DERIVATION.md)
+- [代码来源审计](docs/research/CODE_PROVENANCE.md)
+- 入口：`python -m scripts.evaluate_unlabeled_map --output outputs/new_run`
+- 实际更新接口：`models/unlabeled_map.py`（U仅传RSSI，不传坐标）；η=0精确回到原TPM。
+
+以下保留继承分支的背景说明。
+
+---
+
 # MetaLoc 式 UJI 少样本跨楼层定位
 
 这是 `Amanon-666/Femloc` 的 `metaloc-few-shot` 分支。`main` 保留独立 FeMLoc EXP1 重实现及原始结果；本分支只读共用 UJI 原始 CSV，使用新的 episode、共享 RSSI 回归网络和训练入口。
