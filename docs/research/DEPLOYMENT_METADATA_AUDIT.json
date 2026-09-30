@@ -1,0 +1,2296 @@
+{
+  "training": {
+    "path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+    "sha256": "45ca0128bd12019c976bb4793e407c979c82995d7a5940ab7288620247905168",
+    "rows_total": 19937,
+    "floors": {
+      "B0F0": {
+        "rows": 1059,
+        "positions_exact": 54,
+        "scans_per_position_min_median_max": [
+          10,
+          20.0,
+          42
+        ],
+        "time_min_max_utc": [
+          "2013-05-30T10:15:24+00:00",
+          "2013-06-12T14:29:04+00:00"
+        ],
+        "unique_timestamps": 652,
+        "utc_day_counts": {
+          "2013-05-30": 531,
+          "2013-06-10": 270,
+          "2013-06-12": 258
+        },
+        "user_counts": {
+          "1": 528,
+          "11": 531
+        },
+        "phones": {
+          "13": {
+            "rows": 531,
+            "positions": 53,
+            "time_min_max_utc": [
+              "2013-05-30T10:15:24+00:00",
+              "2013-05-30T11:03:15+00:00"
+            ]
+          },
+          "14": {
+            "rows": 528,
+            "positions": 49,
+            "time_min_max_utc": [
+              "2013-06-10T15:37:22+00:00",
+              "2013-06-12T14:29:04+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-05-30T10:52:44+00:00",
+          "early_rows": 389,
+          "late_rows": 670,
+          "cross_boundary_positions": 34,
+          "early_after_purging_shared_positions": 50,
+          "late_after_purging_shared_positions": 291,
+          "early_phones": [
+            "13"
+          ],
+          "late_phones": [
+            "13",
+            "14"
+          ]
+        }
+      },
+      "B0F1": {
+        "rows": 1356,
+        "positions_exact": 67,
+        "scans_per_position_min_median_max": [
+          10,
+          20,
+          30
+        ],
+        "time_min_max_utc": [
+          "2013-05-30T15:26:43+00:00",
+          "2013-06-12T15:06:06+00:00"
+        ],
+        "unique_timestamps": 759,
+        "utc_day_counts": {
+          "2013-05-30": 599,
+          "2013-06-12": 757
+        },
+        "user_counts": {
+          "1": 757,
+          "11": 599
+        },
+        "phones": {
+          "13": {
+            "rows": 599,
+            "positions": 61,
+            "time_min_max_utc": [
+              "2013-05-30T15:26:43+00:00",
+              "2013-05-30T16:12:48+00:00"
+            ]
+          },
+          "14": {
+            "rows": 757,
+            "positions": 66,
+            "time_min_max_utc": [
+              "2013-06-12T14:15:51+00:00",
+              "2013-06-12T15:06:06+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-05-30T15:59:23+00:00",
+          "early_rows": 492,
+          "late_rows": 864,
+          "cross_boundary_positions": 49,
+          "early_after_purging_shared_positions": 10,
+          "late_after_purging_shared_positions": 345,
+          "early_phones": [
+            "13"
+          ],
+          "late_phones": [
+            "13",
+            "14"
+          ]
+        }
+      },
+      "B0F2": {
+        "rows": 1443,
+        "positions_exact": 70,
+        "scans_per_position_min_median_max": [
+          9,
+          20.0,
+          30
+        ],
+        "time_min_max_utc": [
+          "2013-05-30T15:16:30+00:00",
+          "2013-06-12T16:08:13+00:00"
+        ],
+        "unique_timestamps": 882,
+        "utc_day_counts": {
+          "2013-05-30": 10,
+          "2013-05-31": 362,
+          "2013-06-04": 338,
+          "2013-06-12": 733
+        },
+        "user_counts": {
+          "1": 733,
+          "11": 710
+        },
+        "phones": {
+          "13": {
+            "rows": 710,
+            "positions": 70,
+            "time_min_max_utc": [
+              "2013-05-30T15:16:30+00:00",
+              "2013-06-04T09:52:50+00:00"
+            ]
+          },
+          "14": {
+            "rows": 733,
+            "positions": 68,
+            "time_min_max_utc": [
+              "2013-06-12T15:21:18+00:00",
+              "2013-06-12T16:08:13+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-04T09:02:38+00:00",
+          "early_rows": 552,
+          "late_rows": 891,
+          "cross_boundary_positions": 52,
+          "early_after_purging_shared_positions": 19,
+          "late_after_purging_shared_positions": 335,
+          "early_phones": [
+            "13"
+          ],
+          "late_phones": [
+            "13",
+            "14"
+          ]
+        }
+      },
+      "B0F3": {
+        "rows": 1391,
+        "positions_exact": 68,
+        "scans_per_position_min_median_max": [
+          16,
+          20.0,
+          30
+        ],
+        "time_min_max_utc": [
+          "2013-06-04T09:54:19+00:00",
+          "2013-06-12T17:02:03+00:00"
+        ],
+        "unique_timestamps": 798,
+        "utc_day_counts": {
+          "2013-06-04": 672,
+          "2013-06-12": 719
+        },
+        "user_counts": {
+          "1": 719,
+          "11": 672
+        },
+        "phones": {
+          "13": {
+            "rows": 672,
+            "positions": 68,
+            "time_min_max_utc": [
+              "2013-06-04T09:54:19+00:00",
+              "2013-06-04T10:28:52+00:00"
+            ]
+          },
+          "14": {
+            "rows": 719,
+            "positions": 68,
+            "time_min_max_utc": [
+              "2013-06-12T16:29:46+00:00",
+              "2013-06-12T17:02:03+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-04T10:21:33+00:00",
+          "early_rows": 524,
+          "late_rows": 867,
+          "cross_boundary_positions": 54,
+          "early_after_purging_shared_positions": 0,
+          "late_after_purging_shared_positions": 304,
+          "early_phones": [
+            "13"
+          ],
+          "late_phones": [
+            "13",
+            "14"
+          ]
+        }
+      },
+      "B1F0": {
+        "rows": 1368,
+        "positions_exact": 76,
+        "scans_per_position_min_median_max": [
+          9,
+          20.0,
+          80
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T07:34:57+00:00",
+          "2013-06-20T08:28:29+00:00"
+        ],
+        "unique_timestamps": 870,
+        "utc_day_counts": {
+          "2013-06-20": 1368
+        },
+        "user_counts": {
+          "11": 139,
+          "13": 69,
+          "14": 138,
+          "16": 472,
+          "7": 550
+        },
+        "phones": {
+          "13": {
+            "rows": 139,
+            "positions": 14,
+            "time_min_max_utc": [
+              "2013-06-20T07:36:33+00:00",
+              "2013-06-20T07:46:46+00:00"
+            ]
+          },
+          "14": {
+            "rows": 472,
+            "positions": 43,
+            "time_min_max_utc": [
+              "2013-06-20T07:41:08+00:00",
+              "2013-06-20T08:15:23+00:00"
+            ]
+          },
+          "17": {
+            "rows": 69,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-06-20T07:49:10+00:00",
+              "2013-06-20T07:52:38+00:00"
+            ]
+          },
+          "6": {
+            "rows": 550,
+            "positions": 41,
+            "time_min_max_utc": [
+              "2013-06-20T07:34:57+00:00",
+              "2013-06-20T08:28:29+00:00"
+            ]
+          },
+          "7": {
+            "rows": 138,
+            "positions": 14,
+            "time_min_max_utc": [
+              "2013-06-20T07:41:37+00:00",
+              "2013-06-20T07:49:35+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T07:54:33+00:00",
+          "early_rows": 727,
+          "late_rows": 641,
+          "cross_boundary_positions": 3,
+          "early_after_purging_shared_positions": 665,
+          "late_after_purging_shared_positions": 613,
+          "early_phones": [
+            "13",
+            "14",
+            "17",
+            "6",
+            "7"
+          ],
+          "late_phones": [
+            "14",
+            "6"
+          ]
+        }
+      },
+      "B1F1": {
+        "rows": 1484,
+        "positions_exact": 60,
+        "scans_per_position_min_median_max": [
+          2,
+          20.0,
+          62
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T07:56:37+00:00",
+          "2013-06-20T09:47:19+00:00"
+        ],
+        "unique_timestamps": 790,
+        "utc_day_counts": {
+          "2013-06-20": 1484
+        },
+        "user_counts": {
+          "11": 467,
+          "13": 332,
+          "14": 309,
+          "16": 186,
+          "7": 190
+        },
+        "phones": {
+          "13": {
+            "rows": 467,
+            "positions": 26,
+            "time_min_max_utc": [
+              "2013-06-20T09:22:23+00:00",
+              "2013-06-20T09:47:19+00:00"
+            ]
+          },
+          "14": {
+            "rows": 186,
+            "positions": 17,
+            "time_min_max_utc": [
+              "2013-06-20T08:20:39+00:00",
+              "2013-06-20T08:39:00+00:00"
+            ]
+          },
+          "17": {
+            "rows": 332,
+            "positions": 25,
+            "time_min_max_utc": [
+              "2013-06-20T07:56:37+00:00",
+              "2013-06-20T08:21:23+00:00"
+            ]
+          },
+          "6": {
+            "rows": 190,
+            "positions": 18,
+            "time_min_max_utc": [
+              "2013-06-20T09:20:34+00:00",
+              "2013-06-20T09:34:42+00:00"
+            ]
+          },
+          "7": {
+            "rows": 309,
+            "positions": 26,
+            "time_min_max_utc": [
+              "2013-06-20T09:20:29+00:00",
+              "2013-06-20T09:45:43+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:28:39+00:00",
+          "early_rows": 885,
+          "late_rows": 599,
+          "cross_boundary_positions": 20,
+          "early_after_purging_shared_positions": 539,
+          "late_after_purging_shared_positions": 330,
+          "early_phones": [
+            "13",
+            "14",
+            "17",
+            "6",
+            "7"
+          ],
+          "late_phones": [
+            "13",
+            "6",
+            "7"
+          ]
+        }
+      },
+      "B1F2": {
+        "rows": 1396,
+        "positions_exact": 79,
+        "scans_per_position_min_median_max": [
+          3,
+          20,
+          40
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T07:33:58+00:00",
+          "2013-06-20T14:15:45+00:00"
+        ],
+        "unique_timestamps": 1041,
+        "utc_day_counts": {
+          "2013-06-20": 1396
+        },
+        "user_counts": {
+          "10": 234,
+          "2": 472,
+          "4": 374,
+          "9": 316
+        },
+        "phones": {
+          "14": {
+            "rows": 316,
+            "positions": 22,
+            "time_min_max_utc": [
+              "2013-06-20T07:35:53+00:00",
+              "2013-06-20T10:08:27+00:00"
+            ]
+          },
+          "18": {
+            "rows": 374,
+            "positions": 38,
+            "time_min_max_utc": [
+              "2013-06-20T13:29:52+00:00",
+              "2013-06-20T14:15:45+00:00"
+            ]
+          },
+          "23": {
+            "rows": 472,
+            "positions": 48,
+            "time_min_max_utc": [
+              "2013-06-20T07:33:58+00:00",
+              "2013-06-20T08:16:49+00:00"
+            ]
+          },
+          "8": {
+            "rows": 234,
+            "positions": 22,
+            "time_min_max_utc": [
+              "2013-06-20T07:35:22+00:00",
+              "2013-06-20T07:58:55+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T07:58:55+00:00",
+          "early_rows": 732,
+          "late_rows": 664,
+          "cross_boundary_positions": 31,
+          "early_after_purging_shared_positions": 304,
+          "late_after_purging_shared_positions": 353,
+          "early_phones": [
+            "14",
+            "23",
+            "8"
+          ],
+          "late_phones": [
+            "14",
+            "18",
+            "23",
+            "8"
+          ]
+        }
+      },
+      "B1F3": {
+        "rows": 948,
+        "positions_exact": 50,
+        "scans_per_position_min_median_max": [
+          8,
+          20.0,
+          44
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T06:17:08+00:00",
+          "2013-06-20T10:12:24+00:00"
+        ],
+        "unique_timestamps": 762,
+        "utc_day_counts": {
+          "2013-06-20": 948
+        },
+        "user_counts": {
+          "10": 128,
+          "17": 196,
+          "18": 230,
+          "8": 204,
+          "9": 190
+        },
+        "phones": {
+          "1": {
+            "rows": 204,
+            "positions": 20,
+            "time_min_max_utc": [
+              "2013-06-20T07:40:03+00:00",
+              "2013-06-20T08:01:43+00:00"
+            ]
+          },
+          "10": {
+            "rows": 230,
+            "positions": 24,
+            "time_min_max_utc": [
+              "2013-06-20T06:17:08+00:00",
+              "2013-06-20T06:50:50+00:00"
+            ]
+          },
+          "14": {
+            "rows": 190,
+            "positions": 10,
+            "time_min_max_utc": [
+              "2013-06-20T08:03:48+00:00",
+              "2013-06-20T10:12:24+00:00"
+            ]
+          },
+          "22": {
+            "rows": 196,
+            "positions": 16,
+            "time_min_max_utc": [
+              "2013-06-20T07:38:32+00:00",
+              "2013-06-20T08:18:37+00:00"
+            ]
+          },
+          "8": {
+            "rows": 128,
+            "positions": 13,
+            "time_min_max_utc": [
+              "2013-06-20T08:03:27+00:00",
+              "2013-06-20T08:12:45+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T07:51:53+00:00",
+          "early_rows": 399,
+          "late_rows": 549,
+          "cross_boundary_positions": 11,
+          "early_after_purging_shared_positions": 288,
+          "late_after_purging_shared_positions": 437,
+          "early_phones": [
+            "1",
+            "10",
+            "22"
+          ],
+          "late_phones": [
+            "1",
+            "14",
+            "22",
+            "8"
+          ]
+        }
+      },
+      "B2F0": {
+        "rows": 1942,
+        "positions_exact": 67,
+        "scans_per_position_min_median_max": [
+          18,
+          30,
+          60
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T09:16:42+00:00",
+          "2013-06-20T10:10:15+00:00"
+        ],
+        "unique_timestamps": 1291,
+        "utc_day_counts": {
+          "2013-06-20": 1942
+        },
+        "user_counts": {
+          "10": 551,
+          "17": 528,
+          "8": 303,
+          "9": 560
+        },
+        "phones": {
+          "1": {
+            "rows": 303,
+            "positions": 28,
+            "time_min_max_utc": [
+              "2013-06-20T09:16:42+00:00",
+              "2013-06-20T09:39:12+00:00"
+            ]
+          },
+          "14": {
+            "rows": 560,
+            "positions": 41,
+            "time_min_max_utc": [
+              "2013-06-20T09:16:50+00:00",
+              "2013-06-20T09:54:04+00:00"
+            ]
+          },
+          "22": {
+            "rows": 528,
+            "positions": 49,
+            "time_min_max_utc": [
+              "2013-06-20T09:18:18+00:00",
+              "2013-06-20T10:10:15+00:00"
+            ]
+          },
+          "8": {
+            "rows": 551,
+            "positions": 50,
+            "time_min_max_utc": [
+              "2013-06-20T09:16:56+00:00",
+              "2013-06-20T10:08:16+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:38:13+00:00",
+          "early_rows": 1034,
+          "late_rows": 908,
+          "cross_boundary_positions": 19,
+          "early_after_purging_shared_positions": 650,
+          "late_after_purging_shared_positions": 558,
+          "early_phones": [
+            "1",
+            "14",
+            "22",
+            "8"
+          ],
+          "late_phones": [
+            "1",
+            "14",
+            "22",
+            "8"
+          ]
+        }
+      },
+      "B2F1": {
+        "rows": 2162,
+        "positions_exact": 89,
+        "scans_per_position_min_median_max": [
+          8,
+          26,
+          44
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T06:29:45+00:00",
+          "2013-06-20T10:43:20+00:00"
+        ],
+        "unique_timestamps": 1853,
+        "utc_day_counts": {
+          "2013-06-20": 2162
+        },
+        "user_counts": {
+          "12": 437,
+          "15": 498,
+          "16": 374,
+          "18": 210,
+          "7": 643
+        },
+        "phones": {
+          "10": {
+            "rows": 210,
+            "positions": 21,
+            "time_min_max_utc": [
+              "2013-06-20T06:29:45+00:00",
+              "2013-06-20T06:40:21+00:00"
+            ]
+          },
+          "11": {
+            "rows": 498,
+            "positions": 58,
+            "time_min_max_utc": [
+              "2013-06-20T09:40:22+00:00",
+              "2013-06-20T10:43:20+00:00"
+            ]
+          },
+          "14": {
+            "rows": 374,
+            "positions": 37,
+            "time_min_max_utc": [
+              "2013-06-20T09:18:43+00:00",
+              "2013-06-20T09:33:42+00:00"
+            ]
+          },
+          "24": {
+            "rows": 437,
+            "positions": 42,
+            "time_min_max_utc": [
+              "2013-06-20T07:36:49+00:00",
+              "2013-06-20T09:22:52+00:00"
+            ]
+          },
+          "6": {
+            "rows": 643,
+            "positions": 60,
+            "time_min_max_utc": [
+              "2013-06-20T09:42:39+00:00",
+              "2013-06-20T10:41:46+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:48:40+00:00",
+          "early_rows": 1156,
+          "late_rows": 1006,
+          "cross_boundary_positions": 42,
+          "early_after_purging_shared_positions": 577,
+          "late_after_purging_shared_positions": 280,
+          "early_phones": [
+            "10",
+            "11",
+            "14",
+            "24",
+            "6"
+          ],
+          "late_phones": [
+            "11",
+            "6"
+          ]
+        }
+      },
+      "B2F2": {
+        "rows": 1577,
+        "positions_exact": 73,
+        "scans_per_position_min_median_max": [
+          7,
+          20,
+          49
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T07:40:00+00:00",
+          "2013-06-20T10:32:44+00:00"
+        ],
+        "unique_timestamps": 1132,
+        "utc_day_counts": {
+          "2013-06-20": 1577
+        },
+        "user_counts": {
+          "11": 785,
+          "14": 610,
+          "5": 182
+        },
+        "phones": {
+          "13": {
+            "rows": 785,
+            "positions": 55,
+            "time_min_max_utc": [
+              "2013-06-20T09:51:45+00:00",
+              "2013-06-20T10:32:44+00:00"
+            ]
+          },
+          "3": {
+            "rows": 182,
+            "positions": 17,
+            "time_min_max_utc": [
+              "2013-06-20T07:40:00+00:00",
+              "2013-06-20T08:08:55+00:00"
+            ]
+          },
+          "7": {
+            "rows": 610,
+            "positions": 44,
+            "time_min_max_utc": [
+              "2013-06-20T07:57:15+00:00",
+              "2013-06-20T08:33:18+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:57:23+00:00",
+          "early_rows": 918,
+          "late_rows": 659,
+          "cross_boundary_positions": 38,
+          "early_after_purging_shared_positions": 379,
+          "late_after_purging_shared_positions": 178,
+          "early_phones": [
+            "13",
+            "3",
+            "7"
+          ],
+          "late_phones": [
+            "13"
+          ]
+        }
+      },
+      "B2F3": {
+        "rows": 2709,
+        "positions_exact": 113,
+        "scans_per_position_min_median_max": [
+          10,
+          20,
+          50
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T07:39:52+00:00",
+          "2013-06-20T10:24:38+00:00"
+        ],
+        "unique_timestamps": 2008,
+        "utc_day_counts": {
+          "2013-06-20": 2709
+        },
+        "user_counts": {
+          "11": 613,
+          "14": 539,
+          "2": 619,
+          "5": 428,
+          "6": 510
+        },
+        "phones": {
+          "13": {
+            "rows": 613,
+            "positions": 48,
+            "time_min_max_utc": [
+              "2013-06-20T07:57:03+00:00",
+              "2013-06-20T08:38:09+00:00"
+            ]
+          },
+          "19": {
+            "rows": 510,
+            "positions": 51,
+            "time_min_max_utc": [
+              "2013-06-20T07:39:52+00:00",
+              "2013-06-20T08:03:16+00:00"
+            ]
+          },
+          "23": {
+            "rows": 619,
+            "positions": 60,
+            "time_min_max_utc": [
+              "2013-06-20T08:23:43+00:00",
+              "2013-06-20T09:48:16+00:00"
+            ]
+          },
+          "3": {
+            "rows": 428,
+            "positions": 42,
+            "time_min_max_utc": [
+              "2013-06-20T09:17:21+00:00",
+              "2013-06-20T10:13:46+00:00"
+            ]
+          },
+          "7": {
+            "rows": 539,
+            "positions": 45,
+            "time_min_max_utc": [
+              "2013-06-20T09:52:12+00:00",
+              "2013-06-20T10:24:38+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:21:07+00:00",
+          "early_rows": 1344,
+          "late_rows": 1365,
+          "cross_boundary_positions": 79,
+          "early_after_purging_shared_positions": 440,
+          "late_after_purging_shared_positions": 95,
+          "early_phones": [
+            "13",
+            "19",
+            "23",
+            "3"
+          ],
+          "late_phones": [
+            "23",
+            "3",
+            "7"
+          ]
+        }
+      },
+      "B2F4": {
+        "rows": 1102,
+        "positions_exact": 67,
+        "scans_per_position_min_median_max": [
+          2,
+          20,
+          30
+        ],
+        "time_min_max_utc": [
+          "2013-06-20T09:11:34+00:00",
+          "2013-06-20T09:58:50+00:00"
+        ],
+        "unique_timestamps": 494,
+        "utc_day_counts": {
+          "2013-06-20": 1102
+        },
+        "user_counts": {
+          "13": 440,
+          "3": 192,
+          "6": 470
+        },
+        "phones": {
+          "16": {
+            "rows": 192,
+            "positions": 20,
+            "time_min_max_utc": [
+              "2013-06-20T09:11:34+00:00",
+              "2013-06-20T09:21:28+00:00"
+            ]
+          },
+          "17": {
+            "rows": 440,
+            "positions": 42,
+            "time_min_max_utc": [
+              "2013-06-20T09:39:48+00:00",
+              "2013-06-20T09:58:50+00:00"
+            ]
+          },
+          "19": {
+            "rows": 470,
+            "positions": 47,
+            "time_min_max_utc": [
+              "2013-06-20T09:15:53+00:00",
+              "2013-06-20T09:40:06+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-06-20T09:22:27+00:00",
+          "early_rows": 364,
+          "late_rows": 738,
+          "cross_boundary_positions": 18,
+          "early_after_purging_shared_positions": 192,
+          "late_after_purging_shared_positions": 560,
+          "early_phones": [
+            "16",
+            "19"
+          ],
+          "late_phones": [
+            "17",
+            "19"
+          ]
+        }
+      }
+    }
+  },
+  "later_validation": {
+    "path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+    "sha256": "5f90c536648cd657b2c516d20c4e0968d4003279ea6bd5d5d5322d3f1e8905c0",
+    "rows_total": 1111,
+    "floors": {
+      "B0F0": {
+        "rows": 78,
+        "positions_exact": 78,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-09-19T08:15:00+00:00",
+          "2013-10-08T15:57:16+00:00"
+        ],
+        "unique_timestamps": 78,
+        "utc_day_counts": {
+          "2013-09-19": 42,
+          "2013-09-20": 6,
+          "2013-09-26": 1,
+          "2013-10-04": 26,
+          "2013-10-08": 3
+        },
+        "user_counts": {
+          "0": 78
+        },
+        "phones": {
+          "0": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-09-20T08:18:38+00:00",
+              "2013-09-20T08:52:54+00:00"
+            ]
+          },
+          "13": {
+            "rows": 46,
+            "positions": 46,
+            "time_min_max_utc": [
+              "2013-09-19T08:15:00+00:00",
+              "2013-10-08T15:57:16+00:00"
+            ]
+          },
+          "14": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T07:44:24+00:00",
+              "2013-10-04T07:47:21+00:00"
+            ]
+          },
+          "20": {
+            "rows": 16,
+            "positions": 16,
+            "time_min_max_utc": [
+              "2013-10-04T07:39:17+00:00",
+              "2013-10-04T07:58:08+00:00"
+            ]
+          },
+          "21": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:43:51+00:00",
+              "2013-10-04T07:48:53+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-09-19T08:45:34+00:00",
+          "early_rows": 39,
+          "late_rows": 39,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 39,
+          "late_after_purging_shared_positions": 39,
+          "early_phones": [
+            "13"
+          ],
+          "late_phones": [
+            "0",
+            "13",
+            "14",
+            "20",
+            "21"
+          ]
+        }
+      },
+      "B0F1": {
+        "rows": 208,
+        "positions_exact": 197,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          3
+        ],
+        "time_min_max_utc": [
+          "2013-09-19T08:12:47+00:00",
+          "2013-10-07T10:17:46+00:00"
+        ],
+        "unique_timestamps": 206,
+        "utc_day_counts": {
+          "2013-09-19": 9,
+          "2013-09-20": 72,
+          "2013-09-24": 8,
+          "2013-09-26": 37,
+          "2013-10-04": 81,
+          "2013-10-07": 1
+        },
+        "user_counts": {
+          "0": 208
+        },
+        "phones": {
+          "0": {
+            "rows": 57,
+            "positions": 56,
+            "time_min_max_utc": [
+              "2013-09-20T08:07:38+00:00",
+              "2013-10-07T10:17:46+00:00"
+            ]
+          },
+          "12": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:34:09+00:00",
+              "2013-10-04T07:38:48+00:00"
+            ]
+          },
+          "13": {
+            "rows": 75,
+            "positions": 71,
+            "time_min_max_utc": [
+              "2013-09-19T08:12:47+00:00",
+              "2013-10-04T09:11:03+00:00"
+            ]
+          },
+          "15": {
+            "rows": 5,
+            "positions": 5,
+            "time_min_max_utc": [
+              "2013-10-04T07:42:41+00:00",
+              "2013-10-04T07:47:49+00:00"
+            ]
+          },
+          "2": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:34:02+00:00",
+              "2013-10-04T07:38:43+00:00"
+            ]
+          },
+          "20": {
+            "rows": 38,
+            "positions": 38,
+            "time_min_max_utc": [
+              "2013-10-04T07:34:55+00:00",
+              "2013-10-04T07:54:59+00:00"
+            ]
+          },
+          "21": {
+            "rows": 3,
+            "positions": 3,
+            "time_min_max_utc": [
+              "2013-10-04T07:39:10+00:00",
+              "2013-10-04T07:42:59+00:00"
+            ]
+          },
+          "4": {
+            "rows": 2,
+            "positions": 2,
+            "time_min_max_utc": [
+              "2013-10-04T07:34:08+00:00",
+              "2013-10-04T07:34:38+00:00"
+            ]
+          },
+          "5": {
+            "rows": 1,
+            "positions": 1,
+            "time_min_max_utc": [
+              "2013-10-04T07:33:28+00:00",
+              "2013-10-04T07:33:28+00:00"
+            ]
+          },
+          "9": {
+            "rows": 15,
+            "positions": 15,
+            "time_min_max_utc": [
+              "2013-10-04T07:42:55+00:00",
+              "2013-10-04T07:48:24+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-09-26T09:55:38+00:00",
+          "early_rows": 103,
+          "late_rows": 105,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 103,
+          "late_after_purging_shared_positions": 105,
+          "early_phones": [
+            "0",
+            "13"
+          ],
+          "late_phones": [
+            "0",
+            "12",
+            "13",
+            "15",
+            "2",
+            "20",
+            "21",
+            "4",
+            "5",
+            "9"
+          ]
+        }
+      },
+      "B0F2": {
+        "rows": 165,
+        "positions_exact": 154,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          4
+        ],
+        "time_min_max_utc": [
+          "2013-09-20T08:17:59+00:00",
+          "2013-10-04T11:00:32+00:00"
+        ],
+        "unique_timestamps": 163,
+        "utc_day_counts": {
+          "2013-09-20": 20,
+          "2013-09-24": 36,
+          "2013-09-26": 1,
+          "2013-10-03": 7,
+          "2013-10-04": 101
+        },
+        "user_counts": {
+          "0": 165
+        },
+        "phones": {
+          "0": {
+            "rows": 20,
+            "positions": 20,
+            "time_min_max_utc": [
+              "2013-09-20T08:17:59+00:00",
+              "2013-09-26T09:57:01+00:00"
+            ]
+          },
+          "12": {
+            "rows": 9,
+            "positions": 9,
+            "time_min_max_utc": [
+              "2013-10-04T07:39:36+00:00",
+              "2013-10-04T07:44:26+00:00"
+            ]
+          },
+          "13": {
+            "rows": 37,
+            "positions": 32,
+            "time_min_max_utc": [
+              "2013-09-20T08:56:02+00:00",
+              "2013-09-24T15:18:44+00:00"
+            ]
+          },
+          "15": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-03T14:44:32+00:00",
+              "2013-10-04T11:00:32+00:00"
+            ]
+          },
+          "2": {
+            "rows": 18,
+            "positions": 18,
+            "time_min_max_utc": [
+              "2013-10-04T07:39:26+00:00",
+              "2013-10-04T09:09:34+00:00"
+            ]
+          },
+          "20": {
+            "rows": 29,
+            "positions": 29,
+            "time_min_max_utc": [
+              "2013-10-04T07:36:19+00:00",
+              "2013-10-04T07:48:22+00:00"
+            ]
+          },
+          "21": {
+            "rows": 11,
+            "positions": 11,
+            "time_min_max_utc": [
+              "2013-10-04T07:54:21+00:00",
+              "2013-10-04T07:59:42+00:00"
+            ]
+          },
+          "4": {
+            "rows": 11,
+            "positions": 11,
+            "time_min_max_utc": [
+              "2013-10-04T07:36:02+00:00",
+              "2013-10-04T07:44:37+00:00"
+            ]
+          },
+          "9": {
+            "rows": 23,
+            "positions": 21,
+            "time_min_max_utc": [
+              "2013-10-03T14:42:23+00:00",
+              "2013-10-04T07:56:55+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T07:40:24+00:00",
+          "early_rows": 81,
+          "late_rows": 84,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 81,
+          "late_after_purging_shared_positions": 84,
+          "early_phones": [
+            "0",
+            "12",
+            "13",
+            "15",
+            "2",
+            "20",
+            "4",
+            "9"
+          ],
+          "late_phones": [
+            "12",
+            "15",
+            "2",
+            "20",
+            "21",
+            "4",
+            "9"
+          ]
+        }
+      },
+      "B0F3": {
+        "rows": 85,
+        "positions_exact": 85,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-09-20T08:57:19+00:00",
+          "2013-10-04T07:57:06+00:00"
+        ],
+        "unique_timestamps": 85,
+        "utc_day_counts": {
+          "2013-09-20": 28,
+          "2013-10-04": 57
+        },
+        "user_counts": {
+          "0": 85
+        },
+        "phones": {
+          "12": {
+            "rows": 12,
+            "positions": 12,
+            "time_min_max_utc": [
+              "2013-10-04T07:43:05+00:00",
+              "2013-10-04T07:53:39+00:00"
+            ]
+          },
+          "13": {
+            "rows": 28,
+            "positions": 28,
+            "time_min_max_utc": [
+              "2013-09-20T08:57:19+00:00",
+              "2013-09-20T09:09:42+00:00"
+            ]
+          },
+          "15": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:49:51+00:00",
+              "2013-10-04T07:55:00+00:00"
+            ]
+          },
+          "2": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:50:41+00:00",
+              "2013-10-04T07:54:41+00:00"
+            ]
+          },
+          "20": {
+            "rows": 11,
+            "positions": 11,
+            "time_min_max_utc": [
+              "2013-10-04T07:37:29+00:00",
+              "2013-10-04T07:44:25+00:00"
+            ]
+          },
+          "21": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T07:50:50+00:00",
+              "2013-10-04T07:53:53+00:00"
+            ]
+          },
+          "4": {
+            "rows": 16,
+            "positions": 16,
+            "time_min_max_utc": [
+              "2013-10-04T07:45:31+00:00",
+              "2013-10-04T07:57:06+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T07:47:29+00:00",
+          "early_rows": 42,
+          "late_rows": 43,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 42,
+          "late_after_purging_shared_positions": 43,
+          "early_phones": [
+            "12",
+            "13",
+            "20",
+            "4"
+          ],
+          "late_phones": [
+            "12",
+            "15",
+            "2",
+            "21",
+            "4"
+          ]
+        }
+      },
+      "B1F0": {
+        "rows": 30,
+        "positions_exact": 30,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-09-20T06:29:07+00:00",
+          "2013-10-04T08:20:15+00:00"
+        ],
+        "unique_timestamps": 30,
+        "utc_day_counts": {
+          "2013-09-20": 3,
+          "2013-09-26": 4,
+          "2013-10-01": 1,
+          "2013-10-03": 1,
+          "2013-10-04": 21
+        },
+        "user_counts": {
+          "0": 30
+        },
+        "phones": {
+          "0": {
+            "rows": 3,
+            "positions": 3,
+            "time_min_max_utc": [
+              "2013-10-01T11:04:03+00:00",
+              "2013-10-04T07:56:53+00:00"
+            ]
+          },
+          "13": {
+            "rows": 12,
+            "positions": 12,
+            "time_min_max_utc": [
+              "2013-09-20T06:29:07+00:00",
+              "2013-10-04T08:03:15+00:00"
+            ]
+          },
+          "14": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T07:56:35+00:00",
+              "2013-10-04T08:10:12+00:00"
+            ]
+          },
+          "2": {
+            "rows": 2,
+            "positions": 2,
+            "time_min_max_utc": [
+              "2013-10-04T08:19:21+00:00",
+              "2013-10-04T08:20:15+00:00"
+            ]
+          },
+          "20": {
+            "rows": 2,
+            "positions": 2,
+            "time_min_max_utc": [
+              "2013-10-03T15:30:50+00:00",
+              "2013-10-04T08:16:52+00:00"
+            ]
+          },
+          "5": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-04T07:48:02+00:00",
+              "2013-10-04T08:05:18+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T07:56:53+00:00",
+          "early_rows": 15,
+          "late_rows": 15,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 15,
+          "late_after_purging_shared_positions": 15,
+          "early_phones": [
+            "0",
+            "13",
+            "14",
+            "20",
+            "5"
+          ],
+          "late_phones": [
+            "0",
+            "13",
+            "14",
+            "2",
+            "20",
+            "5"
+          ]
+        }
+      },
+      "B1F1": {
+        "rows": 143,
+        "positions_exact": 140,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          2
+        ],
+        "time_min_max_utc": [
+          "2013-09-20T08:10:59+00:00",
+          "2013-10-04T08:30:43+00:00"
+        ],
+        "unique_timestamps": 139,
+        "utc_day_counts": {
+          "2013-09-20": 4,
+          "2013-09-24": 4,
+          "2013-09-26": 16,
+          "2013-10-01": 7,
+          "2013-10-04": 112
+        },
+        "user_counts": {
+          "0": 143
+        },
+        "phones": {
+          "0": {
+            "rows": 23,
+            "positions": 23,
+            "time_min_max_utc": [
+              "2013-09-24T12:55:06+00:00",
+              "2013-10-04T07:49:38+00:00"
+            ]
+          },
+          "12": {
+            "rows": 10,
+            "positions": 10,
+            "time_min_max_utc": [
+              "2013-10-04T07:55:41+00:00",
+              "2013-10-04T08:14:17+00:00"
+            ]
+          },
+          "13": {
+            "rows": 46,
+            "positions": 46,
+            "time_min_max_utc": [
+              "2013-09-20T08:10:59+00:00",
+              "2013-10-04T07:57:24+00:00"
+            ]
+          },
+          "14": {
+            "rows": 5,
+            "positions": 5,
+            "time_min_max_utc": [
+              "2013-10-04T07:50:31+00:00",
+              "2013-10-04T07:54:58+00:00"
+            ]
+          },
+          "15": {
+            "rows": 3,
+            "positions": 3,
+            "time_min_max_utc": [
+              "2013-10-04T08:08:01+00:00",
+              "2013-10-04T08:10:27+00:00"
+            ]
+          },
+          "2": {
+            "rows": 8,
+            "positions": 8,
+            "time_min_max_utc": [
+              "2013-10-04T07:57:32+00:00",
+              "2013-10-04T08:07:23+00:00"
+            ]
+          },
+          "20": {
+            "rows": 19,
+            "positions": 19,
+            "time_min_max_utc": [
+              "2013-10-04T07:56:20+00:00",
+              "2013-10-04T08:30:43+00:00"
+            ]
+          },
+          "21": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-04T08:01:52+00:00",
+              "2013-10-04T08:05:06+00:00"
+            ]
+          },
+          "4": {
+            "rows": 10,
+            "positions": 10,
+            "time_min_max_utc": [
+              "2013-10-04T08:01:27+00:00",
+              "2013-10-04T08:11:54+00:00"
+            ]
+          },
+          "5": {
+            "rows": 5,
+            "positions": 5,
+            "time_min_max_utc": [
+              "2013-10-04T07:38:20+00:00",
+              "2013-10-04T07:43:56+00:00"
+            ]
+          },
+          "9": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-04T08:07:46+00:00",
+              "2013-10-04T08:11:41+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T07:54:37+00:00",
+          "early_rows": 71,
+          "late_rows": 72,
+          "cross_boundary_positions": 1,
+          "early_after_purging_shared_positions": 70,
+          "late_after_purging_shared_positions": 71,
+          "early_phones": [
+            "0",
+            "13",
+            "14",
+            "5"
+          ],
+          "late_phones": [
+            "12",
+            "13",
+            "14",
+            "15",
+            "2",
+            "20",
+            "21",
+            "4",
+            "9"
+          ]
+        }
+      },
+      "B1F2": {
+        "rows": 87,
+        "positions_exact": 85,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          2
+        ],
+        "time_min_max_utc": [
+          "2013-09-24T13:17:00+00:00",
+          "2013-10-07T13:48:05+00:00"
+        ],
+        "unique_timestamps": 87,
+        "utc_day_counts": {
+          "2013-09-24": 8,
+          "2013-10-04": 61,
+          "2013-10-07": 18
+        },
+        "user_counts": {
+          "0": 87
+        },
+        "phones": {
+          "0": {
+            "rows": 11,
+            "positions": 11,
+            "time_min_max_utc": [
+              "2013-09-24T13:17:00+00:00",
+              "2013-10-04T07:54:06+00:00"
+            ]
+          },
+          "12": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T08:02:50+00:00",
+              "2013-10-04T08:11:45+00:00"
+            ]
+          },
+          "13": {
+            "rows": 18,
+            "positions": 18,
+            "time_min_max_utc": [
+              "2013-10-07T13:37:59+00:00",
+              "2013-10-07T13:48:05+00:00"
+            ]
+          },
+          "2": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-04T08:10:16+00:00",
+              "2013-10-04T08:15:43+00:00"
+            ]
+          },
+          "20": {
+            "rows": 21,
+            "positions": 21,
+            "time_min_max_utc": [
+              "2013-10-04T08:00:05+00:00",
+              "2013-10-04T08:29:04+00:00"
+            ]
+          },
+          "21": {
+            "rows": 8,
+            "positions": 8,
+            "time_min_max_utc": [
+              "2013-10-04T08:07:30+00:00",
+              "2013-10-04T08:14:06+00:00"
+            ]
+          },
+          "4": {
+            "rows": 16,
+            "positions": 16,
+            "time_min_max_utc": [
+              "2013-10-04T08:08:00+00:00",
+              "2013-10-04T08:19:57+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T08:11:44+00:00",
+          "early_rows": 43,
+          "late_rows": 44,
+          "cross_boundary_positions": 2,
+          "early_after_purging_shared_positions": 41,
+          "late_after_purging_shared_positions": 42,
+          "early_phones": [
+            "0",
+            "12",
+            "2",
+            "20",
+            "21",
+            "4"
+          ],
+          "late_phones": [
+            "12",
+            "13",
+            "2",
+            "20",
+            "21",
+            "4"
+          ]
+        }
+      },
+      "B1F3": {
+        "rows": 47,
+        "positions_exact": 46,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          2
+        ],
+        "time_min_max_utc": [
+          "2013-10-04T07:59:39+00:00",
+          "2013-10-07T14:04:36+00:00"
+        ],
+        "unique_timestamps": 47,
+        "utc_day_counts": {
+          "2013-10-04": 21,
+          "2013-10-07": 26
+        },
+        "user_counts": {
+          "0": 47
+        },
+        "phones": {
+          "12": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T08:05:44+00:00",
+              "2013-10-04T08:08:08+00:00"
+            ]
+          },
+          "13": {
+            "rows": 26,
+            "positions": 26,
+            "time_min_max_utc": [
+              "2013-10-07T13:50:17+00:00",
+              "2013-10-07T14:04:36+00:00"
+            ]
+          },
+          "20": {
+            "rows": 13,
+            "positions": 13,
+            "time_min_max_utc": [
+              "2013-10-04T08:09:56+00:00",
+              "2013-10-04T08:27:55+00:00"
+            ]
+          },
+          "5": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T07:59:39+00:00",
+              "2013-10-04T08:01:25+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-07T13:50:46+00:00",
+          "early_rows": 23,
+          "late_rows": 24,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 23,
+          "late_after_purging_shared_positions": 24,
+          "early_phones": [
+            "12",
+            "13",
+            "20",
+            "5"
+          ],
+          "late_phones": [
+            "13"
+          ]
+        }
+      },
+      "B2F0": {
+        "rows": 24,
+        "positions_exact": 24,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-10-04T08:18:47+00:00",
+          "2013-10-04T08:30:28+00:00"
+        ],
+        "unique_timestamps": 24,
+        "utc_day_counts": {
+          "2013-10-04": 24
+        },
+        "user_counts": {
+          "0": 24
+        },
+        "phones": {
+          "15": {
+            "rows": 5,
+            "positions": 5,
+            "time_min_max_utc": [
+              "2013-10-04T08:28:50+00:00",
+              "2013-10-04T08:30:28+00:00"
+            ]
+          },
+          "20": {
+            "rows": 9,
+            "positions": 9,
+            "time_min_max_utc": [
+              "2013-10-04T08:24:53+00:00",
+              "2013-10-04T08:30:10+00:00"
+            ]
+          },
+          "21": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T08:18:47+00:00",
+              "2013-10-04T08:21:46+00:00"
+            ]
+          },
+          "9": {
+            "rows": 6,
+            "positions": 6,
+            "time_min_max_utc": [
+              "2013-10-04T08:28:13+00:00",
+              "2013-10-04T08:30:24+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T08:28:48+00:00",
+          "early_rows": 12,
+          "late_rows": 12,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 12,
+          "late_after_purging_shared_positions": 12,
+          "early_phones": [
+            "20",
+            "21",
+            "9"
+          ],
+          "late_phones": [
+            "15",
+            "20",
+            "9"
+          ]
+        }
+      },
+      "B2F1": {
+        "rows": 111,
+        "positions_exact": 103,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          8
+        ],
+        "time_min_max_utc": [
+          "2013-09-26T14:58:10+00:00",
+          "2013-10-04T08:32:12+00:00"
+        ],
+        "unique_timestamps": 106,
+        "utc_day_counts": {
+          "2013-09-26": 10,
+          "2013-10-04": 101
+        },
+        "user_counts": {
+          "0": 111
+        },
+        "phones": {
+          "12": {
+            "rows": 9,
+            "positions": 9,
+            "time_min_max_utc": [
+              "2013-10-04T08:15:53+00:00",
+              "2013-10-04T08:19:02+00:00"
+            ]
+          },
+          "13": {
+            "rows": 25,
+            "positions": 25,
+            "time_min_max_utc": [
+              "2013-09-26T14:58:10+00:00",
+              "2013-10-04T08:31:45+00:00"
+            ]
+          },
+          "14": {
+            "rows": 2,
+            "positions": 2,
+            "time_min_max_utc": [
+              "2013-10-04T08:30:02+00:00",
+              "2013-10-04T08:30:49+00:00"
+            ]
+          },
+          "15": {
+            "rows": 10,
+            "positions": 9,
+            "time_min_max_utc": [
+              "2013-10-04T08:13:44+00:00",
+              "2013-10-04T08:21:10+00:00"
+            ]
+          },
+          "2": {
+            "rows": 1,
+            "positions": 1,
+            "time_min_max_utc": [
+              "2013-10-04T08:22:07+00:00",
+              "2013-10-04T08:22:07+00:00"
+            ]
+          },
+          "20": {
+            "rows": 21,
+            "positions": 21,
+            "time_min_max_utc": [
+              "2013-10-04T08:01:59+00:00",
+              "2013-10-04T08:32:12+00:00"
+            ]
+          },
+          "21": {
+            "rows": 3,
+            "positions": 3,
+            "time_min_max_utc": [
+              "2013-10-04T08:16:48+00:00",
+              "2013-10-04T08:18:20+00:00"
+            ]
+          },
+          "4": {
+            "rows": 14,
+            "positions": 14,
+            "time_min_max_utc": [
+              "2013-10-04T08:25:40+00:00",
+              "2013-10-04T08:30:59+00:00"
+            ]
+          },
+          "9": {
+            "rows": 26,
+            "positions": 22,
+            "time_min_max_utc": [
+              "2013-10-04T08:13:44+00:00",
+              "2013-10-04T08:23:05+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T08:17:55+00:00",
+          "early_rows": 55,
+          "late_rows": 56,
+          "cross_boundary_positions": 1,
+          "early_after_purging_shared_positions": 54,
+          "late_after_purging_shared_positions": 49,
+          "early_phones": [
+            "12",
+            "13",
+            "15",
+            "20",
+            "21",
+            "9"
+          ],
+          "late_phones": [
+            "12",
+            "13",
+            "14",
+            "15",
+            "2",
+            "20",
+            "21",
+            "4",
+            "9"
+          ]
+        }
+      },
+      "B2F2": {
+        "rows": 54,
+        "positions_exact": 53,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          2
+        ],
+        "time_min_max_utc": [
+          "2013-10-04T08:08:26+00:00",
+          "2013-10-04T08:27:34+00:00"
+        ],
+        "unique_timestamps": 53,
+        "utc_day_counts": {
+          "2013-10-04": 54
+        },
+        "user_counts": {
+          "0": 54
+        },
+        "phones": {
+          "12": {
+            "rows": 14,
+            "positions": 14,
+            "time_min_max_utc": [
+              "2013-10-04T08:19:43+00:00",
+              "2013-10-04T08:26:57+00:00"
+            ]
+          },
+          "13": {
+            "rows": 20,
+            "positions": 19,
+            "time_min_max_utc": [
+              "2013-10-04T08:13:43+00:00",
+              "2013-10-04T08:27:34+00:00"
+            ]
+          },
+          "2": {
+            "rows": 4,
+            "positions": 4,
+            "time_min_max_utc": [
+              "2013-10-04T08:23:53+00:00",
+              "2013-10-04T08:26:27+00:00"
+            ]
+          },
+          "20": {
+            "rows": 16,
+            "positions": 16,
+            "time_min_max_utc": [
+              "2013-10-04T08:08:26+00:00",
+              "2013-10-04T08:26:28+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T08:20:52+00:00",
+          "early_rows": 26,
+          "late_rows": 28,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 26,
+          "late_after_purging_shared_positions": 28,
+          "early_phones": [
+            "12",
+            "13",
+            "20"
+          ],
+          "late_phones": [
+            "12",
+            "13",
+            "2",
+            "20"
+          ]
+        }
+      },
+      "B2F3": {
+        "rows": 40,
+        "positions_exact": 40,
+        "scans_per_position_min_median_max": [
+          1,
+          1.0,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-10-04T08:11:28+00:00",
+          "2013-10-07T14:38:50+00:00"
+        ],
+        "unique_timestamps": 40,
+        "utc_day_counts": {
+          "2013-10-04": 13,
+          "2013-10-07": 27
+        },
+        "user_counts": {
+          "0": 40
+        },
+        "phones": {
+          "13": {
+            "rows": 27,
+            "positions": 27,
+            "time_min_max_utc": [
+              "2013-10-07T14:24:31+00:00",
+              "2013-10-07T14:38:50+00:00"
+            ]
+          },
+          "20": {
+            "rows": 11,
+            "positions": 11,
+            "time_min_max_utc": [
+              "2013-10-04T08:11:28+00:00",
+              "2013-10-04T08:23:20+00:00"
+            ]
+          },
+          "21": {
+            "rows": 2,
+            "positions": 2,
+            "time_min_max_utc": [
+              "2013-10-04T08:24:45+00:00",
+              "2013-10-04T08:25:14+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-07T14:27:43+00:00",
+          "early_rows": 20,
+          "late_rows": 20,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 20,
+          "late_after_purging_shared_positions": 20,
+          "early_phones": [
+            "13",
+            "20",
+            "21"
+          ],
+          "late_phones": [
+            "13"
+          ]
+        }
+      },
+      "B2F4": {
+        "rows": 39,
+        "positions_exact": 39,
+        "scans_per_position_min_median_max": [
+          1,
+          1,
+          1
+        ],
+        "time_min_max_utc": [
+          "2013-10-04T08:13:53+00:00",
+          "2013-10-07T14:22:22+00:00"
+        ],
+        "unique_timestamps": 39,
+        "utc_day_counts": {
+          "2013-10-04": 30,
+          "2013-10-07": 9
+        },
+        "user_counts": {
+          "0": 39
+        },
+        "phones": {
+          "13": {
+            "rows": 9,
+            "positions": 9,
+            "time_min_max_utc": [
+              "2013-10-07T14:10:34+00:00",
+              "2013-10-07T14:22:22+00:00"
+            ]
+          },
+          "14": {
+            "rows": 13,
+            "positions": 13,
+            "time_min_max_utc": [
+              "2013-10-04T08:13:53+00:00",
+              "2013-10-04T08:28:19+00:00"
+            ]
+          },
+          "20": {
+            "rows": 7,
+            "positions": 7,
+            "time_min_max_utc": [
+              "2013-10-04T08:16:57+00:00",
+              "2013-10-04T08:19:12+00:00"
+            ]
+          },
+          "21": {
+            "rows": 10,
+            "positions": 10,
+            "time_min_max_utc": [
+              "2013-10-04T08:26:05+00:00",
+              "2013-10-04T08:29:49+00:00"
+            ]
+          }
+        },
+        "chronological_half_unique_timestamps_diagnostic": {
+          "cutoff_utc": "2013-10-04T08:26:31+00:00",
+          "early_rows": 19,
+          "late_rows": 20,
+          "cross_boundary_positions": 0,
+          "early_after_purging_shared_positions": 19,
+          "late_after_purging_shared_positions": 20,
+          "early_phones": [
+            "14",
+            "20",
+            "21"
+          ],
+          "late_phones": [
+            "13",
+            "14",
+            "21"
+          ]
+        }
+      }
+    }
+  },
+  "overlap_by_floor": {
+    "B0F0": {
+      "exact_positions": 0,
+      "phones": [
+        "13",
+        "14"
+      ]
+    },
+    "B0F1": {
+      "exact_positions": 0,
+      "phones": [
+        "13"
+      ]
+    },
+    "B0F2": {
+      "exact_positions": 1,
+      "phones": [
+        "13"
+      ]
+    },
+    "B0F3": {
+      "exact_positions": 0,
+      "phones": [
+        "13"
+      ]
+    },
+    "B1F0": {
+      "exact_positions": 0,
+      "phones": [
+        "13",
+        "14"
+      ]
+    },
+    "B1F1": {
+      "exact_positions": 3,
+      "phones": [
+        "13",
+        "14"
+      ]
+    },
+    "B1F2": {
+      "exact_positions": 4,
+      "phones": []
+    },
+    "B1F3": {
+      "exact_positions": 1,
+      "phones": []
+    },
+    "B2F0": {
+      "exact_positions": 0,
+      "phones": []
+    },
+    "B2F1": {
+      "exact_positions": 1,
+      "phones": [
+        "14"
+      ]
+    },
+    "B2F2": {
+      "exact_positions": 0,
+      "phones": [
+        "13"
+      ]
+    },
+    "B2F3": {
+      "exact_positions": 0,
+      "phones": [
+        "13"
+      ]
+    },
+    "B2F4": {
+      "exact_positions": 0,
+      "phones": []
+    }
+  },
+  "permissions": {
+    "columns_interpreted": [
+      "LONGITUDE",
+      "LATITUDE",
+      "FLOOR",
+      "BUILDINGID",
+      "PHONEID",
+      "USERID",
+      "TIMESTAMP"
+    ],
+    "rssi_statistics": false,
+    "localization_metrics": false,
+    "training": false,
+    "note": "protocol metadata audit before method freeze; all floors inspected"
+  },
+  "execution": {
+    "system": "Linux",
+    "host": "ray-web",
+    "python": "3.12.3"
+  }
+}

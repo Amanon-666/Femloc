@@ -1,0 +1,56 @@
+{
+  "purpose": "analytic counterexamples only; no UJI model or performance evaluation",
+  "checks_passed": 8,
+  "checks": {
+    "random_location_not_average_measurement": {
+      "mixture_variance": 404.0,
+      "linear_average_variance": 4,
+      "density_ratio_at_minus60_linear_over_mixture": 5.184705528587072e+21,
+      "extra_field_uncertainty_if_C_is_identity": {
+        "random_location": 1,
+        "average": 0.5
+      }
+    },
+    "wrong_association_biases_constant": {
+      "true": 5,
+      "estimated": -15
+    },
+    "occupancy_and_drift_nonidentifiable": {
+      "same_observation": -60,
+      "possible_biases": [
+        20,
+        0
+      ]
+    },
+    "row_permutation_only_invariance": {
+      "original": 5.0,
+      "row_permuted": 5.0,
+      "changed_column_mass": -5.0
+    },
+    "physical_shift_not_encoded_constant": {
+      "latent_shift": 5,
+      "encoded_shifts": {
+        "-95": 2.8318530994064446,
+        "-85": 12.740342382056284,
+        "-65": 5.001410873303904
+      },
+      "threshold_derivative_v0": 2.4947114020071632,
+      "max_derivative_fd_error": 7.02522484630208e-11,
+      "quadrature_error": 1.8474111129762605e-13
+    },
+    "old_anchor_does_not_pin_future_drift": {
+      "old_conditional_variance": 0.23076923076923084,
+      "new_variance": 4.230769230769231
+    },
+    "correlated_repeats": {
+      "N": 20,
+      "rho": 0.8,
+      "iid_mean_variance": 0.05,
+      "correlated_mean_variance": 0.81
+    },
+    "shared_final_feature_offset_cancels": {
+      "before": 34,
+      "after": 34
+    }
+  }
+}

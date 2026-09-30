@@ -59,7 +59,8 @@ def main():
     }
 
     shifts = {str(mu): encoded_mean(mu + 5) - encoded_mean(mu) for mu in [-95, -85, -65]}
-    assert shifts["-95"] < 2 and shifts["-85"] > 10 and abs(shifts["-65"] - 5) < 0.01
+    # Compare to the physical shift; an earlier hand-estimated <2 bound was wrong.
+    assert 0 < shifts["-95"] < 5 and shifts["-85"] > 5 and abs(shifts["-65"] - 5) < 0.01
     errors = []
     for mu in [-100.0, -85.0, -65.0]:
         for variance in [0.0, 25.0, 100.0]:
