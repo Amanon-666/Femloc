@@ -1,0 +1,18 @@
+{
+  "train_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/trainingData.csv",
+  "validation_path": "/home/panyushuo/projects/panyushuo/UJIIndoorLoc/data/raw/UJIndoorLoc/validationData.csv",
+  "steps": 1000,
+  "seeds": [0, 1],
+  "ks": [3, 5, 10],
+  "scans": 3,
+  "train_query_cap": 96,
+  "selection_query_cap": 128,
+  "query_cap": 300,
+  "selection_episodes": 5,
+  "evaluation_episodes": 20,
+  "fields": [[20, 0.1], [20, 0.3], [20, 1.0], [40, 0.1], [40, 0.3], [40, 1.0], [80, 0.1], [80, 0.3], [80, 1.0]],
+  "matches": [[12, -85], [16, -80]],
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "grad_clip": 5.0
+}
