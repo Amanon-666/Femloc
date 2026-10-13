@@ -25,3 +25,9 @@
 ## 提交与推送
 
 - 日常修改可直接提交；不要每轮自动推送。仅在用户明确要求推送时通过隧道执行。
+
+## 2026-10-13 ADKF comparison branch
+
+User authorized parallel follow-up method validation on a new branch. In this
+branch, ADKF_PROTOCOL.md supersedes the old fixed K=10/no target-GP-adaptation
+restrictions for adkf_uji.py only. Existing dkt code is left unchanged.
