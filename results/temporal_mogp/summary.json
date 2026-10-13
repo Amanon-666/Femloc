@@ -1,0 +1,179 @@
+{
+ "equal_floor": {
+  "3": {
+   "old": {
+    "mde": 8.220132299771862,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "anchors": {
+    "mde": 36.99563813870733,
+    "coded_rmse": 5.396481881525466,
+    "visible_rmse": 24.020241340363295,
+    "ap_equal_visible_rmse": 24.290478401744927,
+    "detection_f1": 0.18832390153603498
+   },
+   "append": {
+    "mde": 8.574040892118543,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "global": {
+    "mde": 8.60394690981354,
+    "coded_rmse": 3.973168905624729,
+    "visible_rmse": 15.483327834212282,
+    "ap_equal_visible_rmse": 17.314305346607203,
+    "detection_f1": 0.4085370112212905
+   },
+   "scm": {
+    "mde": 8.2675620686082,
+    "coded_rmse": 3.777471011054964,
+    "visible_rmse": 15.343300046095234,
+    "ap_equal_visible_rmse": 17.2462809353277,
+    "detection_f1": 0.4090760465548672
+   },
+   "lmc": {
+    "mde": 8.323412593262873,
+    "coded_rmse": 3.766727706048352,
+    "visible_rmse": 15.348551922319064,
+    "ap_equal_visible_rmse": 17.24762999286386,
+    "detection_f1": 0.4120566629566529
+   },
+   "diagonal_lmc": {
+    "mde": 8.323412593262873,
+    "coded_rmse": 3.766727706048352,
+    "visible_rmse": 15.348551922319064,
+    "ap_equal_visible_rmse": 17.24762999286386,
+    "detection_f1": 0.4120566629566529
+   },
+   "diagonal_best": {
+    "mde": 8.323412593262873,
+    "coded_rmse": 3.766727706048352,
+    "visible_rmse": 15.348551922319064,
+    "ap_equal_visible_rmse": 17.24762999286386,
+    "detection_f1": 0.4120566629566529
+   }
+  },
+  "5": {
+   "old": {
+    "mde": 8.220132299771862,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "anchors": {
+    "mde": 26.01541676636832,
+    "coded_rmse": 4.762605368542664,
+    "visible_rmse": 21.10324062918557,
+    "ap_equal_visible_rmse": 22.30492961575616,
+    "detection_f1": 0.25707661260729187
+   },
+   "append": {
+    "mde": 8.535038182002843,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "global": {
+    "mde": 8.189312087120623,
+    "coded_rmse": 3.7796194205153357,
+    "visible_rmse": 15.191524039729853,
+    "ap_equal_visible_rmse": 17.104480401747367,
+    "detection_f1": 0.4049296438858295
+   },
+   "scm": {
+    "mde": 8.047902452199612,
+    "coded_rmse": 3.6565965660000384,
+    "visible_rmse": 15.091280083836194,
+    "ap_equal_visible_rmse": 17.06586764291429,
+    "detection_f1": 0.4083379390655816
+   },
+   "lmc": {
+    "mde": 8.061652515760034,
+    "coded_rmse": 3.6458031330287377,
+    "visible_rmse": 15.07219306173552,
+    "ap_equal_visible_rmse": 17.03827954952203,
+    "detection_f1": 0.41181164857181385
+   },
+   "diagonal_lmc": {
+    "mde": 8.061652515760034,
+    "coded_rmse": 3.6458031330287377,
+    "visible_rmse": 15.07219306173552,
+    "ap_equal_visible_rmse": 17.03827954952203,
+    "detection_f1": 0.41181164857181385
+   },
+   "diagonal_best": {
+    "mde": 8.061652515760034,
+    "coded_rmse": 3.6458031330287377,
+    "visible_rmse": 15.07219306173552,
+    "ap_equal_visible_rmse": 17.03827954952203,
+    "detection_f1": 0.41181164857181385
+   }
+  },
+  "10": {
+   "old": {
+    "mde": 8.220132299771862,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "anchors": {
+    "mde": 17.937067950191214,
+    "coded_rmse": 4.187785216323727,
+    "visible_rmse": 18.296275961502353,
+    "ap_equal_visible_rmse": 20.259479282787172,
+    "detection_f1": 0.3438270581561044
+   },
+   "append": {
+    "mde": 8.444171957840302,
+    "coded_rmse": 3.936169087547079,
+    "visible_rmse": 15.983561572562062,
+    "ap_equal_visible_rmse": 17.677555548391567,
+    "detection_f1": 0.41862997143148806
+   },
+   "global": {
+    "mde": 7.882676720237773,
+    "coded_rmse": 3.657953793518449,
+    "visible_rmse": 14.956781981482703,
+    "ap_equal_visible_rmse": 16.97100904316651,
+    "detection_f1": 0.4041758211287591
+   },
+   "scm": {
+    "mde": 7.751725358307856,
+    "coded_rmse": 3.5173779769866758,
+    "visible_rmse": 14.720565463760794,
+    "ap_equal_visible_rmse": 16.830067412620856,
+    "detection_f1": 0.4093530469300721
+   },
+   "lmc": {
+    "mde": 7.730947509751731,
+    "coded_rmse": 3.500551781242547,
+    "visible_rmse": 14.665924762466798,
+    "ap_equal_visible_rmse": 16.770693853025747,
+    "detection_f1": 0.41064259536845465
+   },
+   "diagonal_lmc": {
+    "mde": 7.730947509751731,
+    "coded_rmse": 3.500551781242547,
+    "visible_rmse": 14.665924762466798,
+    "ap_equal_visible_rmse": 16.770693853025747,
+    "detection_f1": 0.41064259536845465
+   },
+   "diagonal_best": {
+    "mde": 7.730947509751731,
+    "coded_rmse": 3.500551781242547,
+    "visible_rmse": 14.665924762466798,
+    "ap_equal_visible_rmse": 16.770693853025747,
+    "detection_f1": 0.41064259536845465
+   }
+  }
+ },
+ "elapsed_s": 32.648887395858765
+}
