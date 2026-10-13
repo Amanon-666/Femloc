@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13",
+  "status": "prerun_review_before_any_performance_run",
+  "research_question": "Can a contextual old-map AP covariance prior improve sparse same-floor temporal maintenance beyond an independently tuned spatial GP and an identical-marginal decorrelated LMC?",
+  "assumption_to_falsify": "Static old-map PCA directions approximate some future coded-RSS drift directions; static correlation does not imply drift correlation.",
+  "data": "May-June trainingData old map; September-October validationData future observations. Device and sampling geometry also differ; temporal-only causality is not claimed.",
+  "source": "LOBO selects common matcher using old-only localisation, then separately selects SCM and LMC parameters from only other buildings' future data. Every source floor is equally weighted. 3 nested draws, K=3/5/10, identical fixed query across K.",
+  "target": "Target building never enters parameter selection. Its trainingData old map alone defines old nodes, means and AP PCA. Future Support is one actual scan at each distinct physical position; 10 nested draws; 40% fixed position Query, leaving >=10 pool positions. Query RSS only final localisation/reconstruction; Query coordinates only partition/evaluation.",
+  "observation": "100 becomes -110 coded RSS. A residual includes real changes, mobile-device effects and old-map interpolation mismatch. We do not call coded-RSS RMSE physical latent-field accuracy. Exact coordinate hits return the measured old prototype; only non-exact positions use 3-neighbour interpolation.",
+  "kernel": "k0 I + sum aq kq uq uq.T, uq orthogonal old-map PCA. PSD by nonnegative amplitudes. Nonzero isotropic observation noise; rank<=8. Top two modes have length 2*l, others l/2. Remaining AP subspace has independent base GP. Missing/new old-map APs have no cross-AP mode but retain base updates from Support.",
+  "control": "diagonal_lmc uses exactly the selected LMC's per-AP marginal covariance and noise; only cross-AP covariance is removed. Independently selected strong SCM uses its own source-only grid. Shared matcher and appended anchors except explicit old/anchor-only baselines. Additionally diagonal_best selects its own same source grid, to separate same-parameter offdiagonal ablation from the best independent multiscale prior.",
+  "counterexamples": "zero residual gives zero update; gamma=0 reduces SCM; AP permutation/translation invariant; one anchor finite; source may select gamma=0; incorrect old correlation may harm; unknown old AP cannot have learned cross-AP mode; no old geometry correspondence across buildings is assumed; posterior map has old+Support candidate coordinates, no Query nodes.",
+  "minimal_checks": "Small exact flattened full GP validates orthogonal LMC solver and diagonal control; zero residual, gamma=0, translation, AP permutation, one anchor. No temporal performance smoke before freeze.",
+  "evaluation": "MDE equal-floor average, per-floor results and draw distribution; coded RMSE; visible-only RSS RMSE; AP-equal visible RMSE; threshold-based detection F1 as diagnostic only; future support fraction, old nearest-node distance and 1m coverage.",
+  "budget": "CPU only, OMP/BLAS/MKL 2 threads. Largest LMC solve <=10; diagonal models batch 520x10x10. PCA old node Gram. 13 floors*10 draws*3 K*8 methods=3120 target rows. Source 57 candidate settings per episode, 3 draws*3K per source floor. No GPU or external process changes.",
+  "references": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10857661/",
+    "https://docs.gpytorch.ai/en/stable/examples/04_Variational_and_Approximate_GPs/SVGP_Multitask_GP_Regression.html"
+  ],
+  "implementation_scope": "Uses standard LMC equations with closed-form eigenspace solve; contextual old-map covariance is project hypothesis, not a full reproduction of the MOGP paper. No learned neural kernel or online DKT modification."
+}
