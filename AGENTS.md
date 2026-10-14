@@ -31,3 +31,11 @@
 User authorized parallel follow-up method validation on a new branch. In this
 branch, ADKF_PROTOCOL.md supersedes the old fixed K=10/no target-GP-adaptation
 restrictions for adkf_uji.py only. Existing dkt code is left unchanged.
+
+## 2026-10-14 heterogeneous meta-regularization branch
+
+For heterogeneous_uji.py, HETEROGENEOUS_PROTOCOL.md supersedes original fixed
+K/no target fitting restrictions. This is a distinct inverse-localization
+adaptation of AISTATS2025 task-specific ridge, not a DKT performance claim.
+Unmodified NTT author code lives outside git for private internal evaluation;
+do not vendor/publish that module or derivative model checkpoints.
