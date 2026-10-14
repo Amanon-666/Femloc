@@ -1,0 +1,560 @@
+{
+  "frozen_server_commit": "c8032faf642875b56e4885faf9de2e39901753ca",
+  "n_rows": 1170,
+  "averaging": "equal physical floor and five shared Support draws; one source seed",
+  "metrics": [
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "raw_source",
+      "mde": 27.439632500424022
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "wknn",
+      "mde": 28.17049273841544
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "spatial_residual",
+      "mde": 27.625206812873337
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "raw_source",
+      "mde": 19.149140665345435
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "wknn",
+      "mde": 19.29704778311464
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "spatial_residual",
+      "mde": 19.09638828702178
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "raw_source",
+      "mde": 14.242134112011055
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "wknn",
+      "mde": 14.114669692751566
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "spatial_residual",
+      "mde": 14.15039101545979
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "raw_source",
+      "mde": 28.754472611991122
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "wknn",
+      "mde": 29.49240866717883
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "spatial_residual",
+      "mde": 28.88335034628228
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "raw_source",
+      "mde": 21.092915347486706
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "wknn",
+      "mde": 20.687969212410827
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "spatial_residual",
+      "mde": 21.116086568625924
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "raw_source",
+      "mde": 16.164270473018938
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "wknn",
+      "mde": 15.737272534018663
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "spatial_residual",
+      "mde": 16.139794992365314
+    }
+  ],
+  "by_building": [
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 21.44787139736706
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 33.865018390776605
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 27.092732670587527
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "wknn",
+      "building": 0,
+      "mde": 21.8588796591118
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "wknn",
+      "building": 1,
+      "mde": 33.36015821345476
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "wknn",
+      "building": 2,
+      "mde": 29.068050821826898
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 21.112316990457753
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 33.98812256861301
+    },
+    {
+      "split": "internal",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 27.74518606621406
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 14.2107513292877
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 25.86658470245108
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 17.725896904507103
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "wknn",
+      "building": 0,
+      "mde": 14.885988335204297
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "wknn",
+      "building": 1,
+      "mde": 24.46229993092858
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "wknn",
+      "building": 2,
+      "mde": 18.693693623191763
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 14.259190752841628
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 25.409629144746447
+    },
+    {
+      "split": "internal",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 17.91555362818617
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 10.87137359721147
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 19.624886437561077
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 12.632540663410708
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "wknn",
+      "building": 0,
+      "mde": 10.891754234623198
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "wknn",
+      "building": 1,
+      "mde": 18.458732034128126
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "wknn",
+      "building": 2,
+      "mde": 13.21775218615301
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 10.788373220445123
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 19.64230629628291
+    },
+    {
+      "split": "internal",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 12.446473026813027
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 22.92719475341545
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 35.9118523542301
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 27.69039110506048
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "wknn",
+      "building": 0,
+      "mde": 22.507656270618963
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "wknn",
+      "building": 1,
+      "mde": 35.60715719993061
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "wknn",
+      "building": 2,
+      "mde": 30.1884117582253
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 22.217026077758433
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 35.993421495726615
+    },
+    {
+      "split": "official",
+      "k": 5,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 28.5283528415459
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 15.557739623106787
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 27.207922599091898
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 20.629050125706488
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "wknn",
+      "building": 0,
+      "mde": 14.001021341143009
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "wknn",
+      "building": 1,
+      "mde": 26.258089682217634
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "wknn",
+      "building": 2,
+      "mde": 21.58143113357964
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 15.45656867746819
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 26.799346786390903
+    },
+    {
+      "split": "official",
+      "k": 10,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 21.097092707340124
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "raw_source",
+      "building": 0,
+      "mde": 12.283650551839406
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "raw_source",
+      "building": 1,
+      "mde": 20.29178328553498
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "raw_source",
+      "building": 2,
+      "mde": 15.966756159949728
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "wknn",
+      "building": 0,
+      "mde": 10.336018710702486
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "wknn",
+      "building": 1,
+      "mde": 19.433558003949784
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "wknn",
+      "building": 2,
+      "mde": 17.101247216726705
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 0,
+      "mde": 12.053837756851348
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 1,
+      "mde": 20.173348273368322
+    },
+    {
+      "split": "official",
+      "k": 20,
+      "method": "spatial_residual",
+      "building": 2,
+      "mde": 16.181718155974075
+    }
+  ],
+  "selected": {
+    "0": {
+      "step": 1000,
+      "dev_scores": {
+        "0": 22.28624267639268,
+        "300": 22.085104748136246,
+        "1000": 21.802506984903243
+      },
+      "wknn": [
+        1,
+        1.0
+      ],
+      "wknn_grid": {
+        "1,1.0": 21.251200409892373,
+        "1,2.0": 21.251200409892373,
+        "3,1.0": 25.537931391150096,
+        "3,2.0": 23.28084476487915,
+        "5,1.0": 31.58024024030981,
+        "5,2.0": 27.020232535325903
+      }
+    },
+    "1": {
+      "step": 1000,
+      "dev_scores": {
+        "0": 18.25167633536248,
+        "300": 17.930621499015203,
+        "1000": 17.761567551794613
+      },
+      "wknn": [
+        1,
+        1.0
+      ],
+      "wknn_grid": {
+        "1,1.0": 18.087099454317357,
+        "1,2.0": 18.087099454317357,
+        "3,1.0": 20.30595802930412,
+        "3,2.0": 19.00908905245311,
+        "5,1.0": 24.210233957083698,
+        "5,2.0": 21.334151335297545
+      }
+    },
+    "2": {
+      "step": 1000,
+      "dev_scores": {
+        "0": 19.420789409078207,
+        "300": 19.10523337987137,
+        "1000": 19.05476115479519
+      },
+      "wknn": [
+        1,
+        1.0
+      ],
+      "wknn_grid": {
+        "1,1.0": 17.371576530039174,
+        "1,2.0": 17.371576530039174,
+        "3,1.0": 22.793189920833115,
+        "3,2.0": 20.46619879783729,
+        "5,1.0": 28.774005070323415,
+        "5,2.0": 24.128116632516207
+      }
+    }
+  },
+  "code_sha256": "614bc51dca58fe557423818c97ddae73ced4d5536050ce2b4aeba6790e255229",
+  "driver": "STARTED 2026-10-14T05:46:17Z\nFINISHED 2026-10-14T05:47:15Z\nEXIT_STATUS 0\n",
+  "scope": "Primary practical comparison only; no performance ablations or target-guided retries"
+}

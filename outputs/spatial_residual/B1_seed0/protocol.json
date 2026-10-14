@@ -1,0 +1,60 @@
+{
+  "building": 1,
+  "seed": 0,
+  "sources": [
+    "B0F0",
+    "B0F1",
+    "B0F2",
+    "B0F3",
+    "B2F0",
+    "B2F1",
+    "B2F2",
+    "B2F3",
+    "B2F4"
+  ],
+  "source_train": [
+    "B0F0",
+    "B0F1",
+    "B0F2",
+    "B2F0",
+    "B2F1",
+    "B2F2",
+    "B2F3"
+  ],
+  "source_dev": [
+    "B0F3",
+    "B2F4"
+  ],
+  "targets": [
+    "B1F0",
+    "B1F1",
+    "B1F2",
+    "B1F3"
+  ],
+  "coordinate_scale": 28.68428976912998,
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "draws": 5,
+  "scans_per_position": 3,
+  "checks": [
+    0,
+    300,
+    1000
+  ],
+  "features": [
+    "visible_position_fraction",
+    "within_position_sd",
+    "repeat_observation_fraction",
+    "ridge_training_r2",
+    "ridge_slope_norm",
+    "insufficient_positions",
+    "geometry_rank_ratio",
+    "visible_rss_mean"
+  ],
+  "ridge_statistic_regularization": 0.1,
+  "raw_gp_parameters": "Frozen permitted source checkpoint",
+  "code_sha256": "614bc51dca58fe557423818c97ddae73ced4d5536050ce2b4aeba6790e255229"
+}

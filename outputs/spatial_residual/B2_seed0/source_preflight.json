@@ -1,0 +1,13 @@
+{
+  "identity_max_error": 0.0,
+  "initial_last_gradient": 0.012918210909634673,
+  "initial_hidden_gradient": 0.0,
+  "hidden_gradient_after_first_step": 2.833928252110311e-05,
+  "valid_statistics": true,
+  "monotone": true,
+  "ap_permutation": true,
+  "support_permutation": true,
+  "coordinate_translation": true,
+  "constant_axis": true,
+  "note": "Source-only implementation evidence, not a performance experiment"
+}
