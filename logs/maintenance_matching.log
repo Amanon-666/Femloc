@@ -1,0 +1,18 @@
+checks passed: frozen matcher, whole-group replication, endpoints, equal energy, empty Support
+freeze 0 {"group_append": 0.05, "group_field_append": 0.05}
+floor B0F0 done elapsed 5.2
+floor B0F1 done elapsed 5.5
+floor B0F2 done elapsed 5.7
+floor B0F3 done elapsed 5.9
+freeze 1 {"group_append": 0.01, "group_field_append": 0.05}
+floor B1F0 done elapsed 7.1
+floor B1F1 done elapsed 7.3
+floor B1F2 done elapsed 7.5
+floor B1F3 done elapsed 7.7
+freeze 2 {"group_append": 0.01, "group_field_append": 0.1}
+floor B2F0 done elapsed 8.7
+floor B2F1 done elapsed 9.0
+floor B2F2 done elapsed 9.2
+floor B2F3 done elapsed 9.5
+floor B2F4 done elapsed 9.7
+DONE {"3": {"old": {"mde": 8.22013229966776, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "append": {"mde": 8.574040891983625, "anchor_weight_mean": 0.11444215514770263, "anchor_weight_over_half": 0.10793467355238237}, "field_only": {"mde": 8.227227433125348, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "field_append": {"mde": 8.267562068615245, "anchor_weight_mean": 0.03714753526086764, "anchor_weight_over_half": 0.025388599037977775}, "group_append": {"mde": 8.52643607379503, "anchor_weight_mean": 0.09867425361756249, "anchor_weight_over_half": 0.09583721411500618}, "group_field_append": {"mde": 8.310097519326549, "anchor_weight_mean": 0.04462475229246855, "anchor_weight_over_half": 0.032911019445604976}}, "5": {"old": {"mde": 8.22013229966776, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "append": {"mde": 8.535038181979619, "anchor_weight_mean": 0.17468358550177762, "anchor_weight_over_half": 0.16450054386006688}, "field_only": {"mde": 8.040670237383749, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "field_append": {"mde": 8.047902452217002, "anchor_weight_mean": 0.06503612073974148, "anchor_weight_over_half": 0.04858769118954639}, "group_append": {"mde": 8.523990009774277, "anchor_weight_mean": 0.13739871653644734, "anchor_weight_over_half": 0.13419557628971673}, "group_field_append": {"mde": 8.072800363430414, "anchor_weight_mean": 0.06367795534373018, "anchor_weight_over_half": 0.05022447093667174}}, "10": {"old": {"mde": 8.22013229966776, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "append": {"mde": 8.44417195788251, "anchor_weight_mean": 0.28574323184550504, "anchor_weight_over_half": 0.27139888411654733}, "field_only": {"mde": 7.788352038408818, "anchor_weight_mean": 0.0, "anchor_weight_over_half": 0.0}, "field_append": {"mde": 7.751725358289753, "anchor_weight_mean": 0.11989437160789605, "anchor_weight_over_half": 0.09243103213813206}, "group_append": {"mde": 8.518339382650469, "anchor_weight_mean": 0.2014260269455045, "anchor_weight_over_half": 0.19003968120502027}, "group_field_append": {"mde": 7.749337367561267, "anchor_weight_mean": 0.09239451328947582, "anchor_weight_over_half": 0.07438514402960496}}}
