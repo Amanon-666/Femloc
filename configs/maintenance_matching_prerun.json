@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-14",
+  "status": "prerun_before_performance",
+  "question": "Does updating map signals help when candidate coordinates are held fixed, and does adding observed anchor candidates cause separate degradation? Can explicit source-fitted candidate-group priors improve this use of new measurements?",
+  "chronology": "Follow-up motivated by completed temporal results; the same Query has already been evaluated. This is not a new blind benchmark. Code is frozen before the follow-up run.",
+  "inputs": "Same trainingData old maps and exact prior future Query/Support manifest. No resampling and no PHONEID model input. All observations at one physical Query coordinate remain excluded from Support.",
+  "methods": [
+    "old",
+    "append",
+    "field_only",
+    "field_append",
+    "group_append",
+    "group_field_append"
+  ],
+  "matched_panel": "First four cells use exactly each held-building fold's already-frozen source old-only matcher and independently selected SCM spatial GP. Only field update and candidate append switches change. field_only retains all new Support RSS for GP training; it does not ignore new observations.",
+  "group_model": "Retain exactly the corresponding append/field_append prototypes, GP and matcher. Add log(1-pi)-log(Nold) to old-node scores and log(pi)-log(K) to new-anchor scores, then one global softmax. Query RSS evidence induces adaptive posterior group mass. This is a conditional energy mixture, not a fixed-alpha mixture of coordinate predictions.",
+  "score": "Frozen implementation sums observed squared errors and missing-AP log CDFs; it does not divide either sum by AP count. Observable prototype means include -110-coded missing entries, so this is a Tobit-inspired pseudo likelihood, not a coherent physical latent-RSS model. Group prior fixes arbitrary whole-group count effects, not within-group spatial density or irregular physical area sampling.",
+  "source_selection": "For held building b, use only other buildings. Reuse first three recorded Support draws and all K=3/5/10 on their original fixed Query. Select one pi per group method shared across K by equal-floor mean MDE; grid [.01,.05,.1,.25,.5]. GP/matcher remain frozen and identical. No target Query labels/RSS, PHONEID or batch statistics enter selection.",
+  "target": "All 10 old recorded draws and nested K=3/5/10; exact fixed Query for all six methods. Adaptation uses own old map plus actual Support RSS/coordinates only. Scoring uses each unknown-position Query RSS individually. Query coordinates enter final error only; Query never adds a candidate node.",
+  "counterexamples": "Whole old/new group replication leaves group-prior prediction unchanged; single-location duplication is not claimed invariant. Equal energies produce pi group mass. pi=0/1 recover old/new group predictions mathematically but are not fitted choices. Empty Support reverts to old map. Query evidence can override a small pi, so there is no arbitrary hard reliability cap. Incorrect or highly variable anchors may still harm; source transfer may fail; new spatial coverage may require candidates, so field_only can lose useful coverage. Every output is a nonnegative weighted coordinate average, hence lies in its candidate convex hull; field_only cannot extend the old geometry, while append can. The finite global pi grid need not include each floor/K baseline implicit pi=K/(Nold+K), so source selection is not guaranteed to dominate baseline.",
+  "noise_scope": "No candidate-specific noise or new observation normalization in this experiment. Fixed-sigma Gaussian constants would cancel anyway. Epoch/device heterogeneity remains unresolved and PHONEID is diagnostic-only. Do not advertise a new probabilistic noise model or full TPM reproduction.",
+  "checks": "Synthetic baseline equality to frozen matcher; whole-group replication; exact endpoints; equal energy prior; empty Support; real manifest physical-position isolation checked without performance scoring.",
+  "budget": "CPU only, BLAS/OMP/MKL 2 threads. 13 floors*10 draws*3K*6 methods=2340 target rows, source 5pi*2 group methods*3 draws*3K per source floor. No neural training or GPU use.",
+  "references": [
+    "https://www.usenix.org/legacy/publications/library/proceedings/mobisys05/tech/full_papers/youssef/youssef.pdf",
+    "https://www.cs.rice.edu/CS/Robotics/papers/haeberlen2004practical_robust_large_scale_wireless.pdf",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.logsumexp.html"
+  ],
+  "freeze": "Full Git commit locks the new script and existing imported helpers; manifest also records prior partition and selections hashes. No helper edits."
+}
