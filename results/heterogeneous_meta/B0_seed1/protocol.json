@@ -1,0 +1,57 @@
+{
+  "building": 0,
+  "seed": 1,
+  "source": [
+    "B1F0",
+    "B1F1",
+    "B1F2",
+    "B1F3",
+    "B2F0",
+    "B2F1",
+    "B2F2",
+    "B2F3",
+    "B2F4"
+  ],
+  "train": [
+    "B1F0",
+    "B1F1",
+    "B1F2",
+    "B2F0",
+    "B2F1",
+    "B2F2",
+    "B2F3"
+  ],
+  "dev": [
+    "B1F3",
+    "B2F4"
+  ],
+  "source_scale": 33.53682287087299,
+  "hidden": 128,
+  "matrix_blocks": 3,
+  "attention_stages": 6,
+  "heads": 4,
+  "learning_rate": 0.0001,
+  "checks": [
+    300,
+    1000
+  ],
+  "lambda_floor": 0.001,
+  "use_mu": 0,
+  "source_model_url": "https://www.kecl.ntt.co.jp/as/members/iwata/code_meta_linear.tar.gz",
+  "author_module_sha256": "d7a1526c24d627add8b098473513865c7c129f7a6fd07728f94fe6c6155e190a",
+  "adapter_sha256": "80196750565d3543fc7433d8e979bb1b5faa7985257d4e31657eca809e7e636b",
+  "scalar_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "feature_encoding": "fixed 100->0; otherwise (RSS+105)/105; no X centering",
+  "active_AP": "only nonzero columns in current Support; Query-only AP coefficient is zero",
+  "response": "Support coordinate mean removed; source-only global RMS scale; 2 labels as target-type tokens",
+  "ridge": "sum SSE; positive feature and bias lambdas; zero coefficient prior mean",
+  "controls": "same trained checkpoint flatten/shuffle AP lambdas, preserve predicted bias lambda",
+  "target_manifest": "previous frozen ADKF manifest, physical Query positions separated"
+}
